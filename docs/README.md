@@ -1,33 +1,65 @@
-This is your Development README, which will:
+# TreeSurfing
 
-1. Show wireframes,
-2. Describe features, and
-3. Outline a development timeline for your application.
+[Heroku link][heroku] **Note:** This should be a link to your production site
 
-Note: this README is NOT the same as the Production README that lives at the project's root directory.
+[Trello link][trello]
 
+[heroku]: http://www.herokuapp.com
+[trello]: trello **NOTE:** Add when ready
 
-The following files should be linked to in the Development README:
+## Minimum Viable Product
 
-1. api-endpoints.md
-2. component-hierarchy.md
-3. sample-state.md
-4. schema.md
+TreeSurfing is a web application inspired by CouchSurfing built using Ruby on Rails and React/Redux. Users can book stays in tree houses in cities all over the world. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
-The Development README of your project repo MUST include the following:
+- [ ] Hosting on Heroku
+- [ ] New account creation, login, (and guest/demo login)
+- [ ] Hosts/Tree Houses (Users)
+- [ ] Bookings
+- [ ] Tree House search (by location & availability) & Google Maps on search
+- [ ] References
+- [ ] [Production README] **Note:** Add link to production README
 
-1. Heroku link
+## Design Docs
+* [View Wireframes] **Wireframes Link**
+* [React Components]**Components Link**
+* [API endpoints] **API Endpoints Link**
+* [DB schema] **Schema Link**
+* [Sample State] **Sample State Link**
 
-2. Minimum Viable Product
+[wireframes]: docs/wireframes
+[components]: docs/component-hierarchy.md
+[sample-state]: docs/sample-state.md
+[api-endpoints]: docs/api-endpoints.md
+[schema]: docs/schema.md
 
-3. Wireframes
+## Implementation Timeline
 
-4. React Components
+### Phase 1: Backend setup and Front End User Authentication (2 days)
 
-5. Sample State
+**Objective:** Functioning rails project with front-end Authentication
 
-6. DB Schema
+### Phase 2: Landing Page, Users Model, Countries Model, API, and components (2 days)
 
-7. API Endpoints
+**Objective:** Hosts (and cities) can be created, read, edited and destroyed through the API. Hosts can be populated to Cities through the API. Landing page with graphics and Navigation.
 
-8. Implementation Timeline 
+### Phase 3: Host homepage, City Search, and View with Host Filtering (2 days)
+
+**Objective:** Cities can be searched from navbar. City view shows Hosts and Map. Hosts can be filtered by date (and other criteria) and be selected through the GoogleMaps API.
+
+### Phase 4: Details and Requests (2 days)
+
+**Objective:** Hosts can be clicked on and have page showing details. Hosts can be requested for range of dates.
+
+### Phase 5: Reviews (1 day)
+
+**Objective:** Hosts can have reviews left on them and persisted to the DB.
+
+### Phase 6: - Fix issues, finish styling (1 day)
+
+**Objective:** Finish all pending tasks.
+
+### Bonus Features (TBD)
+- [ ] World Map/Explore
+- [ ] User Profiles
+- [ ] Host Profiles
+- [ ] Guest Login/Page
