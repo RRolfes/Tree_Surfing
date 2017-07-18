@@ -40,11 +40,11 @@ TreeSurfing is a web application inspired by CouchSurfing built using Ruby on Ra
 
 ### Phase 2: Landing Page, Users Model, Countries Model, API, and components (2 days)
 
-**Objective:** Hosts (and cities) can be created, read, edited and destroyed through the API. Hosts can be populated to Cities through the API. Landing page with graphics and Navigation.
+**Objective:** Hosts and cities (locations) can be created, read, edited and destroyed through the API. Hosts can be populated to Cities through the API. Landing page with graphics and Navigation.
 
-### Phase 3: Host homepage, City Search, and View with Host Filtering (2 days)
+### Phase 3: City Search and View with Host Filtering (2 days)
 
-**Objective:** Cities can be searched from navbar. City view shows Hosts and Map. Hosts can be filtered by date (and other criteria) and be selected through the GoogleMaps API.
+**Objective:** Cities can be searched from the landing page. City view shows Hosts and Map. Hosts can be filtered by date and selected through the GoogleMaps API.
 
 ### Phase 4: Details and Requests (2 days)
 
@@ -59,7 +59,7 @@ TreeSurfing is a web application inspired by CouchSurfing built using Ruby on Ra
 **Objective:** Finish all pending tasks.
 
 ### Bonus Features (TBD)
-- [ ] World Map/Explore
-- [ ] User Profiles
 - [ ] Host Profiles
+- [ ] User Profiles
+- [ ] World Map/Explore All
 - [ ] Guest Login/Page
