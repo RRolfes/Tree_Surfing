@@ -28,7 +28,6 @@
 - `POST /api/tree-houses`
 - `PATCH /api/tree-houses/:id`
 - `DELETE /api/tree-houses/:id`
-- ``
 
 ### Bookings (Reference the users table)
 
