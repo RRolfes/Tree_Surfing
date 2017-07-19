@@ -8,14 +8,14 @@ full_name       | string    | not null
 email           | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
-languages       | array     |
 city            | string    | not null
 country         | string    | not null
-age             | string    |
+languages       | array     | 
 occupation      | string    |
 image_url       | string    |
+age             | integer   |
 about           | text      |
-hosting         | boolean   | not null
+host            | boolean   | not null
 
 Association: has_many tree_houses
 Association: has_many bookings (via tree_houses; as host)
@@ -30,7 +30,6 @@ lng             | float     | not null
 lat             | float     | not null
 city            | string    | not null
 country         | string    | not null
-dates           | array     | not null
 image_url       | string    |
 
 Association: belongs_to user

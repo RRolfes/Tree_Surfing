@@ -18,8 +18,9 @@
         country: "United States",
         age: 25,
         occupation: "Software Developer",
+        image_url: "image_url.com"
         about: "I am..."
-        hosting: true,
+        host: true,
         bookings: [1, 5, 8],
         tree_houses: [1, 2]
       }

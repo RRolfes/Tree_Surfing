@@ -4,12 +4,12 @@
 
 * **AuthFormContainer**
     * AuthForm
-
-* **App**
   * **NewUser**
     * SignUpForm
   * **LoginUser**
     * LoginForm
+
+* **Home_Container**
   * **TreeHousesIndex**
     * SearchFilter
     * MenuBar
