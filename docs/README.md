@@ -4,8 +4,8 @@
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
-[trello]: trello
+[heroku]: http://treesuring.herokuapp.com
+[trello]: https://trello.com/b/eDnRYxaT
 
 ## Minimum Viable Product
 
