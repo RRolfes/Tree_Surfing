@@ -3,7 +3,7 @@
 **Bolded** components are associated with routes.
 
 * **AuthFormContainer**
- * AuthForm
+    * AuthForm
 
 * **App**
   * **NewUser**
@@ -18,6 +18,6 @@
       * AddTreeHouseLocations
   * **TreeHouseDetail**
     * HostDetail
-    * TreeHouse 
+    * TreeHouse
     * BookingForm
     * DisplayReferences
