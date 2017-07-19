@@ -1,11 +1,11 @@
 # TreeSurfing
 
-[Heroku link][heroku] **Note:** This should be a link to your production site
+[Heroku link][heroku] 
 
 [Trello link][trello]
 
 [heroku]: http://www.herokuapp.com
-[trello]: trello **NOTE:** Add when ready
+[trello]: trello
 
 ## Minimum Viable Product
 
@@ -20,17 +20,17 @@ TreeSurfing is a web application inspired by CouchSurfing built using Ruby on Ra
 - [ ] [Production README] **Note:** Add link to production README
 
 ## Design Docs
-* [View Wireframes] **Wireframes Link**
-* [React Components]**Components Link**
-* [API endpoints] **API Endpoints Link**
-* [DB schema] **Schema Link**
-* [Sample State] **Sample State Link**
+* [View Wireframes][wireframes]
+* [React Components][components]
+* [API endpoints][api-endpoints]
+* [DB schema][schema]
+* [Sample State][sample-state]
 
 [wireframes]: docs/wireframes
 [components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
 [api-endpoints]: docs/api-endpoints.md
 [schema]: docs/schema.md
+[sample-state]: docs/sample-state.md
 
 ## Implementation Timeline
 
