@@ -1,3 +1,4 @@
+```js
 {
   session: {
     current_user: 1
@@ -68,3 +69,4 @@
     }
   }
 }
+```
