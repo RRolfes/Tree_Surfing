@@ -25,11 +25,11 @@ column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 user_id         | integer   | not null, foreign key (references users), indexed
-location        | array     | not null
+lng             | float     | not null
+lat             | float     | not null
 city            | string    | not null
 country         | string    | not null
 dates           | array     | not null
-confirmed       | boolean   | not null
 
 Association: belongs_to user
 Association: has_many bookings
@@ -40,7 +40,8 @@ column name     | data type | details
 id              | integer   | not null, primary key
 user_id         | integer   | not null, foreign key (references users), indexed
 tree_house_id   | integer   | not null, foreign key (references tree_houses), indexed
-dates           | array     | not null
+start_date      | date      | not null
+end_date        | date      | not null
 confirmed       | boolean   | not null
 
 Association: belongs_to user
@@ -50,10 +51,10 @@ Association: belongs_to tree_house
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
-booking_id      | integer   | not null, foreign key (references booking), indexed
+tree_house_id   | integer   | not null, foreign key (references booking), indexed
 user_id         | integer   | not null, foreign key (references users), indexed
-title           | text      | not null
+title           | string    | not null
 comment         | text      | not null
 
 Association: belongs_to user
-Association: belongs_to spot
+Association: belongs_to tree_house

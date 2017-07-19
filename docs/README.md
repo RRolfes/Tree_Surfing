@@ -1,6 +1,6 @@
 # TreeSurfing
 
-[Heroku link][heroku] 
+[Heroku link][heroku]
 
 [Trello link][trello]
 
@@ -26,11 +26,11 @@ TreeSurfing is a web application inspired by CouchSurfing built using Ruby on Ra
 * [DB schema][schema]
 * [Sample State][sample-state]
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
-[sample-state]: docs/sample-state.md
+[wireframes]: wireframes
+[components]: component-hierarchy.md
+[api-endpoints]: api-endpoints.md
+[schema]: schema.md
+[sample-state]: sample-state.md
 
 ## Implementation Timeline
 

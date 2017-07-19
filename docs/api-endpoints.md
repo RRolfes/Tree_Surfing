@@ -22,19 +22,20 @@
 
 ### Tree Houses (References the users table)
 
-- `GET /api/tree_houses`
-- `GET /api/tree_houses/:id`
-- `POST /api/tree_houses/:id`
-- `DELETE /api/tree_houses/:id`
+- `GET /api/tree-houses`
+- `GET /api/tree-houses/:id`
+- `POST /api/tree-houses`
+- `DELETE /api/tree-houses/:id`
 
 ### Bookings (Reference the users table)
 
-- `GET /api/bookings`
-- `GET /api/bookings/:id`
-- `POST /api/bookings/:id`
+- `POST /api/bookings`
+- `DELETE /api/bookings/:id`
+
 
 ### References (References the users and tree_houses tables)
 
-- `GET /api/references`
+- `GET /api/tree_houses/:id/references`
 - `POST /api/references`
+- `PATCH /api/references/:id`
 - `DELETE /api/references/:id`
