@@ -8,7 +8,6 @@ full_name       | string    | not null
 email           | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
-location        | array     | not null
 languages       | array     |
 city            | string    | not null
 country         | string    | not null
@@ -26,6 +25,9 @@ column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 user_id         | integer   | not null, foreign key (references users), indexed
+location        | array     | not null
+city            | string    | not null
+country         | string    | not null
 dates           | array     | not null
 confirmed       | boolean   | not null
 
@@ -50,6 +52,7 @@ column name     | data type | details
 id              | integer   | not null, primary key
 booking_id      | integer   | not null, foreign key (references booking), indexed
 user_id         | integer   | not null, foreign key (references users), indexed
+title           | text      | not null
 comment         | text      | not null
 
 Association: belongs_to user
