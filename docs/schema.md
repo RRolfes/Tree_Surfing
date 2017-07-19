@@ -13,6 +13,7 @@ city            | string    | not null
 country         | string    | not null
 age             | string    |
 occupation      | string    |
+image_url       | string    |
 about           | text      |
 hosting         | boolean   | not null
 
@@ -27,10 +28,10 @@ id              | integer   | not null, primary key
 user_id         | integer   | not null, foreign key (references users), indexed
 lng             | float     | not null
 lat             | float     | not null
-image_url       | string    | not null
 city            | string    | not null
 country         | string    | not null
 dates           | array     | not null
+image_url       | string    |
 
 Association: belongs_to user
 Association: has_many bookings
