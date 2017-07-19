@@ -13,7 +13,7 @@ TreeSurfing is a web application inspired by CouchSurfing built using Ruby on Ra
 
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, (and guest/demo login)
-- [ ] Hosts/Tree Houses (Users)
+- [ ] Tree Houses
 - [ ] Bookings
 - [ ] Tree House search (by location & availability) & Google Maps on search
 - [ ] Reviews

@@ -27,6 +27,7 @@ id              | integer   | not null, primary key
 user_id         | integer   | not null, foreign key (references users), indexed
 lng             | float     | not null
 lat             | float     | not null
+image_url       | string    | not null
 city            | string    | not null
 country         | string    | not null
 dates           | array     | not null
