@@ -16,7 +16,7 @@ TreeSurfing is a web application inspired by CouchSurfing built using Ruby on Ra
 - [ ] Hosts/Tree Houses (Users)
 - [ ] Bookings
 - [ ] Tree House search (by location & availability) & Google Maps on search
-- [ ] References
+- [ ] Reviews
 - [ ] [Production README] **Note:** Add link to production README
 
 ## Design Docs
@@ -34,21 +34,21 @@ TreeSurfing is a web application inspired by CouchSurfing built using Ruby on Ra
 
 ## Implementation Timeline
 
-### Phase 1: Backend setup and Front End User Authentication (2 days)
+### Phase 1: Backend setup and front end user authentication (2 days)
 
-**Objective:** Functioning rails project with front-end Authentication
+**Objective:** Functioning rails project with front-end Authentication.
 
-### Phase 2: Users Model, Countries Model, API, and components (2 days)
+### Phase 2: Tree houses and users models, APIs, and components (2 days)
 
-**Objective:** Hosts and cities (locations) can be created, read, edited and destroyed through the API. Hosts can be populated to Cities through the API.
+**Objective:** Tree houses and Users can be created, read, and destroyed through the API.
 
-### Phase 3: City Search and View with Host Filtering (2 days)
+### Phase 3: Map model, API, and components (2 days)
 
-**Objective:** Cities can be searched from the search bar. City view shows Hosts and Map. Hosts can be filtered by date and selected through the GoogleMaps API.
+**Objective:**  The map displays listings and can be updated for different cities. Tree Houses can be filtered by date availability and selected through the GoogleMaps API.
 
-### Phase 4: Details and Requests (2 days)
+### Phase 4: Tree House Page and Requests model, API, and components  (2 days)
 
-**Objective:** Hosts can be clicked on and have page showing details. Hosts can be requested for range of dates.
+**Objective:** Tree Houses can be clicked on and have a page showing host details, tree house reviews, and a request to book form.
 
 ### Phase 5: Reviews (1 day)
 
