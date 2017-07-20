@@ -10,10 +10,15 @@ class SignUpForm extends React.Component {
       password: '',
       city: '',
       country: '',
-      hosting: '',
-      gender: ''
+      gender: '',
+      host: true
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleHost = this.handleHost.bind(this);
+    this.host = '?';
+    this.gender = '?';
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -33,6 +38,29 @@ class SignUpForm extends React.Component {
     const user = this.state;
     this.props.signup(user);
   }
+
+  handleHost(e) {
+     e.preventDefault();
+     if (this.state.host === true) {
+       this.host = "Yes";
+       this.setState({host: false});
+     } else {
+       this.host = "No";
+       this.setState({host: true});
+     }
+   }
+
+   handleGender(e) {
+      e.preventDefault();
+      if (this.state.gender !== "Male") {
+        this.gender = "Male";
+        this.setState({gender: "Male"});
+      } else {
+        this.gender = "Female";
+        this.setState({gender: "Female"});
+      }
+    }
+
 
   renderErrors() {
     return(
@@ -98,23 +126,18 @@ class SignUpForm extends React.Component {
                 />
             </label>
             <br/>
-            <label>Hosting?:
-              <input
-                type="text"
-                value={this.props.city}
-                onChange={this.update("hosting")}
-                className="signup-form"
-                />
-            </label>
-            <br/>
-            <label>Gender:
-              <input
-                type="text"
-                value={this.props.city}
-                onChange={this.update("gender")}
-                className="signup-form"
-                />
-            </label>
+            <div className="gender">
+              Gender?
+              <button onClick={this.handleGender}>
+                {this.gender}
+              </button>
+            </div>
+            <div className="host">
+              Host?
+              <button onClick={this.handleHost}>
+                {this.host}
+              </button>
+            </div>
             <input type="submit" value="Submit" />
           </div>
         </form>

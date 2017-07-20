@@ -22,6 +22,7 @@ class Api::UsersController < ApplicationController
       :occupation,
       :image_url,
       :age,
+      :gender,
       :about,
       :host,
       languages: []
