@@ -11,13 +11,14 @@ class SignUpForm extends React.Component {
       city: '',
       country: '',
       gender: '',
-      host: true
+      host: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleHost = this.handleHost.bind(this);
+    this.handleGender = this.handleGender.bind(this);
     this.host = '?';
-    this.gender = '?';
+    this.gender = 'Press Me!';
 
   }
 
@@ -41,12 +42,12 @@ class SignUpForm extends React.Component {
 
   handleHost(e) {
      e.preventDefault();
-     if (this.state.host === true) {
+     if (this.state.host === false) {
        this.host = "Yes";
-       this.setState({host: false});
+       this.setState({host: true});
      } else {
        this.host = "No";
-       this.setState({host: true});
+       this.setState({host: false});
      }
    }
 
@@ -84,6 +85,7 @@ class SignUpForm extends React.Component {
             <label>Full Name:
               <input
                 type="text"
+                placeholder="First Last"
                 value={this.state.full_name}
                 onChange={this.update("full_name")}
                 className="signup-input"
@@ -93,6 +95,7 @@ class SignUpForm extends React.Component {
             <label>Email:
               <input
                 type="text"
+                placeholder="Email"
                 value={this.state.email}
                 onChange={this.update("email")}
                 className="signup-input"
@@ -101,7 +104,8 @@ class SignUpForm extends React.Component {
             <br/>
             <label>Password:
               <input
-                type="text"
+                type="password"
+                placeholder="Password"
                 value={this.state.password}
                 onChange={this.update("password")}
                 className="signup-form"
@@ -111,6 +115,7 @@ class SignUpForm extends React.Component {
             <label>City:
               <input
                 type="text"
+                placeholder="City"
                 value={this.props.city}
                 onChange={this.update("city")}
                 className="signup-form"
@@ -120,6 +125,7 @@ class SignUpForm extends React.Component {
             <label>Country:
               <input
                 type="text"
+                placeholder="Country"
                 value={this.props.city}
                 onChange={this.update("country")}
                 className="signup-form"

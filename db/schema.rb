@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20170720181831) do
     t.boolean  "host",            null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "gender"
+    t.string   "gender",          null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["session_token"], name: "index_users_on_session_token", unique: true, using: :btree
   end
