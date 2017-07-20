@@ -24,7 +24,7 @@ class Api::UsersController < ApplicationController
       :age,
       :about,
       :host,
-      location: []
+      languages: []
     )
   end
 
