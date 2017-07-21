@@ -17,9 +17,13 @@ class SignUpForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleHost = this.handleHost.bind(this);
     this.handleGender = this.handleGender.bind(this);
-    this.host = '?';
-    this.gender = 'Press Me!';
+    this.host = '-';
+    this.gender = '-';
+    
+  }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -41,26 +45,26 @@ class SignUpForm extends React.Component {
   }
 
   handleHost(e) {
-     e.preventDefault();
-     if (this.state.host === false) {
-       this.host = "Yes";
-       this.setState({host: true});
-     } else {
-       this.host = "No";
-       this.setState({host: false});
-     }
-   }
-
-   handleGender(e) {
-      e.preventDefault();
-      if (this.state.gender !== "Male") {
-        this.gender = "Male";
-        this.setState({gender: "Male"});
-      } else {
-        this.gender = "Female";
-        this.setState({gender: "Female"});
-      }
+    e.preventDefault();
+    if (this.state.host === false) {
+      this.host = "Yes";
+      this.setState({host: true});
+    } else {
+      this.host = "No";
+      this.setState({host: false});
     }
+  }
+
+  handleGender(e) {
+    e.preventDefault();
+    if (this.state.gender !== "Male") {
+      this.gender = "Male";
+      this.setState({gender: "Male"});
+    } else {
+      this.gender = "Female";
+      this.setState({gender: "Female"});
+    }
+  }
 
 
   renderErrors() {
@@ -79,73 +83,69 @@ class SignUpForm extends React.Component {
     return (
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
-          Please enter the info below!
+          <h2 className="login-header">Sign Up</h2>
           {this.renderErrors()}
           <div className="signup-form">
-            <label>Full Name:
-              <input
-                type="text"
-                placeholder="First Last"
-                value={this.state.full_name}
-                onChange={this.update("full_name")}
-                className="signup-input"
-                />
-            </label>
-            <br/>
-            <label>Email:
-              <input
-                type="text"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.update("email")}
-                className="signup-input"
-                />
-            </label>
-            <br/>
-            <label>Password:
-              <input
-                type="password"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                className="signup-form"
-                />
-            </label>
-            <br/>
-            <label>City:
-              <input
-                type="text"
-                placeholder="City"
-                value={this.props.city}
-                onChange={this.update("city")}
-                className="signup-form"
-                />
-            </label>
-            <br/>
-            <label>Country:
-              <input
-                type="text"
-                placeholder="Country"
-                value={this.props.city}
-                onChange={this.update("country")}
-                className="signup-form"
-                />
-            </label>
-            <br/>
-            <div className="gender">
-              Gender?
+            <input
+              type="text"
+              placeholder="First Last"
+              value={this.state.full_name}
+              onChange={this.update("full_name")}
+              className="signup-input"
+              />
+            <input
+              type="text"
+              placeholder="Email"
+              value={this.state.email}
+              onChange={this.update("email")}
+              className="signup-input"
+              />
+            <input
+              type="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.update("password")}
+              className="signup-input"
+              />
+            <input
+              type="text"
+              placeholder="City"
+              value={this.props.city}
+              onChange={this.update("city")}
+              className="signup-input"
+              />
+            <input
+              type="text"
+              placeholder="Country"
+              value={this.props.city}
+              onChange={this.update("country")}
+              className="signup-input"
+              />
+
+            <div className="signup-button">
+              <div>Gender</div>
               <button onClick={this.handleGender}>
                 {this.gender}
               </button>
             </div>
-            <div className="host">
-              Host?
+
+            <div className="signup-button">
+              Host
               <button onClick={this.handleHost}>
                 {this.host}
               </button>
             </div>
-            <input type="submit" value="Submit" />
+
+            <input type="submit" value="Submit" className="submit-button" />
+
+            <br/>
+            Already a member?
+            <br/>
+            <Link to="/login" className="login_input" className="Link">
+              Sign In
+            </Link>
           </div>
+
         </form>
       </div>
     );

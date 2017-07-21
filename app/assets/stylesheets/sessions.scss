@@ -1,3 +1,108 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// html {
+//   background: url("http://res.cloudinary.com/dreuhltzt/image/upload/v1500589308/Treepichq-edit_ctzg3a.jpg");
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+//   height: 100vh;
+//   width: 100%;
+// }
+
+/*
+  Parent vs. Child mindset
+    put display flex on parent and all children are flex children
+
+    vertical items: align-items
+    horizontal: justify-content
+
+*/
+
+.login-form-container, .signup-form-container {
+  display: flex;
+  flex-direction: column;
+  background: url("http://res.cloudinary.com/dreuhltzt/image/upload/v1500589308/Treepichq-edit_ctzg3a.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  position: fixed;
+  z-index: -1;
+}
+
+.login-form-box, .signup-form-box {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 4px;
+  border-color: black;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  opacity: 0.65;
+  padding: 16px;
+}
+
+.login-form, .signup-form {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.login-input, .signup-input {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.signup-button {
+  display: flex;
+  justify-content: space-between;
+  width: 178px;
+  padding: 5px;
+  color: black;
+  align-items: center
+}
+
+.login-header {
+  margin: 20px;
+}
+
+link, .Link {
+  color: blue;
+  text-decoration: underline;
+  margin: 3px;
+  font-size: 150%;
+  border: 2px;
+}
+
+input {
+  border-style: solid;
+  border-width: 1px;
+  margin: 10px;
+}
+
+button, .submit-button {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+
+  text-align: center;
+  // font-weight: bold;
+  width: 100px;
+  background-color: black;
+  color: white;
+}
+
+h2 {
+  font-size: 28px;
+}
