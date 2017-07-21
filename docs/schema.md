@@ -10,7 +10,7 @@ password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
 city            | string    | not null
 country         | string    | not null
-languages       | array     | 
+languages       | array     |
 occupation      | string    |
 image_url       | string    |
 age             | integer   |
@@ -30,6 +30,7 @@ lng             | float     | not null
 lat             | float     | not null
 city            | string    | not null
 country         | string    | not null
+description     | string    | 
 image_url       | string    |
 
 Association: belongs_to user

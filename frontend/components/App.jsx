@@ -18,13 +18,13 @@ const App = () => (
   <div>
     <header>
       <Link to="/login" className="header-link">
-        <h1>Tree Surfing</h1>
       </Link>
       <GreetingContainer />
     </header>
     <Switch>
       <AuthRoute path="/signup" component={SignUpContainer} />
       <AuthRoute path="/" component={SessionFormContainer} />
+      <Route path="/greeting" component={GreetingContainer} />
     </Switch>
   </div>
 );

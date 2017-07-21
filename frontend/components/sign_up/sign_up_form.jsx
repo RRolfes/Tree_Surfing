@@ -19,7 +19,7 @@ class SignUpForm extends React.Component {
     this.handleGender = this.handleGender.bind(this);
     this.host = '-';
     this.gender = '-';
-    
+
   }
 
   componentWillUnmount() {
@@ -41,7 +41,12 @@ class SignUpForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.signup(user);
+    user["location"] = [user["location"]];
+    this.props.signup(user).then(
+      () => this.props.history.push({
+        pathname: `/`
+      })
+    );
   }
 
   handleHost(e) {

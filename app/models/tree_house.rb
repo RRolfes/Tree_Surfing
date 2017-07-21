@@ -1,0 +1,2 @@
+class TreeHouse < ApplicationRecord
+end

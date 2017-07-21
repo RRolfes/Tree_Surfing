@@ -13,16 +13,17 @@ class SessionForm extends React.Component {
 
 
   // if logged in, go to route index
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
-      this.props.history.push('/');
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.loggedIn) {
+  //     this.props.history.push('/');
+  //   }
+  // }
 
   componentWillUnmount() {
+
     this.props.clearErrors();
   }
-  
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -39,8 +40,15 @@ class SessionForm extends React.Component {
       };
     } else {
       user = this.state;
+      user["location"] = [user["location"]];
     }
-    this.props.login(user);
+
+     this.props.login(user);
+    //.then(
+    //   () => this.props.history.push({
+    //     pathname: `/`
+    //   })
+    // );
   }
 
       renderErrors() {
