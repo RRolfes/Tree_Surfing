@@ -20,7 +20,6 @@ class SessionForm extends React.Component {
   // }
 
   componentWillUnmount() {
-
     this.props.clearErrors();
   }
 
@@ -40,7 +39,7 @@ class SessionForm extends React.Component {
       };
     } else {
       user = this.state;
-      user["location"] = [user["location"]];
+      // user["location"] = [user["location"]];
     }
 
      this.props.login(user);
@@ -53,7 +52,7 @@ class SessionForm extends React.Component {
 
       renderErrors() {
         return(
-          <ul>
+          <ul className="errors">
             {this.props.errors.map((error, i) => (
               <li key={`error-${i}`}>
                 {error}

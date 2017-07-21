@@ -41,12 +41,9 @@ class SignUpForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
+    // console.log(user["location"]);
     user["location"] = [user["location"]];
-    this.props.signup(user).then(
-      () => this.props.history.push({
-        pathname: `/`
-      })
-    );
+    this.props.signup(user);
   }
 
   handleHost(e) {
@@ -74,7 +71,7 @@ class SignUpForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
+      <ul className="errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}

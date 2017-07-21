@@ -29,6 +29,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: sans-serif;
   height: 100vh;
   width: 100%;
   justify-content: center;
@@ -43,10 +44,11 @@
   flex-direction: column;
   border-style: solid;
   border-width: 4px;
-  border-color: black;
+  border-color: white;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: black;
+  color: white;
   opacity: 0.65;
   padding: 16px;
 }
@@ -69,7 +71,7 @@
   justify-content: space-between;
   width: 178px;
   padding: 5px;
-  color: black;
+  color: white;
   align-items: center
 }
 
@@ -77,17 +79,21 @@
   margin: 20px;
 }
 
+.errors {
+  color: red;
+  font-weight: bold;
+}
+
 link, .Link {
-  color: blue;
+  color: white;
   text-decoration: underline;
   margin: 3px;
-  font-size: 150%;
   border: 2px;
 }
 
 input {
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   margin: 10px;
 }
 
