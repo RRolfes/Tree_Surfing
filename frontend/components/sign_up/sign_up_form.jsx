@@ -26,12 +26,6 @@ class SignUpForm extends React.Component {
     this.props.clearErrors();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
-      this.props.history.push('/');
-    }
-  }
-
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -41,9 +35,9 @@ class SignUpForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    // console.log(user["location"]);
-    user["location"] = [user["location"]];
-    this.props.signup(user);
+    this.props.signup(user).then( () => {
+      this.props.history.push('/greeting');
+    });
   }
 
   handleHost(e) {

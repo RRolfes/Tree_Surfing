@@ -11,14 +11,6 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
-  // if logged in, go to route index
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.loggedIn) {
-  //     this.props.history.push('/');
-  //   }
-  // }
-
   componentWillUnmount() {
     this.props.clearErrors();
   }
@@ -33,77 +25,69 @@ class SessionForm extends React.Component {
     e.preventDefault();
     let user;
     if (e.currentTarget.innerHTML === "Guest Login") {
-      user = {
-        email: "Guest@TreeSurfing.com",
-        password: "password"
-      };
+      user = { email: "Guest@TreeSurfing.com", password: "password" };
     } else {
       user = this.state;
-      // user["location"] = [user["location"]];
     }
-
-     this.props.login(user);
-    //.then(
-    //   () => this.props.history.push({
-    //     pathname: `/`
-    //   })
-    // );
+    this.props.login(user).then( () => {
+      this.props.history.push('/greeting');
+    });
   }
 
-      renderErrors() {
-        return(
-          <ul className="errors">
-            {this.props.errors.map((error, i) => (
-              <li key={`error-${i}`}>
-                {error}
-              </li>
-            ))}
-          </ul>
-        );
-      }
+  renderErrors() {
+    return(
+      <ul className="errors">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
-      render() {
-        return (
-            <div className="login-form-container">
-              <form onSubmit={this.handleSubmit} className="login-form-box">
-                <h2 className="login-header">Please Login</h2>
-                {this.renderErrors()}
-                <div className="login-form">
-                    <input type="text"
-                      value={this.state.email}
-                      onChange={this.update('email')}
-                      className="login-input"
-                      placeholder="email"
-                      />
-                    <input
-                      type="password"
-                      value={this.state.password}
-                      onChange={this.update('password')}
-                      className="login-input"
-                      placeholder="password"
-                      />
-                  <input
-                    className="login_input"
-                    className="submit-button"
-                    type="submit"
-                    value="Submit" />
-                  <button
-                    className="login_input"
-                    onClick={this.handleSubmit}>
-                    Guest Login
-                  </button>
-                  Not a member yet?
-                  <Link
-                    to="/signup"
-                    className="login_input"
-                    className="Link">
-                    Sign Up
-                  </Link>
-                </div>
-              </form>
-            </div>
-        );
-      }
-    }
+  render() {
+    return (
+      <div className="login-form-container">
+        <form onSubmit={this.handleSubmit} className="login-form-box">
+          <h2 className="login-header">Please Login</h2>
+          {this.renderErrors()}
+          <div className="login-form">
+            <input type="text"
+              value={this.state.email}
+              onChange={this.update('email')}
+              className="login-input"
+              placeholder="email"
+              />
+            <input
+              type="password"
+              value={this.state.password}
+              onChange={this.update('password')}
+              className="login-input"
+              placeholder="password"
+              />
+            <input
+              className="login_input"
+              className="submit-button"
+              type="submit"
+              value="Submit" />
+            <button
+              className="login_input"
+              onClick={this.handleSubmit}>
+              Guest Login
+            </button>
+            Not a member yet?
+            <Link
+              to="/signup"
+              className="login_input"
+              className="Link">
+              Sign Up
+            </Link>
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
 
-    export default withRouter(SessionForm);
+export default withRouter(SessionForm);
