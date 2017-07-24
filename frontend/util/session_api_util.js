@@ -3,6 +3,14 @@ import {
   receiveErrors
 } from '../actions/session_actions';
 
+export const signup = user => (
+  $.ajax({
+    method: 'POST',
+    url: '/api/users',
+    data: {user}
+  })
+);
+
 export const login = user => (
   $.ajax({
     method: 'POST',
@@ -11,13 +19,6 @@ export const login = user => (
   })
 );
 
-export const signup = user => (
-  $.ajax({
-    method: 'POST',
-    url: '/api/users',
-    data: {user}
-  })
-);
 
 export const logout = () => (
   $.ajax({

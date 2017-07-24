@@ -18,6 +18,7 @@ class Api::UsersController < ApplicationController
       :email,
       :password,
       :city,
+      :state,
       :country,
       :occupation,
       :image_url,

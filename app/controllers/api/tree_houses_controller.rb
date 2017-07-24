@@ -3,31 +3,35 @@ class Api::TreeHousesController < ApplicationController
     @tree_house = TreeHouse.new(tree_house_params)
 
     if @tree_house.save
-      render #path
+      render 'api/tree_houses/show'
     else
-      render jason: @tree_house.errros.full_messages, status: 422
+      render json: @tree_house.errros.full_messages, status: 422
     end
   end
 
   def index
     @tree_houses = TreeHouse.all
+    render 'api/tree_houses/index'
   end
 
   def show
-    @tree_house = TreeHouse.find
+    @tree_house = TreeHouse.find(params[:id])
+    render 'api/tree_houses/show'
   end
 
   private
 
   def tree_house_params
     params.require(:tree_house).permit(
-    :user_id,
-    :lng,
-    :lat,
-    :city,
-    :country,
-    :description,
-    :image_url
+      :user_id,
+      :lat,
+      :lng,
+      :city,
+      :sate,
+      :country,
+      :name,
+      :description,
+      :image_url
     )
   end
 end
