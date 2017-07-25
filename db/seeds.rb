@@ -107,4 +107,26 @@ ActiveRecord::Base.transaction do
     image_url: 'https://a0.muscache.com/im/pictures/6ef18b6d-d14a-47dc-8e0d-1f2d2b2955a3.jpg',
     description: 'Huge, romantic luxery tree house!'
   )
+
+  TreeHouse.create!(
+    user_id: 'Ryan Rolfes',
+    lat: -22.863,
+    lng: -46.035,
+    name: 'Jungle House',
+    city: 'Monte Verde',
+    country: 'Brazil',
+    image_url: 'https://a0.muscache.com/im/pictures/69769498/8b565228_original.jpg',
+    description: 'Cozy Tree House in Monte Verde'
+  )
+
+  TreeHouse.create!(
+    user_id: 'Ryan Rolfes',
+    lat: 19.431,
+    lng: -155.225,
+    name: 'Surf Tree',
+    city: 'Volcano',
+    country: 'Hawaii',
+    image_url: 'https://a0.muscache.com/im/pictures/291713/b19c5c33_original.jpg',
+    description: 'Treehouse at Kilauea Volcano'
+  )
 end

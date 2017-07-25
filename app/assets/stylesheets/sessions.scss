@@ -60,10 +60,11 @@
 
 }
 
-.login-input, .signup-input {
+.login_input, .signup-input {
   display: flex;
   justify-content: center;
-  padding: 5px;
+  padding: 2px;
+  margin-bottom: 24px;
 }
 
 .signup-button {
@@ -101,6 +102,7 @@ button, .submit-button {
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
+  padding: 2px;
 
   text-align: center;
   // font-weight: bold;

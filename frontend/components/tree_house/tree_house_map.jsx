@@ -15,7 +15,8 @@ class Map extends React.Component {
     const map = (this.refs.map);
     const options = {
       center: mapCenter,
-      zoom: 3
+      zoom: 4,
+      scrollwheel: false
     };
 
     this.map = new google.maps.Map(map, options);
@@ -36,9 +37,7 @@ class Map extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className='map' ref='map'/>
-      </div>
+      <div className='map' ref='map'/>
     );
   }
 }
