@@ -74,8 +74,8 @@ ActiveRecord::Base.transaction do
 
   TreeHouse.create!(
     user_id: user2.id,
+    lng: -123.006,
     lat: 38.354,
-    lng: 123.006,
     name: 'Eagles Nest Tree House',
     city: 'San Francisco',
     state: 'California',
@@ -86,9 +86,9 @@ ActiveRecord::Base.transaction do
 
   TreeHouse.create!(
     user_id: user1.id,
+    lng: -84.388,
     lat: 33.749,
-    lng: 84.388,
-    name: 'Bolt Farm Tree House',
+    name: 'Secluded Intown Tree House',
     city: 'Atlanta',
     state: 'Georgia',
     country: 'United States',
@@ -98,9 +98,9 @@ ActiveRecord::Base.transaction do
 
   TreeHouse.create!(
     user_id: user3.id,
-    lat: 34.722,
     lng: -83.029,
-    name: 'Secluded Intown Tree House',
+    lat: 34.722,
+    name: 'Bolt Farm Tree House',
     city: 'Walhalla',
     state: 'South Carolina',
     country: 'United States',
