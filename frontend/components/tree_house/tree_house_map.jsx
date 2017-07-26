@@ -1,7 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
 const mapCenter = { lat: 37.775, lng: -121.671 };
+
+const icon = 'https://icons8.com/icon/19696/Treehouse';
+
+const options = {
+  center: mapCenter,
+  zoom: 8,
+  scrollwheel: false
+};
 
 class Map extends React.Component {
 
@@ -11,18 +20,15 @@ class Map extends React.Component {
     this.addTreeHouse = this.addTreeHouse.bind(this);
   }
 
-  componentDidMount () {
+  componentDidMount() {
     const map = (this.refs.map);
-    const options = {
-      center: mapCenter,
-      zoom: 9,
-      scrollwheel: false
-    };
-
     this.map = new google.maps.Map(map, options);
-    const treeHouses = this.props.treeHouses;
-    Object.keys(treeHouses).forEach( id => {
-      this.addTreeHouse(treeHouses[id]);
+    this.registerListeners();
+  }
+
+  componentDidUpdate() {
+    Object.keys(this.props.treeHouses).forEach( id => {
+      this.addTreeHouse(this.props.treeHouses[id]);
     });
   }
 
@@ -40,7 +46,8 @@ class Map extends React.Component {
     const pos = new google.maps.LatLng(treeHouse.lat, treeHouse.lng);
     const marker = new google.maps.Marker({
       position: pos,
-      map: this.map
+      map: this.map,
+      icon: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1501105521/icons8-Treehouse-48_o9q0uy.png'
     });
   }
 

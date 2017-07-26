@@ -74,6 +74,7 @@ ActiveRecord::Base.transaction do
     host: true
   )
 
+  # 1
   TreeHouse.create!(
     user_id: user3.id,
     lng: -123.006,
@@ -86,6 +87,20 @@ ActiveRecord::Base.transaction do
     description: 'Coolest place ever!'
   )
 
+  # 9
+  TreeHouse.create!(
+  user_id: user1.id,
+  lat: 36.362,
+  lng: -121.856,
+  name: 'Big Sur Luxery Tree House',
+  city: 'Big Sur',
+  state: 'California',
+  country: 'United States',
+  image_url: 'http://www.postranchinn.com/wp-content/themes/post_ranch_inn/images/bg-tree-xl.jpg',
+  description: 'Big Sur luxery tree house!'
+  )
+
+  # 2
   TreeHouse.create!(
     user_id: user1.id,
     lng: -84.388,
@@ -98,6 +113,7 @@ ActiveRecord::Base.transaction do
     description: 'Awesome TreeHouse in Georgia with lots of windows and a light up bridge!'
   )
 
+  # 3
   TreeHouse.create!(
     user_id: user1.id,
     lng: -83.029,
@@ -110,18 +126,8 @@ ActiveRecord::Base.transaction do
     description: 'Huge, romantic luxery tree house!'
   )
 
-  TreeHouse.create!(
-    user_id: user1.id,
-    lat: 37.116,
-    lng: -121.917,
-    name: 'Vinyard View Tree House',
-    city: 'Los Gatos',
-    state: 'California',
-    country: 'United States',
-    image_url: 'https://a0.muscache.com/im/pictures/15661a7c-bfb2-421d-ac06-332e5d28f623.jpg',
-    description: 'Treehouse in Vineyard Overlooking Monterey Bay'
-  )
 
+    # 5
   TreeHouse.create!(
     user_id: user1.id,
     lat: -22.863,
@@ -134,6 +140,7 @@ ActiveRecord::Base.transaction do
     description: 'Cozy Tree House in Monte Verde'
   )
 
+  # 6
   TreeHouse.create!(
     user_id: user1.id,
     lat: 19.431,
@@ -146,6 +153,7 @@ ActiveRecord::Base.transaction do
     description: 'Treehouse at Kilauea Volcano'
   )
 
+  # 7
   TreeHouse.create!(
     user_id: user1.id,
     lat: 38.206,
@@ -158,6 +166,21 @@ ActiveRecord::Base.transaction do
     description: 'Magical, Romantic Treehouse'
   )
 
+  # 4
+  TreeHouse.create!(
+  user_id: user1.id,
+  lat: 37.116,
+  lng: -121.917,
+  name: 'Vinyard View Tree House',
+  city: 'Los Gatos',
+  state: 'California',
+  country: 'United States',
+  image_url: 'https://a0.muscache.com/im/pictures/15661a7c-bfb2-421d-ac06-332e5d28f623.jpg',
+  description: 'Treehouse in Vineyard Overlooking Monterey Bay'
+  )
+
+  
+  # 8
   TreeHouse.create!(
     user_id: user1.id,
     lat: 37.794,
@@ -169,5 +192,282 @@ ActiveRecord::Base.transaction do
     image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1465450461/campground-photos/xmuu84zvdnepkzpuucq5.jpg',
     description: 'Nestled into a small cluster of the dominant trees in our landscape our tree platform is built on a multi-trunked interior live oak'
   )
+
+
+  #10
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: 47.538,
+    lng: -121.911,
+    name: 'Tree House Point',
+    city: 'Issaquah',
+    state: 'Washington',
+    country: 'United States',
+    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Treehouse-Point-c-940x1404.jpg',
+    description: 'Just outside Seattle in Issaquah, Washington, is the treehouse B&B named TreeHouse Point.'
+  )
+
+  #11
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: -16.470,
+    lng: 145.345,
+    name: 'Silky Oaks Lodge',
+    city: 'Queensland',
+    state: 'Queensland',
+    country: 'Australia',
+    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Silky-Oaks-b-940x630.jpg',
+    description: 'Silky Oaks Lodge is a luxury tree house in the jungle around Queensland, Australia’s Mossman Gorge River.'
+  )
+
+  #12
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: -36.848,
+    lng: 174.754,
+    name: 'Yellow Tree House',
+    city: 'Aukland',
+    state: 'Aukland',
+    country: 'New Zeland',
+    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Yellow-Treehouse-Restaurant-a.jpg',
+    description: 'The Yellow Tree House is built around a 40-meter-tall redwood tree.'
+  )
+
+  #13
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: 8.777,
+    lng: -83.222,
+    name: 'Finca Bellavista',
+    city: 'Puntarenas',
+    state: 'Puntarenas',
+    country: 'Costa Rica',
+    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Finca-Bellavista-c.jpg',
+    description: 'Finca Bellavista is a sustainable treehouse community in Costa Rica’s rainforest canopies. It’s quite possibly the coolest place on earth.'
+  )
+
+  #14
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: 66.071,
+    lng: 20.987,
+    name: 'TreeHotel',
+    city: 'Harads',
+    state: '',
+    country: 'Sweden',
+    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Treehotel-f-940x627.jpg',
+    description: 'The second-to-none Treehotel in Harads, Sweden, is absolutely incredible.'
+  )
+
+  #15
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: 19.472,
+    lng: 109.885,
+    name: 'Nanshan Tree House',
+    city: 'Hainan',
+    state: '',
+    country: 'China',
+    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Nanshan-b.jpg',
+    description: 'On the island of Hainan in the South China Sea, the Nanshan Treehouse can house up to 20 people. The tree house is also near a Buddhist “theme park,” with a number of pagodas and temples.'
+  )
+
+  #16
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: 35.826,
+    lng: 138.333,
+    name: 'Teahouse Tetsu',
+    city: 'Hokuto City',
+    state: '',
+    country: 'Japan',
+    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Teahouse-a.jpg',
+    description: 'The Teahouse Tetsu is exactly what it sounds like: a teahouse in a tree. It was designed by architect Terunobu Fujimori and sits among the cherry blossoms in Hokuto City, Japan.'
+  )
+
+  #17
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: 11.696,
+    lng: 102.531,
+    name: 'Soneva Kiri Treepod',
+    city: 'Sovena Kiri',
+    state: '',
+    country: 'Thailand',
+    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Soneva-Kiri-a-940x529.jpg',
+    description: 'The Soneva Kiri Resort on Koh Kood, Thailand, has a one-of-a-kind feature: “treepod” dining. Basically, you enter the pod from the jungle floor, then it’s hoisted into the canopy, where you can camp and relax on the deck. Oh, and you can be served a meal by a waiter on a zipline.'
+  )
+
+  #18
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: -39.873,
+    lng: -71.913,
+    name: 'Nothofagus Spiral',
+    city: 'Patagonia',
+    state: '',
+    country: 'Chile',
+    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Nothofagus-b-940x625.jpg',
+    description: 'The Nothofagus Hotel is among the treetops of the Huilo Huilo Biological Reserve in Chilean Patagonia.
+
+'
+  )
+
+  #19
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: 45.0345,
+    lng: -79.437,
+    name: 'Muskoka Treehouse',
+    city: 'Lake Muskoka',
+    state: 'Ontario',
+    country: 'Canada',
+    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Muskoka-a.jpg',
+    description: 'Designer Lukasz Kos’s treehouse in Lake Muskoka, Ontario, is named the 4Treehouse. It was designed to minimize its impact on the surrounding trees. There are three levels to this treehouse, which looks like a Japanese lantern when lit up at night.'
+  )
+
+  #20
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: 35.9856,
+    lng: -84.994,
+    name: 'The Minister’s Treehouse',
+    city: 'Crossville',
+    state: 'Tennessee',
+    country: 'United States',
+    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Minister%E2%80%99s-Treehouse-a.jpg',
+    description: 'The Minister’s Treehouse in Crossville, Tennessee, is possibly the world’s largest treehouse, standing 97 feet tall with over 80 rooms, and also serves as a church. Minister Horace Burgess started building it in 1993 and hasn’t stopped. The house is built around a massive oak with six other oaks used for support.'
+  )
+  #
+  # #10
+  # TreeHouse.create!(
+  #   user_id: user1.id,
+  #   lat: ,
+  #   lng: ,
+  #   name: '',
+  #   city: '',
+  #   state: '',
+  #   country: '',
+  #   image_url: '',
+  #   description: ''
+  # )
+  #
+  # #10
+  # TreeHouse.create!(
+  #   user_id: user1.id,
+  #   lat: ,
+  #   lng: ,
+  #   name: '',
+  #   city: '',
+  #   state: '',
+  #   country: '',
+  #   image_url: '',
+  #   description: ''
+  # )
+  #
+  # #10
+  # TreeHouse.create!(
+  #   user_id: user1.id,
+  #   lat: ,
+  #   lng: ,
+  #   name: '',
+  #   city: '',
+  #   state: '',
+  #   country: '',
+  #   image_url: '',
+  #   description: ''
+  # )
+  #
+  # #10
+  # TreeHouse.create!(
+  #   user_id: user1.id,
+  #   lat: ,
+  #   lng: ,
+  #   name: '',
+  #   city: '',
+  #   state: '',
+  #   country: '',
+  #   image_url: '',
+  #   description: ''
+  # )
+  #
+  # #10
+  # TreeHouse.create!(
+  #   user_id: user1.id,
+  #   lat: ,
+  #   lng: ,
+  #   name: '',
+  #   city: '',
+  #   state: '',
+  #   country: '',
+  #   image_url: '',
+  #   description: ''
+  # )
+  #
+  # #10
+  # TreeHouse.create!(
+  #   user_id: user1.id,
+  #   lat: ,
+  #   lng: ,
+  #   name: '',
+  #   city: '',
+  #   state: '',
+  #   country: '',
+  #   image_url: '',
+  #   description: ''
+  # )
+  #
+  # #10
+  # TreeHouse.create!(
+  #   user_id: user1.id,
+  #   lat: ,
+  #   lng: ,
+  #   name: '',
+  #   city: '',
+  #   state: '',
+  #   country: '',
+  #   image_url: '',
+  #   description: ''
+  # )
+  #
+  # #10
+  # TreeHouse.create!(
+  #   user_id: user1.id,
+  #   lat: ,
+  #   lng: ,
+  #   name: '',
+  #   city: '',
+  #   state: '',
+  #   country: '',
+  #   image_url: '',
+  #   description: ''
+  # )
+  #
+  # #10
+  # TreeHouse.create!(
+  #   user_id: user1.id,
+  #   lat: ,
+  #   lng: ,
+  #   name: '',
+  #   city: '',
+  #   state: '',
+  #   country: '',
+  #   image_url: '',
+  #   description: ''
+  # )
+  #
+  # #10
+  # TreeHouse.create!(
+  #   user_id: user1.id,
+  #   lat: ,
+  #   lng: ,
+  #   name: '',
+  #   city: '',
+  #   state: '',
+  #   country: '',
+  #   image_url: '',
+  #   description: ''
+  # )
+
 
 end

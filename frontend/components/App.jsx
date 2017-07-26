@@ -8,7 +8,6 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import GreetingContainer from './greeting/greeting_container';
 import TreeHouseContainer from './tree_house/tree_house_container';
 import SessionFormContainer from './session_form/session_form_container';
 import SignUpContainer from './sign_up/sign_up_container';

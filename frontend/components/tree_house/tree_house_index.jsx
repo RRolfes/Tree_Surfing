@@ -10,21 +10,27 @@ class TreeHouseIndex extends React.Component {
       northEast: { lat: 38.5, lng: -120.7 },
       southWest: { lat: 36.5, lng: -122.7 }
     };
-    console.log("hello");
     this.props.updateFilter(defaultBounds);
   }
 
   render() {
     const treeHouses = this.props.treeHouses;
-    if (Object.keys(treeHouses).length !== 0) {
-      return (
-        <div>
+    // const
+    // if (Object.keys(treeHouses).length !== 0) {
+    return (
+      <div>
 
-          <div className="nav-bar">
-            <h1>Tree Surfing</h1>
-            <button className="header-button" onClick={this.props.logout}>Log Out</button>
+        <div className="nav-bar">
+          <h1>Tree Surfing</h1>
+          <div className="nav-bar-greeting-and-logout">
+            <h2>Hi, {this.props.session.currentUser.full_name}</h2>
+            <button
+              className="header-button"
+              onClick={this.props.logout}>
+              Log Out
+            </button>
           </div>
-
+        </div>
 
         <div className="index-map-container">
           <div className="tree-house-index">
@@ -43,22 +49,23 @@ class TreeHouseIndex extends React.Component {
           </div>
 
           <div className="map-container">
-            <Map treeHouses={treeHouses} updateFilter={this.props.updateFilter} />
+            <Map
+              treeHouses={treeHouses}
+              updateFilter={this.props.updateFilter}
+              />
           </div>
 
           <div className="logout-button">
           </div>
         </div>
-        </div>
-      );
-    } else {
-      return(
-        <div> Loading </div>
-      );
-    }
+      </div>
+    );
+    // } else {
+    //   return(
+    //     <div> Loading </div>
+    //   );
+    // }
   }
-
-
 }
 
 export default withRouter(TreeHouseIndex);
