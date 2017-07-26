@@ -179,7 +179,7 @@ ActiveRecord::Base.transaction do
   description: 'Treehouse in Vineyard Overlooking Monterey Bay'
   )
 
-  
+
   # 8
   TreeHouse.create!(
     user_id: user1.id,
