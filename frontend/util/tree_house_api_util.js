@@ -1,10 +1,10 @@
-export const fetchTreeHouses = data => (
-  $.ajax({
+export const fetchTreeHouses = bounds => {
+  return $.ajax({
     method: 'GET',
     url: '/api/tree_houses',
-    data
-  })
-);
+    bounds
+  });
+};
 
 export const fetchTreeHouse = id => (
   $.ajax({

@@ -13,8 +13,8 @@ export const receiveTreeHouse = treeHouse => ({
   treeHouse
 });
 
-export const fetchTreeHouses = () => dispatch => (
-  APIUtil.fetchTreeHouses().then(treeHouses => (
+export const fetchTreeHouses = (bounds) => dispatch => (
+  APIUtil.fetchTreeHouses(bounds).then(treeHouses => (
     dispatch(receiveTreeHouses(treeHouses))
   ))
 );

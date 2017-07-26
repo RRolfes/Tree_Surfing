@@ -6,7 +6,12 @@ import Map from './tree_house_map';
 class TreeHouseIndex extends React.Component {
 
   componentWillMount() {
-    this.props.fetchTreeHouses();
+    const defaultBounds = {
+      northEast: { lat: 38.5, lng: -120.7 },
+      southWest: { lat: 36.5, lng: -122.7 }
+    };
+    console.log("hello");
+    this.props.updateFilter(defaultBounds);
   }
 
   render() {
@@ -38,7 +43,7 @@ class TreeHouseIndex extends React.Component {
           </div>
 
           <div className="map-container">
-            <Map treeHouses={treeHouses} />
+            <Map treeHouses={treeHouses} updateFilter={this.props.updateFilter} />
           </div>
 
           <div className="logout-button">

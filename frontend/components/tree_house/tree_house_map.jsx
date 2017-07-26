@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const mapCenter = { lat: 39.8283, lng: -98.580 };
+const mapCenter = { lat: 37.775, lng: -121.671 };
 
 class Map extends React.Component {
 
@@ -15,7 +15,7 @@ class Map extends React.Component {
     const map = (this.refs.map);
     const options = {
       center: mapCenter,
-      zoom: 4,
+      zoom: 9,
       scrollwheel: false
     };
 
@@ -23,6 +23,16 @@ class Map extends React.Component {
     const treeHouses = this.props.treeHouses;
     Object.keys(treeHouses).forEach( id => {
       this.addTreeHouse(treeHouses[id]);
+    });
+  }
+
+  registerListeners() {
+    google.maps.event.addListener(this.map, 'idle', () => {
+      const { north, south, east, west } = this.map.getBounds().toJSON();
+      const bounds = {
+        northEast: { lat:north, lng: east },
+        southWest: { lat: south, lng: west } };
+      this.props.updateFilter(bounds);
     });
   }
 

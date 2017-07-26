@@ -13,11 +13,13 @@
 #   host:
 # )
 
-# TreeHouse.create(
-#   user_id: ,
+# TreeHouse.create!(
+#   user_id: user1.id,
 #   lat: ,
 #   lng: ,
+#   name: '',
 #   city: '',
+#   state: '',
 #   country: '',
 #   image_url: '',
 #   description: ''
@@ -73,7 +75,7 @@ ActiveRecord::Base.transaction do
   )
 
   TreeHouse.create!(
-    user_id: user2.id,
+    user_id: user3.id,
     lng: -123.006,
     lat: 38.354,
     name: 'Eagles Nest Tree House',
@@ -97,7 +99,7 @@ ActiveRecord::Base.transaction do
   )
 
   TreeHouse.create!(
-    user_id: user3.id,
+    user_id: user1.id,
     lng: -83.029,
     lat: 34.722,
     name: 'Bolt Farm Tree House',
@@ -109,24 +111,63 @@ ActiveRecord::Base.transaction do
   )
 
   TreeHouse.create!(
-    user_id: 'Ryan Rolfes',
+    user_id: user1.id,
+    lat: 37.116,
+    lng: -121.917,
+    name: 'Vinyard View Tree House',
+    city: 'Los Gatos',
+    state: 'California',
+    country: 'United States',
+    image_url: 'https://a0.muscache.com/im/pictures/15661a7c-bfb2-421d-ac06-332e5d28f623.jpg',
+    description: 'Treehouse in Vineyard Overlooking Monterey Bay'
+  )
+
+  TreeHouse.create!(
+    user_id: user1.id,
     lat: -22.863,
     lng: -46.035,
     name: 'Jungle House',
     city: 'Monte Verde',
+    state: '',
     country: 'Brazil',
     image_url: 'https://a0.muscache.com/im/pictures/69769498/8b565228_original.jpg',
     description: 'Cozy Tree House in Monte Verde'
   )
 
   TreeHouse.create!(
-    user_id: 'Ryan Rolfes',
+    user_id: user1.id,
     lat: 19.431,
     lng: -155.225,
     name: 'Surf Tree',
     city: 'Volcano',
-    country: 'Hawaii',
+    state: 'Hawaii',
+    country: 'United States',
     image_url: 'https://a0.muscache.com/im/pictures/291713/b19c5c33_original.jpg',
     description: 'Treehouse at Kilauea Volcano'
   )
+
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: 38.206,
+    lng: -122.682,
+    name: 'Treehouse at Swallowtail Studio',
+    city: 'Peteluma',
+    state: 'California',
+    country: 'United States',
+    image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1485986996/campground-photos/e4tahv9qnivihw52ohjv.jpg',
+    description: 'Magical, Romantic Treehouse'
+  )
+
+  TreeHouse.create!(
+    user_id: user1.id,
+    lat: 37.794,
+    lng: -120.243,
+    name: 'Wondernut Farm',
+    city: 'Yosemite',
+    state: 'California',
+    country: 'United States',
+    image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1465450461/campground-photos/xmuu84zvdnepkzpuucq5.jpg',
+    description: 'Nestled into a small cluster of the dominant trees in our landscape our tree platform is built on a multi-trunked interior live oak'
+  )
+
 end

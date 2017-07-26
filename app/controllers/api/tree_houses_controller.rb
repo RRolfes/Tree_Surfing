@@ -9,9 +9,14 @@ class Api::TreeHousesController < ApplicationController
     end
   end
 
+  # def index
+  #   @tree_houses = TreeHouse.all
+  #   render 'api/tree_houses/index'
+  # end
+
   def index
-    @tree_houses = TreeHouse.all
-    render 'api/tree_houses/index'
+    @tree_houses = bounds ? TreeHouse.in_bounds(bounds) : TreeHouse.all
+    render :index
   end
 
   def show
@@ -33,5 +38,9 @@ class Api::TreeHousesController < ApplicationController
       :description,
       :image_url
     )
+  end
+
+  def bounds
+    params[:bounds]
   end
 end
