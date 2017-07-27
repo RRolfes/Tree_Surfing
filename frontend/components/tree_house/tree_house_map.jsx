@@ -9,8 +9,7 @@ const icon = 'https://icons8.com/icon/19696/Treehouse';
 const options = {
   center: mapCenter,
   zoom: 8,
-  scrollwheel: false,
-  minZoom: 2
+  scrollwheel: false
 
 };
 

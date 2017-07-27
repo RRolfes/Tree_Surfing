@@ -15,8 +15,8 @@ class TreeHouseIndex extends React.Component {
 
   render() {
     const treeHouses = this.props.treeHouses;
-    // const
-    // if (Object.keys(treeHouses).length !== 0) {
+
+    if (treeHouses) {
     return (
       <div>
 
@@ -62,11 +62,11 @@ class TreeHouseIndex extends React.Component {
         </div>
       </div>
     );
-    // } else {
-    //   return(
-    //     <div> Loading </div>
-    //   );
-    // }
+    } else {
+      return(
+        <div> Loading </div>
+      );
+    }
   }
 }
 

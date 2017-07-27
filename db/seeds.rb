@@ -25,6 +25,8 @@
 #   description: ''
 # )
 
+
+
 User.destroy_all
 TreeHouse.destroy_all
 
@@ -75,7 +77,7 @@ ActiveRecord::Base.transaction do
   )
 
   # 1
-  TreeHouse.create!(
+  treeHouse1 = TreeHouse.create!(
     user_id: user3.id,
     lng: -123.006,
     lat: 38.354,
@@ -87,7 +89,7 @@ ActiveRecord::Base.transaction do
     description: 'Coolest place ever!'
   )
 
-  # 9
+  # 2
   TreeHouse.create!(
   user_id: user1.id,
   lat: 36.362,
@@ -100,7 +102,7 @@ ActiveRecord::Base.transaction do
   description: 'Big Sur luxery tree house!'
   )
 
-  # 2
+  # 3
   TreeHouse.create!(
     user_id: user1.id,
     lng: -84.388,
@@ -113,7 +115,7 @@ ActiveRecord::Base.transaction do
     description: 'Awesome TreeHouse in Georgia with lots of windows and a light up bridge!'
   )
 
-  # 3
+  # 4
   TreeHouse.create!(
     user_id: user1.id,
     lng: -83.029,
@@ -126,8 +128,7 @@ ActiveRecord::Base.transaction do
     description: 'Huge, romantic luxery tree house!'
   )
 
-
-    # 5
+  # 5
   TreeHouse.create!(
     user_id: user1.id,
     lat: -22.863,
@@ -178,7 +179,6 @@ ActiveRecord::Base.transaction do
   image_url: 'https://a0.muscache.com/im/pictures/15661a7c-bfb2-421d-ac06-332e5d28f623.jpg',
   description: 'Treehouse in Vineyard Overlooking Monterey Bay'
   )
-
 
   # 8
   TreeHouse.create!(
@@ -468,6 +468,28 @@ ActiveRecord::Base.transaction do
   #   image_url: '',
   #   description: ''
   # )
+
+  Review.create!(
+    tree_house_id: treeHouse1.id,
+    user_id: user1.id,
+    title: "Awesome stay!",
+    comment: "My girlfriend and I stayed the weekend here and had a blast!"
+  )
+
+  Review.create!(
+    tree_house_id: treeHouse1.id,
+    user_id: user2.id,
+    title: "Cool Spot!",
+    comment: "Loved the tree house design and all the ammeneties up there!"
+  )
+
+  Booking.create!(
+    tree_house_id: treeHouse1.id,
+    user_id: user1.id,
+    start_date: '2017-08-08',
+    end_date: '2017-08-11',
+    confirmed: true
+  )
 
 
 end
