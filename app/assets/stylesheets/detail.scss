@@ -1,0 +1,94 @@
+body {
+  background: #fafafa;
+  font-family: 'Roboto', sans-serif;
+}
+
+.tree-house-detail-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.detail-nav-bar {
+
+}
+
+.host-profile-and-tree-house-photo-container {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 60vh;
+}
+
+.tree-house-detail-photo-container {
+  width: 66.666%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+
+}
+
+.bookings-table-and-reviews-index-container {
+  display: flex;
+  justify-content: space-between;
+  height: 40vh;
+}
+
+.host-profile {
+  display:flex;
+  width: 33.333%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.reviews-table {
+  width: 66.666%;
+  display: flex;
+  border: 1px solid black;
+}
+
+.reviewer-profile {
+  width: 33.333%;
+}
+
+.review-item-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.review-item {
+  display: flex;
+  border-top: 1px solid black;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.review-text {
+  border-left: 1px solid black;
+  width: 100%;
+}
+
+
+.bookings-table {
+  width: 33.333%;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+}
+
+.tree-house-detail-photo {
+  width: initial;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+h4 {
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  border:0;
+}

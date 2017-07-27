@@ -4,13 +4,10 @@ import ReactDOM from 'react-dom';
 
 const mapCenter = { lat: 37.775, lng: -121.671 };
 
-const icon = 'https://icons8.com/icon/19696/Treehouse';
-
 const options = {
   center: mapCenter,
   zoom: 8,
   scrollwheel: false
-
 };
 
 class Map extends React.Component {
@@ -54,9 +51,12 @@ class Map extends React.Component {
 
 
   render() {
-    return (
-      <div className='map' ref='map'/>
-    );
+    // this.map;
+    // if (this.map) {
+      return <div className='map' ref='map'/>;
+    // } else {
+    //   return <div>Loading</div>;
+    // }
   }
 }
 

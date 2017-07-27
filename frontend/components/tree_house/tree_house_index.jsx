@@ -5,13 +5,13 @@ import Map from './tree_house_map';
 
 class TreeHouseIndex extends React.Component {
 
-  componentWillMount() {
-    const defaultBounds = {
-      northEast: { lat: 38.5, lng: -120.7 },
-      southWest: { lat: 36.5, lng: -122.7 }
-    };
-    this.props.updateFilter(defaultBounds);
-  }
+  // componentWillMount() {
+  //   const defaultBounds = {
+  //     northEast: { lat: 38.5, lng: -120.7 },
+  //     southWest: { lat: 36.5, lng: -122.7 }
+  //   };
+  //   this.props.updateFilter(defaultBounds);
+  // }
 
   render() {
     const treeHouses = this.props.treeHouses;
@@ -21,7 +21,7 @@ class TreeHouseIndex extends React.Component {
       <div>
 
         <div className="nav-bar">
-          <h1>Tree Surfing</h1>
+          <h1 className="nav-bar-header">Tree Surfing</h1>
           <div className="nav-bar-greeting-and-logout">
             <h2>Hi, {this.props.session.currentUser.full_name}</h2>
             <button
@@ -38,7 +38,7 @@ class TreeHouseIndex extends React.Component {
               {Object.keys(treeHouses).map((key, idx) =>
                 <li key={idx} className="tree-house-index-item" >
                   <Link to={`/treehouses/${key}`}>
-                    <img src={treeHouses[key].image_url}></img>
+                    <img className=".map-img" src={treeHouses[key].image_url}></img>
                   </Link>
                   <ul className="tree-house-info">
                     <li>{treeHouses[key].name}</li>
