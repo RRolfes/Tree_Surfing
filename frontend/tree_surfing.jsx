@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { fetchTreeHouse, fetchTreeHouses } from './actions/tree_house_actions';
+import {
+  fetchTreeHouse,
+  fetchTreeHouses,
+  fetchCurrentTreeHouse
+} from './actions/tree_house_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -17,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   window.fetchTreeHouses = fetchTreeHouses;
   window.fetchTreeHouse = fetchTreeHouse;
+  window.fetchCurrentTreeHouse = fetchCurrentTreeHouse;
   // window.createTreeHouse = createTreeHouse;
 
 

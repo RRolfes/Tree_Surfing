@@ -9,7 +9,12 @@ export const fetchTreeHouses = bounds => (
 export const fetchTreeHouse = id => (
   $.ajax({
     method: 'GET',
-    url: `api/tree_houses/${id}`
+    url: `api/tree_houses/${id}`,
+    data: {
+      treeHouse : {
+        id
+      }
+    }
   })
 );
 

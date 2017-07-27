@@ -37,7 +37,9 @@ class TreeHouseIndex extends React.Component {
             <ul className="index-list">
               {Object.keys(treeHouses).map((key, idx) =>
                 <li key={idx} className="tree-house-index-item" >
-                  <img src={treeHouses[key].image_url}></img>
+                  <Link to={`/treehouses/${key}`}>
+                    <img src={treeHouses[key].image_url}></img>
+                  </Link>
                   <ul className="tree-house-info">
                     <li>{treeHouses[key].name}</li>
                     <li>{treeHouses[key].city}</li>

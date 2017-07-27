@@ -2,10 +2,16 @@ import * as APIUtil from '../util/tree_house_api_util';
 
 export const RECEIVE_TREE_HOUSES = 'RECEIVE_TREE_HOUSES';
 export const RECEIVE_TREE_HOUSE = 'RECEIVE_TREE_HOUSE';
+export const RECEIVE_CURRENT_TREE_HOUSE = 'RECEIVE_CURRENT_TREE_HOUSE';
 
 export const receiveTreeHouses = treeHouses => ({
   type: RECEIVE_TREE_HOUSES,
   treeHouses
+});
+
+export const receiveCurrentTreeHouse = currentTreeHouse => ({
+  type: RECEIVE_CURRENT_TREE_HOUSE,
+  currentTreeHouse
 });
 
 export const receiveTreeHouse = treeHouse => ({
@@ -22,6 +28,12 @@ export const fetchTreeHouses = (bounds) => dispatch => (
 export const fetchTreeHouse = id => dispatch => (
   APIUtil.fetchTreeHouse(id).then(treeHouse => (
     dispatch(receiveTreeHouse(treeHouse))
+  ))
+);
+
+export const fetchCurrentTreeHouse = id => dispatch => (
+  APIUtil.fetchTreeHouse(id).then(treeHouse => (
+    dispatch(receiveCurrentTreeHouse(treeHouse))
   ))
 );
 
