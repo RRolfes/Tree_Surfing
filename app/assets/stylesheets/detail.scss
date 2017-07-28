@@ -6,7 +6,6 @@ body {
 .tree-house-detail-container {
   display: flex;
   flex-direction: column;
-
 }
 
 .detail-nav-bar {
@@ -25,7 +24,11 @@ body {
   height: 100%;
   overflow: hidden;
   background: black;
+}
 
+.link {
+  color: blue;
+  text-align: center;
 }
 
 .bookings-table-and-reviews-index-container {
@@ -40,6 +43,8 @@ body {
   width: 33.333%;
   border: 1px solid black;
   box-sizing: border-box;
+  align-items: center;
+  padding: 20px;
 }
 
 .reviews-table {
@@ -48,8 +53,16 @@ body {
   border: 1px solid black;
 }
 
+.host-photo-container {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
 .reviewer-profile {
-  width: 20%;
+  width: 125px;
+  padding: 10px;
+
 }
 
 .review-item-container {
@@ -61,22 +74,21 @@ body {
 
 }
 
-.review-form-container {
-  width: 30%
+.host-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
 
 .review-container {
-  width: 50%;
+  flex: 1;
 }
 
-.review-error {
+.review-error, .booking-error {
   color: red;
   text-align: center;
-}
-
-.reviewer-photo {
-  height: 150px;
-  width: initial;
 }
 
 .review-item {
@@ -85,6 +97,7 @@ body {
   // border-top: 1px solid black;
   box-sizing: border-box;
   width: 100%;
+  align-items: center;
 }
 
 .review-text {
@@ -92,11 +105,34 @@ body {
   width: 100%;
 }
 
+.booking-header, .review-header {
+  text-align: center;
+}
 
 .bookings-table {
   width: 33.333%;
   border-bottom: 1px solid black;
   box-sizing: border-box;
+  overflow: scroll;
+}
+
+
+
+.review-form-container {
+  width: 30%;
+  border-left: 1px solid;
+
+}
+
+.review-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.host-photo {
+
 }
 
 .tree-house-detail-photo {

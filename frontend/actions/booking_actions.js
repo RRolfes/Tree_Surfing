@@ -6,3 +6,9 @@ export const receiveBooking = booking => ({
   type: RECEIVE_BOOKING,
   booking
 });
+
+export const createBooking = booking => dispatch => (
+  APIUtil.createBooking(booking).then(booking1 => (
+    dispatch(receiveBooking(booking1))
+  ))
+);

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router-dom';
-import { createReview } from '../../util/review_api_util';
+
 
 // need: tree_id, session
 
@@ -16,7 +16,7 @@ class ReviewForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.count = 0;
+    this.errors = null;
   }
 
   update(field) {
@@ -27,18 +27,26 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const review = this.state;
-    createReview(review);
-    this.count++;
-    
-    this.setState({
-      title: '',
-      comment: ''
-    });
+
+    if (this.state.title && this.state.comment) {
+      const review = this.state;
+      this.props.createReview(review);
+      this.errors = false;
+      this.setState({
+        title: '',
+        comment: ''
+      });
+    } else {
+      this.errors = true;
+      this.setState({
+        title: '',
+        comment: ''
+      });
+    }
   }
 
   renderErrors() {
-    if (!this.state.title) {
+    if (!this.state.title || !this.state.comment) {
       return(
         <div className="review-error">Empty title or comment!</div>
       );
@@ -51,9 +59,9 @@ class ReviewForm extends React.Component {
     return (
       <div className="review-form">
         <form onSubmit={this.handleSubmit} className="review-form-box">
-          <h3 className="login-header">Write a review:</h3>
-          {this.count !== 0 ? this.renderErrors() : <div></div>}
-          <div className="signup-form">
+          <h3 className="review-header">Write a review:</h3>
+          {this.errors ? this.renderErrors() : <div></div>}
+          <div className="review-form">
             <input
               type="text"
               placeholder="Title"
@@ -62,7 +70,7 @@ class ReviewForm extends React.Component {
               className="review-input"
               />
             <input
-              type="textarea"
+              type="text"
               placeholder="Comment"
               value={this.state.comment}
               onChange={this.update("comment")}

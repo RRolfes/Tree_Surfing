@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Review from './tree_house_review';
 import ReviewForm from './review_form';
 import { createReview } from '../../util/review_api_util';
 
 import TreeHouseShowContainer from './tree_house_show_container';
+import BookingForm from './booking_form';
 
 class TreeHouseShow extends React.Component {
   constructor(props) {
@@ -53,14 +54,18 @@ class TreeHouseShow extends React.Component {
 
             <div className='host-profile-and-tree-house-photo-container'>
               <div className="host-profile">
+                Host Profile
                 <h2 className="host-name">{host.name}</h2>
-                <img className='host-photo' src={host.photo}></img>
+                <div className="host-photo-container">
+                  <img className='host-photo' src={host.photo}></img>
+                </div>
                 <ul className="host-info">
-                  <li>Hometown: {host.city}</li>
-                  <li>Age: {host.age}</li>
-                  <li>Occupation: {host.occupation}</li>
-                  <li>About: {host.about}</li>
+                  <li><b>Hometown</b>: {host.city}</li>
+                  <li><b>Age</b>: {host.age}</li>
+                  <li><b>Occupation</b>: {host.occupation}</li>
+                  <li><b>About</b>: {host.about}</li>
                 </ul>
+                <Link to={`/treehouses`} className="link">Back to Index page</Link>
               </div>
 
 
@@ -71,12 +76,13 @@ class TreeHouseShow extends React.Component {
 
             <div className='bookings-table-and-reviews-index-container'>
               <div className="bookings-table">
-                <h2>Already booked from:</h2>
-                {bookings.map( booking =>
-                  <span key={booking.id}>
-                    {booking.start_date} - {booking.end_date}
-                  </span>
-                )}
+                <BookingForm
+                  bookings={bookings}
+                  createBooking={this.props.createBooking}
+                  session={this.props.session}
+                  treeHouseId={currentTreeHouse.id}
+                  booking={this.props.booking}
+                  />
               </div>
 
               <div className="reviews-table">
@@ -84,7 +90,7 @@ class TreeHouseShow extends React.Component {
 
                 <ul className="review-item-container">
                   {reviews.map( review =>
-                    <li>
+                    <li key={review.id}>
                       <Review
                       fetchUser={this.props.fetchUser}
                       userId={review.user_id}
@@ -95,12 +101,15 @@ class TreeHouseShow extends React.Component {
                   )}
                 </ul>
 
-                <div className="review-form-container">
-                  <ReviewForm
-                    treeHouseId={currentTreeHouse.id}
-                    session={this.props.session}
-                    />
-                </div>
+
+                  <div className="review-form-container">
+                    <ReviewForm
+                      treeHouseId={currentTreeHouse.id}
+                      session={this.props.session}
+                      createReview={this.props.createReview}
+                      />
+                  </div>
+
 
               </div>
 
@@ -111,7 +120,7 @@ class TreeHouseShow extends React.Component {
       );
     } else {
       return(
-        <div>Loading</div>
+        <div>Loading123</div>
       );
     }
   }
