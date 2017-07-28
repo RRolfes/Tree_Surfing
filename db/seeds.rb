@@ -483,6 +483,13 @@ ActiveRecord::Base.transaction do
     comment: "Loved the tree house design and all the ammeneties up there!"
   )
 
+  Review.create!(
+    tree_house_id: treeHouse1.id,
+    user_id: user3.id,
+    title: "Lovely Place!",
+    comment: "This is my favorite place in the world - hope you love it to!"
+  )
+
   Booking.create!(
     tree_house_id: treeHouse1.id,
     user_id: user1.id,

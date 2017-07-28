@@ -71,7 +71,7 @@ class TreeHouseShow extends React.Component {
 
             <div className='bookings-table-and-reviews-index-container'>
               <div className="bookings-table">
-                <h2>Not available:</h2>
+                <h2>Already booked from:</h2>
                 {bookings.map( booking =>
                   <span key={booking.id}>
                     {booking.start_date} - {booking.end_date}
