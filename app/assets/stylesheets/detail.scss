@@ -36,6 +36,7 @@ body {
 
 .host-profile {
   display:flex;
+  flex-direction: column;
   width: 33.333%;
   border: 1px solid black;
   box-sizing: border-box;
@@ -48,20 +49,40 @@ body {
 }
 
 .reviewer-profile {
-  width: 33.333%;
+  width: 20%;
 }
 
 .review-item-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
+  overflow: scroll;
 
+}
+
+.review-form-container {
+  width: 30%
+}
+
+.review-container {
+  width: 50%;
+}
+
+.review-error {
+  color: red;
+  text-align: center;
+}
+
+.reviewer-photo {
+  height: 150px;
+  width: initial;
 }
 
 .review-item {
   display: flex;
-  border-top: 1px solid black;
+  justify-content: space-between;
+  // border-top: 1px solid black;
   box-sizing: border-box;
   width: 100%;
 }
@@ -85,6 +106,9 @@ body {
   box-sizing: border-box;
 }
 
+.login-header {
+  text-align: center;
+}
 
 h4 {
   font-size: 18px;

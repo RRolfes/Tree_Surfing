@@ -3,5 +3,4 @@ class Review < ApplicationRecord
 
   belongs_to :tree_house
   belongs_to :user
-
 end

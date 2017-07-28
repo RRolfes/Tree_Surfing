@@ -4,12 +4,14 @@ import { combineReducers } from 'redux';
 import SessionReducer from './session_reducer';
 import TreeHousesReducer from './tree_houses_reducer';
 import FiltersReducer from './filters_reducer';
+import UserReducer from './user_reducer';
 
 
 const RootReducer = combineReducers({
   treeHouses: TreeHousesReducer,
   filters: FiltersReducer,
-  session: SessionReducer
+  session: SessionReducer,
+  user: UserReducer
 });
 
 export default RootReducer;

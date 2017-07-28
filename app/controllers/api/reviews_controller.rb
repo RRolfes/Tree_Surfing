@@ -1,9 +1,5 @@
 class Api::ReviewsController < ApplicationController
 
-  # def index
-  #   @reviews = Review.where(tree_house_id: booking_params[tree_house_id])
-  # end
-
   def create
     @review = Review.new(review_params)
 

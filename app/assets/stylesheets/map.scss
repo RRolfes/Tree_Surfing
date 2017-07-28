@@ -25,7 +25,12 @@ body {
   right: 0;
   z-index: 2;
   text-transform: uppercase;
+}
 
+.nav-bar-header {
+  margin: 10px;
+  font-size: 48px;
+  padding: 10px;
 }
 
 .nav-bar-greeting-and-logout {
@@ -40,11 +45,6 @@ body {
   text-transform: uppercase;
 }
 
-.nav-bar-header {
-  margin: 10px;
-  font-size: 48px;
-  padding: 10px;
-}
 
 .tree-house-index {
   display: flex;

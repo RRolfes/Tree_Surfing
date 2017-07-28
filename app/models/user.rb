@@ -30,10 +30,9 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
   before_validation :ensure_session_token_uniqueness
 
-  # has_many :tree_houses
-  # has_many :guests,
-  # 	through: :tree_houses,
-  # 	source: :bookings
+  has_many :bookings
+  has_many :reviews
+
 
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)

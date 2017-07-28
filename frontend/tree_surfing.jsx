@@ -8,6 +8,10 @@ import {
   fetchCurrentTreeHouse
 } from './actions/tree_house_actions';
 
+import {fetchUser} from './actions/user_actions';
+import { createBooking } from './util/booking_api_util';
+import { createReview } from './util/review_api_util';
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
@@ -19,10 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.store = store;
-  window.fetchTreeHouses = fetchTreeHouses;
-  window.fetchTreeHouse = fetchTreeHouse;
-  window.fetchCurrentTreeHouse = fetchCurrentTreeHouse;
-  // window.createTreeHouse = createTreeHouse;
+  window.createReview = createReview;
+  window.createBooking = createBooking;
 
 
   const root = document.getElementById('root');

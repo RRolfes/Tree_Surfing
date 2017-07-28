@@ -9,11 +9,6 @@ class Api::TreeHousesController < ApplicationController
     end
   end
 
-  # def index
-  #   @tree_houses = TreeHouse.all
-  #   render 'api/tree_houses/index'
-  # end
-
   def index
     @tree_houses = bounds ? TreeHouse.in_bounds(bounds) : TreeHouse.all
     render :index

@@ -5,14 +5,6 @@ import Map from './tree_house_map';
 
 class TreeHouseIndex extends React.Component {
 
-  // componentWillMount() {
-  //   const defaultBounds = {
-  //     northEast: { lat: 38.5, lng: -120.7 },
-  //     southWest: { lat: 36.5, lng: -122.7 }
-  //   };
-  //   this.props.updateFilter(defaultBounds);
-  // }
-
   render() {
     const treeHouses = this.props.treeHouses;
 
