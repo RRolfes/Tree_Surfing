@@ -23,3 +23,7 @@ Ultimately, the database was designed to require each tree house to contain its 
 ### Searching the World for Tree Houses
 
 ![Tree House Map Creation Creation](docs/snapshots/tree_house_show.png)
+
+The aforementioned index page is a collection of clickable photos that redirect to each tree houses individual show page. This page allows users to easily see the tree house's availability and book stays by entering his or her desired dates. Other bookings are shown on the page. Unlike other travel sites, Tree Surfing encourages meeting new people by staying together in tree houses. This is comparable to Couch Surfing allowing multiple guests.
+
+Additionally, users can see the host's profile and information. Finally, users can leave comments about the treehouse and see other comments from previous visitors. 
