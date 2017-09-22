@@ -7,7 +7,7 @@ const mapCenter = { lat: 37.775, lng: -121.671 };
 const options = {
   center: mapCenter,
   zoom: 8,
-  scrollwheel: false
+  scrollwheel: true
 };
 
 
