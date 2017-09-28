@@ -24,8 +24,8 @@ class TreeHouseTile extends React.Component {
           </Link>
           <Link to={`/treehouses/${treeHouse.id}`}>
             <div className="tree-house-info">
-              <ul >
-                <li>{treeHouse.name}</li>
+              <ul>
+                <li className="tree-house-name">{treeHouse.name}</li>
                 <li>{treeHouse.city}</li>
                 <li>{treeHouse.country}</li>
               </ul>
