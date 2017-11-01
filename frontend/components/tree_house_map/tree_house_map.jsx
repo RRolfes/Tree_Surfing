@@ -6,7 +6,7 @@ const mapCenter = { lat: 37.775, lng: -121.671 };
 
 const options = {
   center: mapCenter,
-  zoom: 8,
+  zoom: 9,
   scrollwheel: false
 };
 
