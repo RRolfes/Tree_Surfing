@@ -3,6 +3,7 @@ class Api::TreeHousesController < ApplicationController
     @tree_house = TreeHouse.new(tree_house_params)
 
     if @tree_house.save
+      # rendering a view
       render 'api/tree_houses/show'
     else
       render json: @tree_house.errros.full_messages, status: 422

@@ -6,7 +6,6 @@
   }
 
   users: {
-    byId: {
       1: {
         id: 1,
         full_name: "Ryan Rolfes",
@@ -24,7 +23,6 @@
         bookings: [1, 5, 8],
         tree_houses: [1, 2]
       }
-    }
     user_detail: 1
   }
 
