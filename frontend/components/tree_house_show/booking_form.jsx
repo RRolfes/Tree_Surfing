@@ -73,22 +73,30 @@ render() {
           <h3 className="booking-header">Create a booking:</h3>
           {this.errors ? this.renderErrors() : <div></div>}
           <div className="signup-form">
-            Start date:
-            <input
-              type="text"
-              placeholder="yyyy/mm/dd"
-              value={this.state.start_date}
-              onChange={this.update("start_date")}
-              className="booking-input"
-              />
-            End date:
-            <input
-              type="text"
-              placeholder="yyyy/mm/dd"
-              value={this.state.end_date}
-              onChange={this.update("end_date")}
-              className="booking-input"
-              />
+            <div className="start-date-input-container">
+              <div className="start-date-text">
+                Start Date:
+              </div>
+              <input
+                type="text"
+                placeholder="yyyy/mm/dd"
+                value={this.state.start_date}
+                onChange={this.update("start_date")}
+                className="booking-input"
+                />
+            </div>
+            <div className="end-date-input-container">
+              <div className="start-date-text">
+                End Date:
+              </div>
+              <input
+                type="text"
+                placeholder="yyyy/mm/dd"
+                value={this.state.end_date}
+                onChange={this.update("end_date")}
+                className="booking-input"
+                />
+            </div>
 
             <input type="submit" value="Submit" className="submit-button" />
 

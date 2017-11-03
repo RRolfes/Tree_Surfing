@@ -129,7 +129,11 @@ body {
   overflow: scroll;
 }
 
-
+.start-date-input-container, .end-date-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 .review-form-container {
   width: 30%;
