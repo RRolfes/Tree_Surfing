@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-const mapCenter = { lat: 37.775, lng: -121.671 };
+const mapCenter = { lat: 37.75, lng: -121.671 };
 
 const options = {
   center: mapCenter,
