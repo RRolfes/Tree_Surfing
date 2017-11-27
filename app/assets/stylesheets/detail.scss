@@ -6,17 +6,28 @@ body {
 .tree-house-detail-container {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
-.detail-nav-bar {
+.tree-house-detail-nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 4vh;
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
 
+.detail-text {
+  padding: 7px;
 }
 
 .host-profile-and-tree-house-photo-container {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  height: 60vh;
+  height: 57vh;
 }
 
 .tree-house-detail-photo-container {
@@ -29,17 +40,20 @@ body {
   margin-bottom: 10px;
   margin-right: 10px;
   margin-left: 5px;
+  box-shadow: 3px 3px 3px 0px #e6e6e6;
+  border: 1px solid #e6e6e6;
 }
 
-.link {
+.index-link {
   color: blue;
   text-align: center;
+  padding: 7px;
 }
 
 .bookings-table-and-reviews-index-container {
   display: flex;
   justify-content: space-between;
-  height: 40vh;
+  height: 38vh;
 }
 
 .host-profile {
@@ -82,8 +96,6 @@ body {
   width: 80%;
   box-sizing: border-box;
   overflow: scroll;
-
-
 }
 
 .host-info {
@@ -105,7 +117,7 @@ body {
 .review-item {
   display: flex;
   justify-content: space-between;
-  // border-top: 1px solid black;
+  border-bottom: 1px solid #e6e6e6;
   box-sizing: border-box;
   width: 100%;
   align-items: center;
@@ -141,15 +153,18 @@ body {
 .review-form-container {
   width: 30%;
   border-left: 1px solid #e6e6e6;
-
-}
-
-.review-form {
   align-items: center;
-  display: flex;
-  flex-direction: column;
+
 }
 
+.review-form, .booking-input {
+  align-items: center;
+
+}
+
+.review-input {
+  width: 80%;
+}
 
 .host-photo {
 

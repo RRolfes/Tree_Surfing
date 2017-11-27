@@ -40,18 +40,22 @@ class TreeHouseShow extends React.Component {
 
   render() {
     const currentTreeHouse = this.props.treeHouses.currentTreeHouse;
-    const hostLoad = this.props.user;
+    const usersHaveLoaded = this.props.user;
 
-    if (currentTreeHouse && hostLoad) {
+    if (currentTreeHouse && usersHaveLoaded) {
       const reviews = this.props.treeHouses.currentTreeHouse.reviews;
       const bookings = this.props.treeHouses.currentTreeHouse.bookings;
       const host = this.state;
 
-
       return (
         <div className="master">
           <div className='tree-house-detail-container'>
-
+            <div className='tree-house-detail-nav-bar'>
+              <h1 className='detail-text'>
+                {currentTreeHouse.name}
+              </h1>
+              <Link to={`/treehouses`} className="index-link">Back to Map</Link>
+            </div>
             <div className='host-profile-and-tree-house-photo-container'>
               <div className="host-profile">
                 Host Profile
@@ -65,7 +69,6 @@ class TreeHouseShow extends React.Component {
                   <li><b>Occupation</b>: {host.occupation}</li>
                   <li><b>About</b>: {host.about}</li>
                 </ul>
-                <Link to={`/treehouses`} className="link">Back to Index page</Link>
               </div>
 
 

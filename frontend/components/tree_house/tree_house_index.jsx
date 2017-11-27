@@ -10,11 +10,10 @@ class TreeHouseIndex extends React.Component {
 
     if (treeHouses) {
     return (
-      <div>
-
-        <div className="nav-bar">
-          <h1 className="nav-bar-header">Tree Surfing</h1>
-          <div className="nav-bar-greeting-and-logout">
+      <div className="index-page-master">
+        <div className="index-page-nav-bar">
+          <h1 className="index-page-nav-bar-header">Tree Surfing</h1>
+          <div className="index-page-nav-bar-greeting-and-logout">
             <h2>Hi, {this.props.session.currentUser.full_name}</h2>
             <button
               className="header-button"
