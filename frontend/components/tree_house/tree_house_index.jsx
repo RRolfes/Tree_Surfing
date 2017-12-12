@@ -16,11 +16,15 @@ class TreeHouseIndex extends React.Component {
     if (currentUser) {
       return <div className="index-page-nav-bar-greeting-and-logout">
         <h2>Welcome Back, {currentUser.full_name}!</h2>
-        <button
-          className="header-button"
-          onClick={this.props.logout}>
-          Log Out
-        </button>
+          <button
+            className="header-button"
+            onClick={() => this.props.logout().then( () => {
+              this.props.history.push('./login');
+            })
+          }
+            >
+            Log Out
+          </button>
       </div>;
     } else {
       return <div className="index-page-nav-bar-greeting-and-logout">
