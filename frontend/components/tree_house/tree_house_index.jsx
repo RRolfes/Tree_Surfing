@@ -4,23 +4,49 @@ import TreeHouseContainer from './tree_house_container';
 import Map from './tree_house_map';
 
 class TreeHouseIndex extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.greeting = this.greeting.bind(this);
+  }
+
+  greeting() {
+    const currentUser = this.props.session.currentUser;
+
+    if (currentUser) {
+      return <div className="index-page-nav-bar-greeting-and-logout">
+        <h2>Welcome Back, {currentUser.full_name}!</h2>
+        <button
+          className="header-button"
+          onClick={this.props.logout}>
+          Log Out
+        </button>
+      </div>;
+    } else {
+      return <div className="index-page-nav-bar-greeting-and-logout">
+        <Link to={`/login`}>
+          <button
+            className="header-button"
+            >
+            Login
+          </button>
+        </Link>
+      </div>;
+    }
+  }
 
   render() {
     const treeHouses = this.props.treeHouses;
+    // const currentUserName = this.props.session.currentUser.full_name;
 
     if (treeHouses) {
     return (
       <div className="index-page-master">
         <div className="index-page-nav-bar">
           <h1 className="index-page-nav-bar-header">Tree Surfing</h1>
-          <div className="index-page-nav-bar-greeting-and-logout">
-            <h2>Hi, {this.props.session.currentUser.full_name}</h2>
-            <button
-              className="header-button"
-              onClick={this.props.logout}>
-              Log Out
-            </button>
-          </div>
+
+          <div>{this.greeting()}</div>
+
         </div>
 
         <div className="index-map-container">

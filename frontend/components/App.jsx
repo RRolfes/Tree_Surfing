@@ -17,12 +17,12 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <Switch>
-      <ProtectedRoute path="/treehouses/:treeHouseId" component={TreeHouseShowContainer} />
-      <ProtectedRoute exact path="/" component={TreeHouseContainer} />
+      <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SignUpContainer} />
-      <AuthRoute path="/" component={SessionFormContainer} />
-    </Switch>
+      <ProtectedRoute path="/treehouses/:treeHouseId" component={TreeHouseShowContainer} />
+      <Route exact path="/" component={TreeHouseContainer} />
+      <Route exact path="/treehouses" component={TreeHouseContainer} />
+
   </div>
 );
 
