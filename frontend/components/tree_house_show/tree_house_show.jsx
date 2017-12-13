@@ -58,8 +58,7 @@ class TreeHouseShow extends React.Component {
             </div>
             <div className='host-profile-and-tree-house-photo-container'>
               <div className="host-profile">
-                Host Profile
-                <h2 className="host-name">{host.name}</h2>
+                <div className="host-name">Hosted by {host.name}</div>
                 <div className="host-photo-container">
                   <img className='host-photo' src={host.photo}></img>
                 </div>

@@ -3,6 +3,16 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.master {
+  margin: 0 auto;
+  max-width: 1440px;
+  position: relative;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
 .tree-house-detail-container {
   display: flex;
   flex-direction: column;
@@ -34,7 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 66.666%;
+  width: 75%;
   background: black;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -59,7 +69,7 @@ body {
 .host-profile {
   display:flex;
   flex-direction: column;
-  width: 33.333%;
+  width: 25%;
   border: 1px solid #e6e6e6;;
   box-sizing: border-box;
   padding: 10px;
@@ -69,7 +79,7 @@ body {
 
 .reviews-table {
   display: flex;
-  width: 66.666%;
+  width: 75%;
   margin-right: 10px;
   margin-left: 5px;
   margin-bottom: 10px;
@@ -135,7 +145,7 @@ body {
 .bookings-table {
   display: flex;
   flex-direction: column;
-  width: 33.333%;
+  width: 25%;
   border: 1px solid #e6e6e6;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -167,6 +177,10 @@ body {
 }
 
 .host-photo {
+  display: block;
+  width: auto;
+  height: auto;
+  background-size: cover !important;
 
 }
 
@@ -181,6 +195,11 @@ body {
 
 .login-header {
   text-align: center;
+}
+
+.host-name {
+  font-size: 22px;
+  padding-bottom: 10px;
 }
 
 h4 {
