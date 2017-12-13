@@ -14,36 +14,37 @@ class TreeHouseIndex extends React.Component {
     const currentUser = this.props.session.currentUser;
 
     if (currentUser) {
+      const firstName = currentUser.full_name.split(" ")[0];
       return <div className="index-page-nav-bar-greeting-and-logout">
-        <h2>Welcome Back, {currentUser.full_name}!</h2>
-          <button
-            className="header-button"
-            onClick={() => this.props.logout().then( () => {
-              this.props.history.push('./login');
-            })
-          }
-            >
-            Log Out
-          </button>
-      </div>;
-    } else {
-      return <div className="index-page-nav-bar-greeting-and-logout">
-        <Link to={`/login`}>
-          <button
-            className="header-button"
-            >
-            Login
-          </button>
-        </Link>
-      </div>;
-    }
+        <h2>Hi, {firstName}!</h2>
+        <button
+          className="header-button"
+          onClick={() => this.props.logout().then( () => {
+            this.props.history.push('./login');
+          })
+        }
+        >
+        Log Out
+      </button>
+    </div>;
+  } else {
+    return <div className="index-page-nav-bar-greeting-and-logout">
+      <Link to={`/login`}>
+        <button
+          className="header-button"
+          >
+          Login
+        </button>
+      </Link>
+    </div>;
   }
+}
 
-  render() {
-    const treeHouses = this.props.treeHouses;
-    // const currentUserName = this.props.session.currentUser.full_name;
+render() {
+  const treeHouses = this.props.treeHouses;
+  // const currentUserName = this.props.session.currentUser.full_name;
 
-    if (treeHouses) {
+  if (treeHouses) {
     return (
       <div className="index-page-master">
         <div className="index-page-nav-bar">
@@ -83,12 +84,12 @@ class TreeHouseIndex extends React.Component {
         </div>
       </div>
     );
-    } else {
-      return(
-        <div> Loading </div>
-      );
-    }
+  } else {
+    return(
+      <div> Loading </div>
+    );
   }
+}
 }
 
 export default withRouter(TreeHouseIndex);
