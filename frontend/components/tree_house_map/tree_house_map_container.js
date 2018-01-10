@@ -4,8 +4,6 @@ import Map from './tree_house_map';
 import { updateFilter } from '../../actions/filter_actions';
 import { resetLocation } from '../../actions/search_actions';
 
-
-
 const mapStateToProps = ( { treeHouses, location } ) => ({
   treeHouses,
   location

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import TreeHouseMapContainer from './tree_house_map_container';
+import TreeHouseMapContainer from '../tree_house_map/tree_house_map_container';
 import SearchBarContainer from '../search_bar/search_bar_container';
-import Map from './tree_house_map';
 
 class TreeHouseIndex extends React.Component {
   constructor(props) {
