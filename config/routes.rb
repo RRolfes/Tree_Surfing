@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  namespace :api, defaults: { format: :json } do
+
+  get 'api/tree_houses/search/:location', :to => 'api/tree_houses#search'
+
+  namespace :api, defaults: { format: :json } dorake 
     resources :tree_houses, only: [:show, :index, :create]
     resources :users, only: [:show, :create]
     resources :reviews, only: [:create]
