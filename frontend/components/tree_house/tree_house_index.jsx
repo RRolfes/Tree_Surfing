@@ -8,10 +8,10 @@ class TreeHouseIndex extends React.Component {
   constructor(props) {
     super(props);
 
-    this.greeting = this.greeting.bind(this);
+    this.welcome = this.welcome.bind(this);
   }
 
-  greeting() {
+  welcome() {
     const currentUser = this.props.session.currentUser;
 
     if (currentUser) {
@@ -43,16 +43,15 @@ class TreeHouseIndex extends React.Component {
 
 render() {
   const treeHouses = this.props.treeHouses;
-  // const currentUserName = this.props.session.currentUser.full_name;
-  debugger;
-  if (treeHouses) {
+
+    if (treeHouses) {
     return (
       <div className="index-page-master">
         <div className="index-page-nav-bar">
           <h1 className="index-page-nav-bar-header">Tree Surfing</h1>
 
           <SearchBarContainer />
-          <div>{this.greeting()}</div>
+          <div>{this.welcome()}</div>
 
         </div>
 
