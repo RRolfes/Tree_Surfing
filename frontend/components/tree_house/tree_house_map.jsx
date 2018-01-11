@@ -10,6 +10,8 @@ const options = {
   scrollwheel: false
 };
 
+
+
 class Map extends React.Component {
 
   constructor(props) {
@@ -19,8 +21,9 @@ class Map extends React.Component {
   }
 
   componentDidMount() {
-    const map = (this.refs.map);
+    const map = this.refs.map;
     this.map = new google.maps.Map(map, options);
+
     this.registerListeners();
   }
 
@@ -34,7 +37,7 @@ class Map extends React.Component {
     google.maps.event.addListener(this.map, 'idle', () => {
       const { north, south, east, west } = this.map.getBounds().toJSON();
       const bounds = {
-        northEast: { lat:north, lng: east },
+        northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west } };
       this.props.updateFilter(bounds);
     });
@@ -51,12 +54,10 @@ class Map extends React.Component {
 
 
   render() {
-    // this.map;
-    // if (this.map) {
-      return <div className='map' ref='map'/>;
-    // } else {
-    //   return <div>Loading</div>;
-    // }
+      return (
+        <div className='map' ref='map'/>
+
+      );
   }
 }
 
