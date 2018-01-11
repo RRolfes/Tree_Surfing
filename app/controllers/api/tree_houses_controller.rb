@@ -1,4 +1,11 @@
 class Api::TreeHousesController < ApplicationController
+
+  def search
+    @location = Geocoder.search(params[:location])[0]
+    render :search
+    # this hits the jbuilder view!
+  end
+
   def create
     @tree_house = TreeHouse.new(tree_house_params)
 
@@ -24,15 +31,15 @@ class Api::TreeHousesController < ApplicationController
 
   def tree_house_params
     params.require(:tree_house).permit(
-      :user_id,
-      :lat,
-      :lng,
-      :city,
-      :sate,
-      :country,
-      :name,
-      :description,
-      :image_url
+    :user_id,
+    :lat,
+    :lng,
+    :city,
+    :sate,
+    :country,
+    :name,
+    :description,
+    :image_url
     )
   end
 
