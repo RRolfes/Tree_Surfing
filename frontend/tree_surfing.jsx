@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   window.createReview = createReview;
   window.createBooking = createBooking;
+  window.getState = store.getState;
 
 
   const root = document.getElementById('root');
