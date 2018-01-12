@@ -8,7 +8,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import TreeHouseContainer from './tree_house/tree_house_container';
+import TreeHouseIndexContainer from './tree_house/tree_house_index_container';
 import SessionFormContainer from './session_form/session_form_container';
 import SignUpContainer from './sign_up/sign_up_container';
 import TreeHouseShowContainer from './tree_house_show/tree_house_show_container';
@@ -20,8 +20,8 @@ const App = () => (
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SignUpContainer} />
       <ProtectedRoute path="/treehouses/:treeHouseId" component={TreeHouseShowContainer} />
-      <Route exact path="/" component={TreeHouseContainer} />
-      <Route exact path="/treehouses" component={TreeHouseContainer} />
+      <Route exact path="/" component={TreeHouseIndexContainer} />
+      <Route exact path="/treehouses" component={TreeHouseIndexContainer} />
 
   </div>
 );

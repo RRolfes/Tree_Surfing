@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import TreeHouseContainer from './tree_house_container';
+import TreeHouseMapContainer from './tree_house_map_container';
+import SearchBarContainer from '../search_bar/search_bar_container';
 import Map from './tree_house_map';
 
 class TreeHouseIndex extends React.Component {
@@ -50,6 +51,7 @@ render() {
         <div className="index-page-nav-bar">
           <h1 className="index-page-nav-bar-header">Tree Surfing</h1>
 
+          <SearchBarContainer />
           <div>{this.greeting()}</div>
 
         </div>
@@ -73,10 +75,7 @@ render() {
           </div>
 
           <div className="map-container">
-            <Map
-              treeHouses={treeHouses}
-              updateFilter={this.props.updateFilter}
-              />
+            <TreeHouseMapContainer />
           </div>
 
           <div className="logout-button">
