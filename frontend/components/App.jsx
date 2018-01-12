@@ -8,7 +8,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import TreeHouseIndexContainer from './tree_house/tree_house_index_container';
+import TreeHouseIndexContainer from './tree_house_index/tree_house_index_container';
 import SessionFormContainer from './session_form/session_form_container';
 import SignUpFormContainer from './sign_up/sign_up_form_container';
 import TreeHouseShowContainer from './tree_house_show/tree_house_show_container';

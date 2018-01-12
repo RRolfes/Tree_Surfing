@@ -30,11 +30,7 @@ class TreeHouseIndex extends React.Component {
   } else {
     return <div className="index-page-nav-bar-greeting-and-logout">
       <Link to={`/login`}>
-        <button
-          className="header-button"
-          >
-          Login
-        </button>
+        <button className="header-button"> Login </button>
       </Link>
     </div>;
   }

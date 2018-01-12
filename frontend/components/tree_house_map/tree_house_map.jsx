@@ -32,6 +32,7 @@ class Map extends React.Component {
       this.addTreeHouse(this.props.treeHouses[id]);
     });
     if (this.props.location && this.props.location.setLocation){
+      debugger;
       const lat = this.props.location.lat;
       const lng = this.props.location.lng;
       const northEast = this.props.location.northeast;
