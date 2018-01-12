@@ -44,7 +44,7 @@ class TreeHouseIndex extends React.Component {
 render() {
   const treeHouses = this.props.treeHouses;
   // const currentUserName = this.props.session.currentUser.full_name;
-
+  debugger;
   if (treeHouses) {
     return (
       <div className="index-page-master">
