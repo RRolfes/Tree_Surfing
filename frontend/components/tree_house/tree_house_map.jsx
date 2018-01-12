@@ -31,7 +31,24 @@ class Map extends React.Component {
     Object.keys(this.props.treeHouses).forEach( id => {
       this.addTreeHouse(this.props.treeHouses[id]);
     });
-    debugger;
+    if (this.props.location && this.props.location.setLocation){
+      const lat = this.props.location.lat;
+      const lng = this.props.location.lng;
+      const northEast = this.props.location.northeast;
+      const southWest = this.props.location.southwest;
+      const newLatLng = new google.maps.LatLng(lat, lng);
+
+      const northEastBound = new google.maps.LatLng(northEast[0], northEast[1]);
+      const southWestBound = new google.maps.LatLng(southWest[0], southWest[1]);
+      const newBounds = new google.maps.LatLngBounds(southWestBound, northEastBound);
+
+      this.map.setZoom(16);
+      this.map.fitBounds(newBounds);
+      this.map.setZoom(this.map.getZoom() + 1);
+      this.map.panTo(newLatLng);
+
+      this.props.resetLocation();
+    }
   }
 
   registerListeners() {
@@ -57,11 +74,11 @@ class Map extends React.Component {
 //
 //   // this.MarkerManager.updateMarkers(this.props.homes);
 //   debugger;
-//   if (this.props.newLocation && this.props.newLocation.setLocation){
-//     const lat = this.props.newLocation.lat;
-//     const lng = this.props.newLocation.lng;
-//     const northEast = this.props.newLocation.northeast;
-//     const southWest = this.props.newLocation.southwest;
+//   if (this.props.location && this.props.location.setLocation){
+//     const lat = this.props.location.lat;
+//     const lng = this.props.location.lng;
+//     const northEast = this.props.location.northeast;
+//     const southWest = this.props.location.southwest;
 //     const newLatLng = new google.maps.LatLng(lat, lng);
 //
 //     const northEastBound = new google.maps.LatLng(northEast[0], northEast[1]);
