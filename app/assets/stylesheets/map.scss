@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 
+.search-bar {
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  box-shadow: 0px 3px 14px 1px #e6e1e6;
+}
+
 .index-map-container {
   display: flex;
   margin: 10px;
