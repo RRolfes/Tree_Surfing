@@ -1,101 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-
-.search-bar {
-  height: 40px;
-  width: 490px;
-  display: flex;
-  margin-left: 10px;
-  border: 1px solid lightgray;
-  border-radius: 3px;
-  box-shadow: 0px 3px 14px 1px #e6e1e6;
-}
-
 .index-map-container {
   display: flex;
   margin: 10px;
   position: relative;
   margin-top: 90px;
-}
-
-.left-nav {
-  display: flex;
-  align-items: center;
-}
-
-.search-icon {
-  height: 30px;
-  width: 30px;
-  margin-bottom: 2px;
-  margin-left: 10px;
-}
-
-.search-icon-container {
-  display: flex;
-  align-items: center;
-}
-
-.search-bar-input-container {
-  display: flex;
-  align-items: center;
-}
-
-.search-bar-input {
-  height: 40px;
-  width: 490px;
-  border: 0px solid;
-  margin-left: 20px;
-  outline: none;
-  font-size: 18px;
-}
-
-body {
-  background: #fafafa;
-  font-family: 'Roboto', sans-serif;
-}
-
-.index-page-nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  background: #fff;
-  border-bottom: 1px solid #e6e6e6;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-}
-
-.index-page-nav-bar-header {
-  margin: 10px;
-  font-size: 48px;
-  padding: 10px;
-}
-
-.index-page-nav-bar-greeting-and-logout {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  height: 65px;
-  width: 65px;
-  padding: 5px
-}
-
-.header-button {
-  height: 25px;
-  margin-right: 20px;
-  margin-left: 10px;
-}
-
-
-.tree-house-index {
-  display: flex;
-  width: 33.333%;
-  box-sizing: border-box;
 }
 
 .map-container {
@@ -116,47 +25,13 @@ body {
   border-radius: 3px;
 }
 
-.searchBox {
-  width: 100%;
-  height: 100%;
-}
-.index-list {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.tree-house-index-item {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #e6e6e6;
-  box-shadow: 3px 3px 3px 0px #e6e6e6;
-  border-radius: 3px;
-  margin-bottom: 30px;
-}
-
-.tree-house-info {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-between;
-}
-
-
-.tree-house-photo {
-  width: 100%;
-  height: 300px;
-}
-
-
-.logout-button {
-  display: flex
-}
-
-
 .map-img {
   width: 100%;
   height: 80%;
   border-radius: 3px;
+}
+
+body {
+  background: #fafafa;
+  font-family: 'Roboto', sans-serif;
 }
