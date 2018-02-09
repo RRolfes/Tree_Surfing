@@ -23,6 +23,32 @@
   align-items: center;
 }
 
+.search-icon {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 2px;
+  margin-left: 10px;
+}
+
+.search-icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar-input {
+  height: 45px;
+  width: 490px;
+  border: 0px solid;
+  margin-left: 20px;
+  outline: none;
+  font-size: 18px;
+}
+
 body {
   background: #fafafa;
   font-family: 'Roboto', sans-serif;
