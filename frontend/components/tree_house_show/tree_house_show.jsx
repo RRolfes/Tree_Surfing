@@ -5,6 +5,7 @@ import Review from './tree_house_review';
 import ReviewForm from './review_form';
 import { createReview } from '../../util/review_api_util';
 
+import NavBarContainer from '../nav_bar/nav_bar_container';
 import TreeHouseShowContainer from './tree_house_show_container';
 import BookingForm from './booking_form';
 
@@ -51,10 +52,7 @@ class TreeHouseShow extends React.Component {
         <div className="master">
           <div className='tree-house-detail-container'>
             <div className='tree-house-detail-nav-bar'>
-              <h1 className='detail-text'>
-                {currentTreeHouse.name}
-              </h1>
-              <Link to={`/treehouses`} className="index-link">Back to Map</Link>
+              <NavBarContainer />
             </div>
             <div className='host-profile-and-tree-house-photo-container'>
               <div className="host-profile">
