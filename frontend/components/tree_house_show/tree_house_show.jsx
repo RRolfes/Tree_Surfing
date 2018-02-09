@@ -48,30 +48,35 @@ class TreeHouseShow extends React.Component {
       const bookings = this.props.treeHouses.currentTreeHouse.bookings;
       const host = this.state;
 
+      const backgroundImageStyles = {
+        backgroundImage: `url(${currentTreeHouse.image_url})`
+      };
+
+
       return (
         <div className="master">
           <div className='tree-house-detail-container'>
-            <div className='tree-house-detail-nav-bar'>
-              <NavBarContainer />
+            <NavBarContainer />
+            <div className="tree-house-detail-photo-container" >
+              <div className='tree-house-detail-photo' style={backgroundImageStyles}></div>
             </div>
-            <div className='host-profile-and-tree-house-photo-container'>
-              <div className="host-profile">
-                <div className="host-name">Hosted by {host.name}</div>
-                <div className="host-photo-container">
-                  <img className='host-photo' src={host.photo}></img>
-                </div>
-                <ul className="host-info">
-                  <li><b>Hometown</b>: {host.city}</li>
-                  <li><b>Age</b>: {host.age}</li>
-                  <li><b>Occupation</b>: {host.occupation}</li>
-                  <li><b>About</b>: {host.about}</li>
-                </ul>
+            <div>
+              <div className="tree-house-name">{currentTreeHouse.name}</div>
+              <span>{`${currentTreeHouse.city}, ${currentTreeHouse.state}`}</span>
+            </div>
+            <div className="host-profile">
+              <div className="host-name">Host: {host.name}</div>
+              <div className="host-photo-container">
+                <img className='host-photo' src={host.photo}></img>
               </div>
+              <ul className="host-info">
+                <li><b>Hometown</b>: {host.city}</li>
+                <li><b>Age</b>: {host.age}</li>
+                <li><b>Occupation</b>: {host.occupation}</li>
+                <li><b>About</b>: {host.about}</li>
+              </ul>
 
 
-              <div className="tree-house-detail-photo-container" >
-                <img className='tree-house-detail-photo' src={currentTreeHouse.image_url}></img>
-              </div>
             </div>
 
             <div className='bookings-table-and-reviews-index-container'>
@@ -92,23 +97,23 @@ class TreeHouseShow extends React.Component {
                   {reviews.map( review =>
                     <li key={review.id}>
                       <Review
-                      fetchUser={this.props.fetchUser}
-                      userId={review.user_id}
-                      review={review}
-                      comment={review.comment}
-                      />
+                        fetchUser={this.props.fetchUser}
+                        userId={review.user_id}
+                        review={review}
+                        comment={review.comment}
+                        />
                     </li>
                   )}
                 </ul>
 
 
-                  <div className="review-form-container">
-                    <ReviewForm
-                      treeHouseId={currentTreeHouse.id}
-                      session={this.props.session}
-                      createReview={this.props.createReview}
-                      />
-                  </div>
+                <div className="review-form-container">
+                  <ReviewForm
+                    treeHouseId={currentTreeHouse.id}
+                    session={this.props.session}
+                    createReview={this.props.createReview}
+                    />
+                </div>
 
 
               </div>
