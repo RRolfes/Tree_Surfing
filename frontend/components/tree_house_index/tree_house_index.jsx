@@ -39,14 +39,19 @@ class TreeHouseIndex extends React.Component {
 render() {
   const treeHouses = this.props.treeHouses;
 
-    if (treeHouses) {
+  if (treeHouses) {
     return (
       <div className="index-page-master">
         <div className="index-page-nav-bar">
-          <h1 className="index-page-nav-bar-header">Tree Surfing</h1>
-
+          <div className='left-nav'>
+            <a className="logo" href="#/">
+              <img src='http://res.cloudinary.com/dreuhltzt/image/upload/v1518133771/Logo_foyk7n.png' ></img>
+            </a>
           <SearchBarContainer />
-          <div>{this.welcome()}</div>
+          </div>
+          <div className="right-nav">
+            <div>{this.welcome()}</div>
+          </div>
 
         </div>
 

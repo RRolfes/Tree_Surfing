@@ -29,7 +29,7 @@ class SearchBar extends React.Component {
     return(
       <div className='search-bar-container'>
         <div className='search-bar'>
-          <input type='text' placeholder='Search' className='search-bar-input' onKeyPress={this.queryHandler} onChange={this.searchHandler} value={this.state.query}></input>
+          <input type='text' placeholder='Search (or adjust map!)' className='search-bar-input' onKeyPress={this.queryHandler} onChange={this.searchHandler} value={this.state.query}></input>
         </div>
       </div>
     );
