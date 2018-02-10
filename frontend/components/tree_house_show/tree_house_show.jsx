@@ -9,16 +9,12 @@ import NavBarContainer from '../nav_bar/nav_bar_container';
 import TreeHouseShowContainer from './tree_house_show_container';
 import BookingForm from './booking_form';
 
+
 class TreeHouseShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      photo: '',
-      city: '',
-      age: '',
-      occupation: '',
-      about: ''
+      host: {}
     };
   }
 
@@ -27,12 +23,7 @@ class TreeHouseShow extends React.Component {
     this.props.fetchCurrentTreeHouse(treeHouseId).then( treeHouse =>
       this.props.fetchUser(this.props.treeHouses.currentTreeHouse.user_id).then( host =>
         this.setState({
-          name: host.user.full_name,
-          photo: host.user.image_url,
-          city: host.user.city,
-          age: host.user.age,
-          occupation: host.user.occupation,
-          about: host.user.about
+          host: host.user
         })
       )
     );
@@ -42,11 +33,12 @@ class TreeHouseShow extends React.Component {
   render() {
     const currentTreeHouse = this.props.treeHouses.currentTreeHouse;
     const usersHaveLoaded = this.props.user;
+    console.log(this.state);
 
     if (currentTreeHouse && usersHaveLoaded) {
       const reviews = this.props.treeHouses.currentTreeHouse.reviews;
       const bookings = this.props.treeHouses.currentTreeHouse.bookings;
-      const host = this.state;
+      const host = this.state.host;
 
       const backgroundImageStyles = {
         backgroundImage: `url(${currentTreeHouse.image_url})`
@@ -67,7 +59,7 @@ class TreeHouseShow extends React.Component {
             <div className="host-profile">
               <div className="host-name">Host: {host.name}</div>
               <div className="host-photo-container">
-                <img className='host-photo' src={host.photo}></img>
+                <img className='host-photo' src={host.image_url}></img>
               </div>
               <ul className="host-info">
                 <li><b>Hometown</b>: {host.city}</li>
@@ -125,7 +117,7 @@ class TreeHouseShow extends React.Component {
       );
     } else {
       return(
-        <div>Loading123</div>
+        <div>Loading...</div>
       );
     }
   }
