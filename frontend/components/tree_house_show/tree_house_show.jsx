@@ -33,8 +33,7 @@ class TreeHouseShow extends React.Component {
   render() {
     const currentTreeHouse = this.props.treeHouses.currentTreeHouse;
     const usersHaveLoaded = this.props.user;
-    console.log(this.state);
-
+    // break out in to components 
     if (currentTreeHouse && usersHaveLoaded) {
       const reviews = this.props.treeHouses.currentTreeHouse.reviews;
       const bookings = this.props.treeHouses.currentTreeHouse.bookings;
