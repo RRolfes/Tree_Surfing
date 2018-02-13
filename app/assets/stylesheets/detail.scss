@@ -3,14 +3,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.master {
-  margin: 0 auto;
-  position: relative;
-  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-}
+// .master {
+//   margin: 0 auto;
+//   position: relative;
+//   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+//   -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+//   box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+//   background-color: #fff;
+// }
 
 .tree-house-detail-container {
   display: flex;
@@ -61,6 +61,17 @@ body {
 //   justify-content: space-between;
 //   height: 38vh;
 // }
+
+.tree-house-show {
+  margin: 0 auto;
+  padding: 0 24px;
+  font-family: sans-serif;
+}
+
+.tree-house-centered {
+  width: 85%;
+  margin: 0 auto;
+}
 
 .host-profile {
   display:flex;

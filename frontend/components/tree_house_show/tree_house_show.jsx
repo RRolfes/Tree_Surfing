@@ -33,7 +33,7 @@ class TreeHouseShow extends React.Component {
   render() {
     const currentTreeHouse = this.props.treeHouses.currentTreeHouse;
     const usersHaveLoaded = this.props.user;
-    // break out in to components
+    // break out into components
     // need seperate comps for all
     if (currentTreeHouse && usersHaveLoaded) {
       const reviews = this.props.treeHouses.currentTreeHouse.reviews;
@@ -47,29 +47,44 @@ class TreeHouseShow extends React.Component {
 
 
       return (
-        <div className="master">
+        <div className="tree-house-detail-master">
+          <NavBarContainer />
           <div className='tree-house-detail-container'>
-            <NavBarContainer />
             <div className="tree-house-detail-photo-container" >
               <div className='tree-house-detail-photo' style={backgroundImageStyles}></div>
             </div>
-            <div>
-              <div className="tree-house-name">{currentTreeHouse.name}</div>
-              <span>{`${currentTreeHouse.city}, ${currentTreeHouse.state}`}</span>
-            </div>
-            <div className="host-profile">
-              <div className="host-name">Host: {host.full_name}</div>
-              <div className="host-photo-container">
-                <img className='host-photo' src={host.image_url}></img>
+            <div className="tree-house-show">
+              <div className="tree-house-centered">
+                <div>
+                  <div className="tree-house-name">{currentTreeHouse.name}</div>
+                  <span>{`${currentTreeHouse.city}, ${currentTreeHouse.state}`}</span>
+                </div>
+                <div className="host-profile">
+                  <div className="host-name">Host: {host.full_name}</div>
+                  <div className="host-photo-container">
+                    <img className='host-photo' src={host.image_url}></img>
+                  </div>
+                  <ul className="host-info">
+                    <li><b>Hometown</b>: {host.city}</li>
+                    <li><b>Age</b>: {host.age}</li>
+                    <li><b>Occupation</b>: {host.occupation}</li>
+                    <li><b>About</b>: {host.about}</li>
+                  </ul>
+                </div>
+
+                <ul className="review-item-container">
+                  {reviews.map( review =>
+                    <li key={review.id}>
+                      <Review
+                        fetchUser={this.props.fetchUser}
+                        userId={review.user_id}
+                        review={review}
+                        comment={review.comment}
+                        />
+                    </li>
+                  )}
+                </ul>
               </div>
-              <ul className="host-info">
-                <li><b>Hometown</b>: {host.city}</li>
-                <li><b>Age</b>: {host.age}</li>
-                <li><b>Occupation</b>: {host.occupation}</li>
-                <li><b>About</b>: {host.about}</li>
-              </ul>
-
-
             </div>
 
             <div className='bookings-table-and-reviews-index-container'>
@@ -84,22 +99,6 @@ class TreeHouseShow extends React.Component {
               </div>
 
               <div className="reviews-table">
-
-
-                <ul className="review-item-container">
-                  {reviews.map( review =>
-                    <li key={review.id}>
-                      <Review
-                        fetchUser={this.props.fetchUser}
-                        userId={review.user_id}
-                        review={review}
-                        comment={review.comment}
-                        />
-                    </li>
-                  )}
-                </ul>
-
-
                 <div className="review-form-container">
                   <ReviewForm
                     treeHouseId={currentTreeHouse.id}
@@ -107,14 +106,10 @@ class TreeHouseShow extends React.Component {
                     createReview={this.props.createReview}
                     />
                 </div>
-
-
               </div>
-
             </div>
           </div>
         </div>
-
       );
     } else {
       return(
