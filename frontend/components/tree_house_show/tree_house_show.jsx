@@ -39,6 +39,7 @@ class TreeHouseShow extends React.Component {
       const reviews = this.props.treeHouses.currentTreeHouse.reviews;
       const bookings = this.props.treeHouses.currentTreeHouse.bookings;
       const host = this.state.host;
+      console.log(host);
 
       const backgroundImageStyles = {
         backgroundImage: `url(${currentTreeHouse.image_url})`
@@ -57,7 +58,7 @@ class TreeHouseShow extends React.Component {
               <span>{`${currentTreeHouse.city}, ${currentTreeHouse.state}`}</span>
             </div>
             <div className="host-profile">
-              <div className="host-name">Host: {host.name}</div>
+              <div className="host-name">Host: {host.full_name}</div>
               <div className="host-photo-container">
                 <img className='host-photo' src={host.image_url}></img>
               </div>
