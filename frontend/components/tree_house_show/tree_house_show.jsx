@@ -39,7 +39,6 @@ class TreeHouseShow extends React.Component {
       const reviews = this.props.treeHouses.currentTreeHouse.reviews;
       const bookings = this.props.treeHouses.currentTreeHouse.bookings;
       const host = this.state.host;
-      console.log(host);
 
       const backgroundImageStyles = {
         backgroundImage: `url(${currentTreeHouse.image_url})`
