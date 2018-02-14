@@ -38,6 +38,7 @@ class TreeHouseShow extends React.Component {
     if (currentTreeHouse && usersHaveLoaded) {
       const reviews = this.props.treeHouses.currentTreeHouse.reviews;
       const bookings = this.props.treeHouses.currentTreeHouse.bookings;
+      //use state?
       const host = this.state.host;
 
       const backgroundImageStyles = {
