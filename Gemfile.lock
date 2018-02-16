@@ -65,6 +65,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    font-awesome-sass (5.0.6.2)
+      sass (>= 3.2)
     geocoder (1.4.5)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -186,6 +188,7 @@ DEPENDENCIES
   binding_of_caller
   byebug
   coffee-rails (~> 4.2)
+  font-awesome-sass (~> 5.0.6)
   geocoder
   jbuilder (~> 2.5)
   jquery-rails
