@@ -16,8 +16,6 @@ class TreeHouseIndex extends React.Component {
     if (treeHouses) {
       return (
         <div className="index-page-master">
-          <NavBarContainer />
-
           <div className="index-map-container">
             <div className="tree-house-index">
               <ul className="index-list">
