@@ -46,7 +46,6 @@ class TreeHouseShow extends React.Component {
 
       return (
         <div className="tree-house-detail-master">
-          <NavBarContainer />
           <div className='tree-house-detail-container'>
             <div className="tree-house-body"></div>
             <div className="tree-house-detail-photo-container" >

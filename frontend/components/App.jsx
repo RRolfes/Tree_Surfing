@@ -13,10 +13,14 @@ import SessionFormContainer from './session_form/session_form_container';
 import SignUpFormContainer from './sign_up/sign_up_form_container';
 import TreeHouseShowContainer from './tree_house_show/tree_house_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import NavBar from './components/nav_bar/nav_bar_container';
 
 
 const App = () => (
   <div>
+      <header className="index-page-nav-bar">
+        <NavBar />
+      </header>
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SignUpFormContainer} />
       <ProtectedRoute path="/treehouses/:treeHouseId" component={TreeHouseShowContainer} />
