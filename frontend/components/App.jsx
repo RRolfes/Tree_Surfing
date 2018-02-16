@@ -13,7 +13,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import SignUpFormContainer from './sign_up/sign_up_form_container';
 import TreeHouseShowContainer from './tree_house_show/tree_house_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import NavBar from './components/nav_bar/nav_bar_container';
+import NavBar from './nav_bar/nav_bar_container';
 
 
 const App = () => (
