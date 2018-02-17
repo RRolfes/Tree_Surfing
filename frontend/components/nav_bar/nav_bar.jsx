@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
 
     if (currentUser) {
       const firstName = currentUser.full_name.split(" ")[0];
-      return <div className="index-page-nav-bar-greeting-and-logout">
+      return <div className="nav-bar-greeting-and-logout">
         <h2>Hi, {firstName}!</h2>
         <button
           className="header-button"
@@ -26,7 +26,7 @@ class SearchBar extends React.Component {
       </button>
     </div>;
     } else {
-      return <div className="index-page-nav-bar-greeting-and-logout">
+      return <div className="nav-bar-greeting-and-logout">
         <Link to={`/login`}>
           <button className="header-button"> Login </button>
         </Link>
@@ -37,7 +37,7 @@ class SearchBar extends React.Component {
   render(){
 
     return(
-      <div className="index-page-nav-bar">
+      <div className="nav-bar">
         <div className='left-nav'>
           <a className="logo" href="#/">
             <img src='http://res.cloudinary.com/dreuhltzt/image/upload/v1518133771/Logo_foyk7n.png' ></img>

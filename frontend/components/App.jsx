@@ -18,7 +18,7 @@ import NavBar from './nav_bar/nav_bar_container';
 
 const App = () => (
   <div>
-      <header className="index-page-nav-bar">
+      <header className="nav-bar">
         <NavBar />
       </header>
       <AuthRoute path="/login" component={SessionFormContainer} />

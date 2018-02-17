@@ -15,7 +15,7 @@ class TreeHouseIndex extends React.Component {
 
     if (currentUser) {
       const firstName = currentUser.full_name.split(" ")[0];
-      return <div className="index-page-nav-bar-greeting-and-logout">
+      return <div className="nav-bar-greeting-and-logout">
         <h2>Hi, {firstName}!</h2>
         <button
           className="header-button"
@@ -28,7 +28,7 @@ class TreeHouseIndex extends React.Component {
       </button>
     </div>;
   } else {
-    return <div className="index-page-nav-bar-greeting-and-logout">
+    return <div className="nav-bar-greeting-and-logout">
       <Link to={`/login`}>
         <button
           className="header-button"
@@ -46,8 +46,8 @@ render() {
     if (treeHouses) {
     return (
       <div className="index-page-master">
-        <div className="index-page-nav-bar">
-          <h1 className="index-page-nav-bar-header">Tree Surfing</h1>
+        <div className="nav-bar">
+          <h1 className="nav-bar-header">Tree Surfing</h1>
 
           <SearchBarContainer />
           <div>{this.welcome()}</div>
