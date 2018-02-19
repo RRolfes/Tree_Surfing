@@ -18,9 +18,7 @@ import NavBar from './nav_bar/nav_bar_container';
 
 const App = () => (
   <div>
-      <header className="nav-bar">
-        <NavBar />
-      </header>
+      <header className="nav-bar"><NavBar /></header>
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SignUpFormContainer} />
       <ProtectedRoute path="/treehouses/:treeHouseId" component={TreeHouseShowContainer} />
