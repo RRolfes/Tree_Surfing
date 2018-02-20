@@ -19,12 +19,14 @@ import NavBar from './nav_bar/nav_bar_container';
 const App = () => (
   <div>
       <header className="nav-bar"><NavBar /></header>
-      <AuthRoute path="/login" component={SessionFormContainer} />
-      <AuthRoute path="/signup" component={SignUpFormContainer} />
-      <ProtectedRoute path="/treehouses/:treeHouseId" component={TreeHouseShowContainer} />
-      <Route exact path="/" component={TreeHouseIndexContainer} />
-      <Route exact path="/treehouses" component={TreeHouseIndexContainer} />
 
+      <div className="main-content">
+        <AuthRoute path="/login" component={SessionFormContainer} />
+        <AuthRoute path="/signup" component={SignUpFormContainer} />
+        <ProtectedRoute path="/treehouses/:treeHouseId" component={TreeHouseShowContainer} />
+        <Route exact path="/" component={TreeHouseIndexContainer} />
+        <Route exact path="/treehouses" component={TreeHouseIndexContainer} />
+      </div>
   </div>
 );
 

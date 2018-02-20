@@ -46,11 +46,10 @@ class TreeHouseShow extends React.Component {
 
       return (
         <div className="tree-house-detail-master">
+          <div className="tree-house-detail-photo-container" >
+            <div className='tree-house-detail-photo' style={backgroundImageStyles}></div>
+          </div>
           <div className='tree-house-detail-container'>
-            <div className="tree-house-body"></div>
-            <div className="tree-house-detail-photo-container" >
-              <div className='tree-house-detail-photo' style={backgroundImageStyles}></div>
-            </div>
             <div className="tree-house-show">
               <div className="tree-house-centered">
                 <div>
@@ -84,28 +83,6 @@ class TreeHouseShow extends React.Component {
                 </ul>
               </div>
             </div>
-
-            <div className='bookings-table-and-reviews-index-container'>
-              <div className="bookings-table">
-                <BookingForm
-                  bookings={bookings}
-                  createBooking={this.props.createBooking}
-                  session={this.props.session}
-                  treeHouseId={currentTreeHouse.id}
-                  booking={this.props.booking}
-                  />
-              </div>
-
-              <div className="reviews-table">
-                <div className="review-form-container">
-                  <ReviewForm
-                    treeHouseId={currentTreeHouse.id}
-                    session={this.props.session}
-                    createReview={this.props.createReview}
-                    />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       );
@@ -116,5 +93,27 @@ class TreeHouseShow extends React.Component {
     }
   }
 }
+
+// <div className='bookings-table-and-reviews-index-container'>
+//   <div className="bookings-table">
+//     <BookingForm
+//       bookings={bookings}
+//       createBooking={this.props.createBooking}
+//       session={this.props.session}
+//       treeHouseId={currentTreeHouse.id}
+//       booking={this.props.booking}
+//       />
+//   </div>
+//
+//   <div className="reviews-table">
+//     <div className="review-form-container">
+//       <ReviewForm
+//         treeHouseId={currentTreeHouse.id}
+//         session={this.props.session}
+//         createReview={this.props.createReview}
+//         />
+//     </div>
+//   </div>
+// </div>
 
 export default withRouter(TreeHouseShow);
