@@ -32,11 +32,6 @@ body {
 }
 
 
-
-
-
-
-
 .host-profile {
   display:flex;
   flex-direction: row;
@@ -54,10 +49,8 @@ body {
 }
 
 .host-photo-container {
-  display: flex;
-  justify-content: center;
-  flex: 1;
-  background-color: grey;
+  width: 100px;
+  height: 100%;
 }
 
 .reviewer-profile {
