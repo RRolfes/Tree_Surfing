@@ -83,6 +83,15 @@ class TreeHouseShow extends React.Component {
                     </li>
                   )}
                 </ul>
+                  <div className="bookings-table">
+                    <BookingForm
+                      bookings={bookings}
+                      createBooking={this.props.createBooking}
+                      session={this.props.session}
+                      treeHouseId={currentTreeHouse.id}
+                      booking={this.props.booking}
+                      />
+                  </div>
               </div>
             </div>
           </div>
