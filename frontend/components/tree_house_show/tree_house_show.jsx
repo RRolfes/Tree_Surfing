@@ -50,7 +50,7 @@ class TreeHouseShow extends React.Component {
             <div className='tree-house-detail-photo' style={backgroundImageStyles}></div>
           </div>
           // break out review items
-          // add widget for booking
+          // add widget for booking form
           <div className='tree-house-detail-container'>
             <div className="tree-house-centered">
               <div className="tree-house-content">
