@@ -8,7 +8,7 @@ import { createReview } from '../../util/review_api_util';
 import NavBarContainer from '../nav_bar/nav_bar_container';
 import TreeHouseShowContainer from './tree_house_show_container';
 import BookingForm from './booking_form';
-import intro from './intro';
+import Intro from './intro';
 
 
 class TreeHouseShow extends React.Component {
@@ -53,8 +53,9 @@ class TreeHouseShow extends React.Component {
           <div className='tree-house-detail-container'>
             <div className="tree-house-centered">
               <div className="tree-house-content">
-                <div className="tree-house-name">{currentTreeHouse.name}</div>
-                <span>{`${currentTreeHouse.city}, ${currentTreeHouse.state}`}</span>
+                <Intro
+                  treeHouse={currentTreeHouse}
+                  />
                 <div className="host-profile">
                   <div className="host-name">Host: {host.full_name}</div>
                   <div className="host-photo-container">

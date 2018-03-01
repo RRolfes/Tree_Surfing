@@ -18,7 +18,7 @@ class Intro extends React.Component {
         </div>
         <div className="rating-container">
           <div className="heart">
-            <i class="far fa-heart"></i>
+            <i className="far fa-heart"></i>
           </div>
           <div className="rating">
             98%
