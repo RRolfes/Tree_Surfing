@@ -13,6 +13,7 @@ import About from './about';
 import Details from './details';
 import Features from './features';
 import Activites from './activities';
+import BookingWidget from '../bookings/booking_widget.jsx';
 
 
 class TreeHouseShow extends React.Component {
@@ -71,6 +72,9 @@ class TreeHouseShow extends React.Component {
                   treeHouse={currentTreeHouse}
                   />
                 <Activites
+                  treeHouse={currentTreeHouse}
+                  />
+                <BookingWidget
                   treeHouse={currentTreeHouse}
                   />
 
