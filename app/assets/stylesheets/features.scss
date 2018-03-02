@@ -26,3 +26,19 @@
 .features-right {
   padding-left: 10px;
 }
+
+.fa-transgender-alt, .fa-utensils, .fa-wifi, .fa-shower, .fa-trash-alt {
+  font-size: 18px;
+  font-weight: 200;
+  color: grey;
+  padding-right: 16px;
+}
+
+.feature-false {
+  text-decoration: line-through;
+  color: pink;
+  .fa {
+    color: pink;
+
+  }
+}

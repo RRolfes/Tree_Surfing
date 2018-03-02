@@ -11,19 +11,18 @@ class Features extends React.Component {
     return(
       <div className="features-container">
         <div className="features-text">
-          Features
+          More features
         </div>
         <div className="features-left-right">
           <div className="features-left">
-            {treeHouse.toilets ? <div className="feature-true">Toilets</div> : <div className="feature-ture">Toilets</div> }
-            Check in after: <b>{treeHouse.check_in}</b> <br/>
-            Check out before: <b>{treeHouse.check_out}</b> <br/>
-            Cancellation policy: <b>{treeHouse.cancellation_policy}</b>
+            {treeHouse.toilets ? <div className="feature-true"><i className="fa fa-transgender-alt"></i> Toilets</div> : <div className="feature-false"><i className="fa fa-transgender-alt"></i> Toilets</div> }
+            {treeHouse.picnic_table ? <div className="feature-true"><i className="fa fa-utensils"></i> Picnic table</div> : <div className="feature-false"><i className="fa fa-utensils"></i> Picnic Table</div> }
+            {treeHouse.wifi ? <div className="feature-true"><i className="fa fa-wifi"></i> Wifi</div> : <div className="feature-false"><i className="fa fa-wifi"></i> Wifi</div> }
+
           </div>
           <div className="features-right">
-            On arrival: <b>{treeHouse.on_arrival}</b> <br/>
-            Minimum nights: <b>{treeHouse.minimum_nights}</b> <br/>
-            Accepts bookings: <b>{treeHouse.accepts_bookings}</b>
+            {treeHouse.showers ? <div className="feature-true"><i className="fa fa-shower"></i> Showers</div> : <div className="feature-false" color="red"><i className="fa fa-shower"></i> Showers</div> }
+            {treeHouse.trash ? <div className="feature-true"><i className="fa fa-trash-alt"></i> Trash</div> : <div className="feature-false"><i className="fa fa-trash-alt"></i> Trash</div> }
           </div>
         </div>
       </div>
