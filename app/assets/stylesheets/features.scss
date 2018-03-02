@@ -27,17 +27,30 @@
   padding-left: 10px;
 }
 
-.fa-transgender-alt, .fa-utensils, .fa-wifi, .fa-shower, .fa-trash-alt {
+.fa, .fab, .fas, .far {
   font-size: 18px;
   font-weight: 200;
   color: grey;
   padding-right: 16px;
 }
 
+.fa-check {
+  color: green;
+}
+
+.fa-times {
+  color: red;
+}
+
+.fa-heart {
+  color: #fff;
+  padding-right: 0px;
+}
+
 .feature-false {
   text-decoration: line-through;
   color: pink;
-  .fa {
+  .fa, .fab, .fas, .far {
     color: pink;
 
   }

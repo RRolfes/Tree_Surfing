@@ -12,6 +12,7 @@ import Intro from './intro';
 import About from './about';
 import Details from './details';
 import Features from './features';
+import Activites from './activities';
 
 
 class TreeHouseShow extends React.Component {
@@ -67,6 +68,9 @@ class TreeHouseShow extends React.Component {
                   treeHouse={currentTreeHouse}
                   />
                 <Features
+                  treeHouse={currentTreeHouse}
+                  />
+                <Activites
                   treeHouse={currentTreeHouse}
                   />
 
