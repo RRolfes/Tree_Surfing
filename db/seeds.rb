@@ -46,7 +46,8 @@
   # paddling: ,
   # swimming: ,
   # wildlife_watching: ,
-  # climbing:
+  # climbing: ,
+  # price:
 # )
 
 
@@ -134,7 +135,8 @@ ActiveRecord::Base.transaction do
     paddling: true,
     swimming: true,
     wildlife_watching: true,
-    climbing: false
+    climbing: false,
+    price: 360
   )
 
   # 2

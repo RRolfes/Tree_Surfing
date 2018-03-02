@@ -6,7 +6,7 @@ json.extract! tree_house, :id,
                           :on_arrival, :minimum_nights, :accepts_bookings,
                           :toilets, :showers, :picnic_table, :trash, :wifi,
                           :biking, :boating, :fishing, :hiking, :horseback,
-                          :paddling, :swimming, :wildlife_watching, :climbing
+                          :paddling, :swimming, :wildlife_watching, :climbing, :price
 
 json.reviews do
   json.partial! 'api/reviews/review', collection: tree_house.reviews, as: :review
