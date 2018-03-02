@@ -20,8 +20,8 @@ class About extends React.Component {
             <div className="host-photo-and-name">
               <img className="about-host-photo" src={host.image_url}></img>
               <div className="about-hosted-by">
-                <div className="hosted-by">Hosted by:</div>
-              <div>{host.full_name}</div>
+                <div className="hosted-by">Hosted by</div>
+              <div className="host-name">{host.full_name}</div>
             </div>
             </div>
             <div className="about-description">

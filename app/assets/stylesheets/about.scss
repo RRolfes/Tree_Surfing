@@ -16,18 +16,25 @@
   font-weight: bold;
 }
 
+.host-name {
+  font-size: 14px;
+}
+
 .host-photo-and-name {
   display: flex;
-  flex-direction: column;
-  width: 30%;
+  flex-direction: row;
+  width: 40%;
 }
 
 .about-description {
-  width: 70%;
+  width: 60%;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .about-host-photo {
   width: 38px;
   height: 38px;
   border-radius: 50%;
+  padding-right: 10px;
 }
