@@ -86,7 +86,11 @@ ActiveRecord::Base.transaction do
     state: 'California',
     country: 'United States',
     image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1476482092/campground-photos/abvqx8gl26smow3uxgk8.jpg',
-    description: 'Coolest place ever!'
+    description: 'Coolest place ever!',
+    rating: '98%',
+    bed: true,
+    water: true,
+    electricity: true
   )
 
   # 2

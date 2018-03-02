@@ -24,8 +24,11 @@ class About extends React.Component {
               <div className="host-name">{host.full_name}</div>
             </div>
             </div>
-            <div className="about-description">
-              This is where the descrition will go. This is where the descrition will go. This is where the descrition will go. This is where the descrition will go. This is where the descrition will go. This is where the descrition will go. This is where the descrition will go. This is where the descrition will go.
+            <div className="description-and-amenities">
+              <div className="about-description">
+                The Eagle's Nest Treehouse Farm Stay combines a wilderness experience, sumptuous old growth redwoods, but the comforts of a guest house, with complete privacy and tranquility, yet is within easy driving distance of some of the best that California has to offer. This farm stay and wilderness experience is located on a working ranch on the Sonoma coast. We are less than 90 minutes north of San Francisco and half that from California's premier wine-growing regions of the Napa-Sonoma Valleys. We are also smack dab in the middle of some of California's most breathtaking coast. You are near enough to civilization, but it feels like you are in the most remote and peaceful spot on earth.
+              </div>
+              { false ? <i className="fa fa-check"></i> : <i className="fa fa-times"></i>}
             </div>
           </div>
         </div>

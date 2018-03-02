@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170727034517) do
+ActiveRecord::Schema.define(version: 20180302051121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,17 +39,41 @@ ActiveRecord::Schema.define(version: 20170727034517) do
   end
 
   create_table "tree_houses", force: :cascade do |t|
-    t.integer  "user_id",     null: false
-    t.float    "lat",         null: false
-    t.float    "lng",         null: false
-    t.string   "city",        null: false
-    t.string   "country",     null: false
+    t.integer  "user_id",             null: false
+    t.float    "lat",                 null: false
+    t.float    "lng",                 null: false
+    t.string   "city",                null: false
+    t.string   "country",             null: false
     t.string   "image_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "description"
-    t.string   "name",        null: false
+    t.string   "name",                null: false
     t.string   "state"
+    t.string   "rating"
+    t.boolean  "bed"
+    t.boolean  "water"
+    t.boolean  "electricity"
+    t.string   "check_in"
+    t.string   "check_out"
+    t.string   "cancellation_policy"
+    t.string   "on_arrival"
+    t.string   "minimum_nights"
+    t.string   "accepts_bookings"
+    t.boolean  "toilets"
+    t.boolean  "showers"
+    t.boolean  "picnic_table"
+    t.boolean  "trash"
+    t.boolean  "wifi"
+    t.boolean  "biking"
+    t.boolean  "boating"
+    t.boolean  "fishing"
+    t.boolean  "hiking"
+    t.boolean  "horseback"
+    t.boolean  "paddling"
+    t.boolean  "swimming"
+    t.boolean  "wildlife_watching"
+    t.boolean  "climbing"
     t.index ["user_id"], name: "index_tree_houses_on_user_id", using: :btree
   end
 

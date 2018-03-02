@@ -1,3 +1,8 @@
+.about-container {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
 .about-host-container {
   display: flex;
   flex-direction: row;
@@ -7,8 +12,13 @@
 
 .about-name {
   padding-top: 14px;
-  font-weight: bold;
+  font-weight: bolder;
+  padding-bottom: 8px;
   // font-size: larger;
+}
+
+.about-hosted-by {
+  padding-left: 10px;
 }
 
 .hosted-by {
@@ -23,18 +33,30 @@
 .host-photo-and-name {
   display: flex;
   flex-direction: row;
-  width: 40%;
+  width: 35%;
 }
 
+.description-and-amenities {
+  width: 65%;
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-times {
+  color: red;
+}
+
+
+
 .about-description {
-  width: 60%;
   font-size: 14px;
   font-weight: 300;
 }
 
 .about-host-photo {
-  width: 38px;
-  height: 38px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  padding-right: 10px;
 }
