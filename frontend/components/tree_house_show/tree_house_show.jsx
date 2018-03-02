@@ -10,6 +10,8 @@ import TreeHouseShowContainer from './tree_house_show_container';
 import BookingForm from './booking_form';
 import Intro from './intro';
 import About from './about';
+import Details from './details';
+import Features from './features';
 
 
 class TreeHouseShow extends React.Component {
@@ -60,6 +62,12 @@ class TreeHouseShow extends React.Component {
                 <About
                   treeHouse={currentTreeHouse}
                   host={host}
+                  />
+                <Details
+                  treeHouse={currentTreeHouse}
+                  />
+                <Features
+                  treeHouse={currentTreeHouse}
                   />
 
                 <ul className="review-item-container">

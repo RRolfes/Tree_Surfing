@@ -1,5 +1,5 @@
 .about-container {
-  padding-bottom: 12px;
+  padding-bottom: 24px;
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -21,6 +21,18 @@
   padding-left: 10px;
 }
 
+.about-description {
+  font-size: 14px;
+  font-weight: 300;
+  padding-bottom: 12px;
+}
+
+.about-host-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
 .hosted-by {
   font-size: 14px;
   font-weight: bold;
@@ -40,6 +52,28 @@
   width: 65%;
 }
 
+.about-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+
+}
+
+.icon-text {
+  font-size: 14px;
+  font-weight: 300;
+  padding-left: 16px;
+}
+
+.icon-and-text {
+  display: flex;
+  flex-direction: row;
+}
+
+
 .fa-check {
   color: green;
 }
@@ -48,15 +82,8 @@
   color: red;
 }
 
-
-
-.about-description {
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.about-host-photo {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+.fa-bed, .fa-plug, .fa-tint {
+  font-size: 18px;
+  font-weight: 200;
+  color: grey;
 }

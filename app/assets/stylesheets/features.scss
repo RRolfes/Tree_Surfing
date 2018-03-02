@@ -1,0 +1,28 @@
+.features-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.features-text {
+  padding-top: 5px;
+  font-size: 16px;
+  width: 35%;
+}
+
+.features-left-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 65%;
+}
+
+.features-left, .features-right {
+  line-height: 2.5;
+}
+
+.features-right {
+  padding-left: 10px;
+}

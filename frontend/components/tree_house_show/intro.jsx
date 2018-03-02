@@ -21,7 +21,7 @@ class Intro extends React.Component {
             <i className="far fa-heart"></i>
           </div>
           <div className="rating">
-            98%
+            {treeHouse.rating}
           </div>
         </div>
       </div>
