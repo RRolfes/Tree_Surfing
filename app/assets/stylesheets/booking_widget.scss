@@ -2,12 +2,39 @@
   height: 330px;
   width: 250px;
   position: absolute;
-  top: 530px;
+  top: 533px;
   right: 100px;
+  border: 1px solid #e6e6e6;
+
 }
 
 .widget-fixed {
   position: fixed;
   top: 81px;
   right: 100px;
+}
+
+.price-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(64, 217, 172, 0.85);
+  height: 45px;
+  z-index: 2;
+  font-weight: 400;
+  border: none;
+  color: white;
+}
+
+.price-text {
+  font-family: verdana;
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 15px;
+}
+
+.per-night-text {
+  padding-left: 6px;
+  letter-spacing: 1px;
+  font-weight: 100;
 }
