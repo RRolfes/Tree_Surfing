@@ -79,22 +79,11 @@ class TreeHouseShow extends React.Component {
                     <li key={review.id}>
                       <Review
                         fetchUser={this.props.fetchUser}
-                        userId={review.user_id}
                         review={review}
-                        comment={review.comment}
                         />
                     </li>
                   )}
                 </ul>
-                  <div className="bookings-table">
-                    <BookingForm
-                      bookings={bookings}
-                      createBooking={this.props.createBooking}
-                      session={this.props.session}
-                      treeHouseId={currentTreeHouse.id}
-                      booking={this.props.booking}
-                      />
-                  </div>
               </div>
             </div>
           </div>

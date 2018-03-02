@@ -28,12 +28,12 @@ class Review extends React.Component {
       return(
         <div className="review-item">
           <div className="reviewer-profile">
-            {this.state.name}
             <img className='reviewer-photo' src={this.state.photo}></img>
+            {this.state.name.split(" ")[0]}
           </div>
           <div className="review-container">
-            <h2>{review.title}</h2>
-            {review.comment}
+            <div className="review-title">{review.title}</div>
+            <div className="review-comment">{review.comment}</div>
           </div>
         </div>
       );
