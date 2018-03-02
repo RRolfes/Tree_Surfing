@@ -1,0 +1,33 @@
+.about-host-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 14px;
+
+}
+
+.about-name {
+  padding-top: 14px;
+  font-weight: bold;
+  // font-size: larger;
+}
+
+.hosted-by {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.host-photo-and-name {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.about-description {
+  width: 70%;
+}
+
+.about-host-photo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}

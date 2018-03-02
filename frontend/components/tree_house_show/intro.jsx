@@ -9,7 +9,7 @@ class Intro extends React.Component {
   render() {
     const treeHouse = this.props.treeHouse;
     return(
-      <div className="intro-contianer">
+      <div className="intro-container">
         <div className="location">
           {treeHouse.state ? treeHouse.state : treeHouse.country} > {treeHouse.city}
         </div>

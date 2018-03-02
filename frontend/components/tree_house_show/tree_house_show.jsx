@@ -9,6 +9,7 @@ import NavBarContainer from '../nav_bar/nav_bar_container';
 import TreeHouseShowContainer from './tree_house_show_container';
 import BookingForm from './booking_form';
 import Intro from './intro';
+import About from './about';
 
 
 class TreeHouseShow extends React.Component {
@@ -56,18 +57,10 @@ class TreeHouseShow extends React.Component {
                 <Intro
                   treeHouse={currentTreeHouse}
                   />
-                <div className="host-profile">
-                  <div className="host-name">Host: {host.full_name}</div>
-                  <div className="host-photo-container">
-                    <img className='host-photo' src={host.image_url}></img>
-                  </div>
-                  <ul className="host-info">
-                    <li><b>Hometown</b>: {host.city}</li>
-                    <li><b>Age</b>: {host.age}</li>
-                    <li><b>Occupation</b>: {host.occupation}</li>
-                    <li><b>About</b>: {host.about}</li>
-                  </ul>
-                </div>
+                <About
+                  treeHouse={currentTreeHouse}
+                  host={host}
+                  />
 
                 <ul className="review-item-container">
                   {reviews.map( review =>
