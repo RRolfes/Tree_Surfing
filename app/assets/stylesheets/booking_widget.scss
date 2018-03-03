@@ -1,5 +1,5 @@
 .booking-widget {
-  height: 330px;
+  height: 270px;
   width: 350px;
   position: absolute;
   top: 533px;
@@ -43,7 +43,7 @@
   width: 100%;
   background-color: white;
   border: 1px solid #e6e6e6;
-
+  box-sizing: border-box;
 
 }
 
@@ -56,14 +56,40 @@
   margin-top: 25px;
 }
 
+.guest-selector-container {
+  margin-top: 24px;
+  margin-left: 24px;
+  margin-right: 2px;
+}
+
 .check-out, .check-in {
   padding-left: 10px;
 }
 
 .start-date, .end-date {
-
+  margin-top: 5px;
   padding-left: 7px;
   padding-top: 7px;
-  padding-bottom: 7px;
+  padding-bottom: 1px;
   border: 1px solid #e6e6e6;
+}
+
+.check-in-text, .check-out-text, .selector-text {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+.selector {
+  height: 42px;
+  margin-top: 5px;
+  width: 95%;
+  background-color: white;
+  font-size: 13px;
+  font-weight: 100;
+  border: 1px solid #e6e6e6;
+}
+
+.guest-text {
+
 }

@@ -26,28 +26,29 @@
 #   rating: '',
 #   bed: ,
 #   water: ,
-  # electricity: ,
-  # check_in: '',
-  # check_out: '',
-  # cancellation_policy: '',
-  # on_arrival: '',
-  # minimum_nights: '',
-  # accepts_bookings: '',
-  # toilets: ,
-  # showers: ,
-  # picnic_table: ,
-  # trash: ,
-  # wifi:
-  # biking: ,
-  # boating: ,
-  # fishing: ,
-  # hiking: ,
-  # horseback: ,
-  # paddling: ,
-  # swimming: ,
-  # wildlife_watching: ,
-  # climbing: ,
-  # price:
+#   electricity: ,
+#   check_in: '',
+#   check_out: '',
+#   cancellation_policy: '',
+#   on_arrival: '',
+#   minimum_nights: '',
+#   accepts_bookings: '',
+#   toilets: ,
+#   showers: ,
+#   picnic_table: ,
+#   trash: ,
+#   wifi:
+#   biking: ,
+#   boating: ,
+#   fishing: ,
+#   hiking: ,
+#   horseback: ,
+#   paddling: ,
+#   swimming: ,
+#   wildlife_watching: ,
+#   climbing: ,
+#   price: ,
+#   max_guests:
 # )
 
 
@@ -136,7 +137,8 @@ ActiveRecord::Base.transaction do
     swimming: true,
     wildlife_watching: true,
     climbing: false,
-    price: 360
+    price: 360,
+    max_guests: 4
   )
 
   # 2
