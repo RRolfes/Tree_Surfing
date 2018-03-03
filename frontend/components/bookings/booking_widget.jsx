@@ -3,18 +3,18 @@ import React from 'react';
 class BookingWidget extends React.Component {
   constructor(props) {
     super(props);
-      this.state = {
-        startDate: "",
-        endDate: "",
-        selected: "1 guest",
-        userMessage: "",
-        fixed: false
-      };
+    this.state = {
+      startDate: "",
+      endDate: "",
+      selected: "1 guest",
+      userMessage: "",
+      fixed: false
+    };
 
-      this.handleScroll = this.handleScroll.bind(this);
-      this.handleStartDate = this.handleStartDate.bind(this);
-      this.handleEndDate = this.handleEndDate.bind(this);
-      this.handleSelect = this.handleSelect.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
+    this.handleStartDate = this.handleStartDate.bind(this);
+    this.handleEndDate = this.handleEndDate.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
   componentDidMount() {
@@ -82,7 +82,13 @@ class BookingWidget extends React.Component {
                 </select>
               </div>
             </div>
+            <div className="booking-submit">
+              <button className="booking-button">Book</button>
+            </div>
           </form>
+          <div className="charge-message">
+            <span>You won't be charged yet</span>
+          </div>
         </div>
       </div>
     );
