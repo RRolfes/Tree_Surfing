@@ -1,17 +1,15 @@
 .booking-widget {
   height: 330px;
-  width: 250px;
+  width: 350px;
   position: absolute;
   top: 533px;
-  right: 100px;
-  border: 1px solid #e6e6e6;
-
+  right: 60px;
 }
 
 .widget-fixed {
   position: fixed;
-  top: 81px;
-  right: 100px;
+  top: 78px;
+  right: 60px;
 }
 
 .price-bar {
@@ -36,5 +34,36 @@
 .per-night-text {
   padding-left: 6px;
   letter-spacing: 1px;
-  font-weight: 100;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.booking-form-conatiner {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+
+
+}
+
+.check-in-check-out {
+  display: flex;
+  font-size: 13px;
+  width: 92%;
+  margin: 0 auto;
+  background: white;
+  margin-top: 25px;
+}
+
+.check-out, .check-in {
+  padding-left: 10px;
+}
+
+.start-date, .end-date {
+
+  padding-left: 7px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: 1px solid #e6e6e6;
 }

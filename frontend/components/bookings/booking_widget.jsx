@@ -12,6 +12,8 @@ class BookingWidget extends React.Component {
       };
 
       this.handleScroll = this.handleScroll.bind(this);
+      this.handleStartDate = this.handleStartDate.bind(this);
+      this.handleEndDate = this.handleEndDate.bind(this);
   }
 
   componentDidMount() {
@@ -30,6 +32,14 @@ class BookingWidget extends React.Component {
     }
   }
 
+  handleStartDate(e) {
+    this.setState({startDate: e.target.value});
+  }
+
+  handleEndDate(e) {
+    this.setState({endDate: e.target.value});
+  }
+
   render() {
     const treeHouse = this.props.treeHouse;
     let fixed = this.state.fixed ? ("widget-fixed") : ("");
@@ -39,6 +49,18 @@ class BookingWidget extends React.Component {
         <div className="price-bar">
           <span className="price-text">${treeHouse.price}</span>
           <span className="per-night-text"> per night</span>
+        </div>
+        <div className="booking-form-conatiner">
+          <form className="check-in-check-out" onSubmit={this.handleSubmit}>
+            <div className="check-in">
+              <label>Check In</label>
+              <input type="date" className="start-date" onChange={this.handleStartDate} value={this.state.startDate}></input>
+            </div>
+            <div className="check-out">
+              <label>Check Out</label>
+              <input type="date" className="end-date" onChange={this.handleEndDate} value={this.state.endDate}></input>
+            </div>
+          </form>
         </div>
       </div>
     );
