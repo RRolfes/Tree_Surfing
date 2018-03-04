@@ -26,9 +26,9 @@ class BookingWidget extends React.Component {
   }
 
   handleScroll(e) {
-    if (!this.state.fixed && window.scrollY >= 450) {
+    if (!this.state.fixed && window.scrollY >= 454) {
       this.setState({fixed: true});
-    } else if (this.state.fixed && window.scrollY < 450) {
+    } else if (this.state.fixed && window.scrollY < 455) {
       this.setState({fixed: false});
     }
   }
@@ -47,7 +47,6 @@ class BookingWidget extends React.Component {
 
   render() {
     const treeHouse = this.props.treeHouse;
-
     let options = [];
 
     for (var i = 1; i <= treeHouse.max_guests ; i++) {
