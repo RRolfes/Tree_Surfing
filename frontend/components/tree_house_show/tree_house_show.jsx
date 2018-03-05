@@ -80,16 +80,17 @@ class TreeHouseShow extends React.Component {
                   userId={userId}
                   history={history}
                   />
-                  <div className="reviews-table">
-                    <div className="review-form-container">
-                      <ReviewForm
-                        treeHouseId={currentTreeHouse.id}
-                        session={this.props.session}
-                        createReview={this.props.createReview}
-                        />
-                    </div>
+                
+                <div className="reviews-table">
+                  <div className="review-form-container">
+                    <ReviewForm
+                      treeHouseId={currentTreeHouse.id}
+                      session={this.props.session}
+                      createReview={this.props.createReview}
+                      />
                   </div>
-                  
+                </div>
+
                 <ul className="review-item-container">
                   {reviews.map( review =>
                     <li key={review.id}>
@@ -124,15 +125,15 @@ class TreeHouseShow extends React.Component {
 //       />
 //   </div>
 //
-  // <div className="reviews-table">
-  //   <div className="review-form-container">
-  //     <ReviewForm
-  //       treeHouseId={currentTreeHouse.id}
-  //       session={this.props.session}
-  //       createReview={this.props.createReview}
-  //       />
-  //   </div>
-  // </div>
+// <div className="reviews-table">
+//   <div className="review-form-container">
+//     <ReviewForm
+//       treeHouseId={currentTreeHouse.id}
+//       session={this.props.session}
+//       createReview={this.props.createReview}
+//       />
+//   </div>
+// </div>
 // </div>
 
 export default withRouter(TreeHouseShow);

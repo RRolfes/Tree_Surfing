@@ -18,7 +18,7 @@ class About extends React.Component {
         <div className="host-and-description-container">
           <div className="about-host-container">
             <div className="host-photo-and-name">
-              <img className="about-host-photo" src={host.image_url}></img>
+              <img className="about-host-photo" src={'http://res.cloudinary.com/dreuhltzt/image/upload/v1520240540/John_uj22dz.webp'}></img>
               <div className="about-hosted-by">
                 <div className="hosted-by">Hosted by</div>
               <div className="host-name">{host.full_name}</div>

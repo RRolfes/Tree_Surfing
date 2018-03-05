@@ -8,8 +8,9 @@ class BookingWidget extends React.Component {
       startDate: "",
       endDate: "",
       selected: "1 guest",
-      userMessage: " ",
-      fixed: false
+      userMessage: "",
+      fixed: false,
+      conflicting: ""
     };
 
     this.handleScroll = this.handleScroll.bind(this);
@@ -69,14 +70,10 @@ class BookingWidget extends React.Component {
     let startDate = this.craeteDateObject(this.state.startDate);
     let endDate = this.craeteDateObject(this.state.endDate);
 
-    const that = this;
-
     let valid = true;
-
-
-    bookings.forEach( function(booking) {
-        let bookingStart = that.craeteDateObject(booking.start_date);
-        let bookingEnd = that.craeteDateObject(booking.end_date);
+    bookings.forEach( booking => {
+        let bookingStart = this.craeteDateObject(booking.start_date);
+        let bookingEnd = this.craeteDateObject(booking.end_date);
 
         if (endDate > bookingStart && endDate <= bookingEnd) {
           console.log("end in between bookin start/end");
@@ -130,21 +127,23 @@ class BookingWidget extends React.Component {
           <span className="price-text">${treeHouse.price}</span>
           <span className="per-night-text"> per night</span>
         </div>
-        <div className="error-message">
-          {this.state.userMessage}
-        </div>
         <div className="booking-form-conatiner">
           <form  onSubmit={this.handleSubmit}>
-            <div className="check-in-check-out">
-              <div className="check-in">
-                <label className="check-in-text">Check In</label>
-                <input type="date" className="start-date" onChange={this.handleStartDate} value={this.state.startDate}></input>
+              <div className="error-message">
+                <span>
+                  {this.state.userMessage}
+                </span>
               </div>
-              <div className="check-out">
-                <label className="check-out-text">Check Out</label>
-                <input type="date" className="end-date" onChange={this.handleEndDate} value={this.state.endDate}></input>
+              <div className="check-in-check-out">
+                <div className="check-in">
+                  <label className="check-in-text">Check In</label>
+                  <input type="date" className="start-date" onChange={this.handleStartDate} value={this.state.startDate}></input>
+                </div>
+                <div className="check-out">
+                  <label className="check-out-text">Check Out</label>
+                  <input type="date" className="end-date" onChange={this.handleEndDate} value={this.state.endDate}></input>
+                </div>
               </div>
-            </div>
             <div className="guest-selector-container">
               <div className="">
                 <label className="selector-text">Guests</label>

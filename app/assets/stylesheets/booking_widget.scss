@@ -1,5 +1,5 @@
 .booking-widget {
-  height: 270px;
+  height: 280px;
   width: 350px;
   position: absolute;
   top: 533px;
@@ -47,13 +47,21 @@
 
 }
 
+.error-message {
+  text-align: center;
+  color: red;
+  font-size: 13px;
+  height: 20px;
+  padding-top: 3px;
+}
+
 .check-in-check-out {
   display: flex;
   font-size: 13px;
   width: 92%;
   margin: 0 auto;
   background: white;
-  margin-top: 25px;
+  padding-top: 5px;
 }
 
 .guest-selector-container {
