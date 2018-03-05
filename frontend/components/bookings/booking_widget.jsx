@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 class BookingWidget extends React.Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class BookingWidget extends React.Component {
       startDate: "",
       endDate: "",
       selected: "1 guest",
-      userMessage: "",
+      userMessage: " ",
       fixed: false
     };
 
@@ -52,8 +53,65 @@ class BookingWidget extends React.Component {
     let month = dateArr[1] - 1;
     let day = dateArr[2];
     let dateObj = new Date(year, month, day);
+    return dateObj / 1;
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+
+
+    const userId = this.props.userId;
+    const treeHouseId = this.props.treeHouse.id;
+    const bookings = this.props.treeHouse.bookings;
+
+
+    let today = new Date().setHours(0,0,0,0);
+    let startDate = this.craeteDateObject(this.state.startDate);
+    let endDate = this.craeteDateObject(this.state.endDate);
+
+    const that = this;
+
+    let valid = true;
+
+
+    bookings.forEach( function(booking) {
+        let bookingStart = that.craeteDateObject(booking.start_date);
+        let bookingEnd = that.craeteDateObject(booking.end_date);
+
+        if (endDate > bookingStart && endDate <= bookingEnd) {
+          console.log("end in between bookin start/end");
+          valid = false;
+        } else if (startDate < bookingEnd && endDate >= bookingEnd) {
+          console.log("other");
+          valid = false;
+        } else if (startDate === bookingStart || endDate === bookingEnd) {
+          console.log("same start or end");
+          valid = false;
+        }
+      });
+
+
+    const booking = {
+      start_date: this.state.startDate,
+      end_date: this.state.endDate,
+      user_id: userId,
+      tree_house_id: treeHouseId,
+      confirmed: false
+    };
+
+    if (!endDate || !startDate) {
+      this.setState({userMessage: "Please fill in both dates"});
+    } else if (startDate < today) {
+      this.setState({userMessage: "Start date has passed"});
+    } else if (startDate >= endDate) {
+      this.setState({userMessage: "Invalid end date"});
+    } else if(!valid) {
+      this.setState({userMessage: "Conflicts with existing booking"});
+    } else {
+      this.props.createBooking(booking);
+      this.props.history.push('./');
+    }
+  }
 
 
   render() {
@@ -71,6 +129,9 @@ class BookingWidget extends React.Component {
         <div className="price-bar">
           <span className="price-text">${treeHouse.price}</span>
           <span className="per-night-text"> per night</span>
+        </div>
+        <div className="error-message">
+          {this.state.userMessage}
         </div>
         <div className="booking-form-conatiner">
           <form  onSubmit={this.handleSubmit}>
@@ -93,7 +154,7 @@ class BookingWidget extends React.Component {
               </div>
             </div>
             <div className="booking-submit">
-              <button className="booking-button">Book</button>
+              <button className="booking-button" >Book</button>
             </div>
           </form>
           <div className="charge-message">

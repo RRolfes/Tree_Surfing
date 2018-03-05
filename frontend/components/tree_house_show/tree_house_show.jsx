@@ -5,15 +5,13 @@ import Review from './tree_house_review';
 import ReviewForm from './review_form';
 import { createReview } from '../../util/review_api_util';
 
-import NavBarContainer from '../nav_bar/nav_bar_container';
-import TreeHouseShowContainer from './tree_house_show_container';
 import BookingForm from './booking_form';
 import Intro from './intro';
 import About from './about';
 import Details from './details';
 import Features from './features';
 import Activites from './activities';
-import BookingWidget from '../bookings/booking_widget.jsx';
+import BookingWidgetContainer from '../bookings/booking_widget_container';
 
 
 class TreeHouseShow extends React.Component {
@@ -26,8 +24,8 @@ class TreeHouseShow extends React.Component {
 
   componentDidMount() {
     const treeHouseId = parseInt(this.props.match.params.treeHouseId);
-    this.props.fetchCurrentTreeHouse(treeHouseId).then( treeHouse =>
-      this.props.fetchUser(this.props.treeHouses.currentTreeHouse.user_id).then( host =>
+    this.props.fetchCurrentTreeHouse(treeHouseId).then( payload =>
+      this.props.fetchUser(payload.currentTreeHouse.user_id).then( host =>
         this.setState({
           host: host.user
         })
@@ -44,6 +42,9 @@ class TreeHouseShow extends React.Component {
       const reviews = this.props.treeHouses.currentTreeHouse.reviews;
       const bookings = this.props.treeHouses.currentTreeHouse.bookings;
       const host = this.state.host;
+      const createBooking = this.props.createBooking;
+      const userId = this.props.session.currentUser.id;
+      const history = this.props.history;
 
       const backgroundImageStyles = {
         backgroundImage: `url(${currentTreeHouse.image_url})`
@@ -74,8 +75,10 @@ class TreeHouseShow extends React.Component {
                 <Activites
                   treeHouse={currentTreeHouse}
                   />
-                <BookingWidget
+                <BookingWidgetContainer
                   treeHouse={currentTreeHouse}
+                  userId={userId}
+                  history={history}
                   />
                   <div className="reviews-table">
                     <div className="review-form-container">
@@ -86,7 +89,7 @@ class TreeHouseShow extends React.Component {
                         />
                     </div>
                   </div>
-
+                  
                 <ul className="review-item-container">
                   {reviews.map( review =>
                     <li key={review.id}>
