@@ -15,6 +15,7 @@ class BookingWidget extends React.Component {
     this.handleStartDate = this.handleStartDate.bind(this);
     this.handleEndDate = this.handleEndDate.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -44,6 +45,16 @@ class BookingWidget extends React.Component {
   handleSelect(e) {
     this.setState({ selected: e.target.value });
   }
+
+  craeteDateObject(date) {
+    const dateArr = date.split("-");
+    let year = dateArr[0];
+    let month = dateArr[1] - 1;
+    let day = dateArr[2];
+    let dateObj = new Date(year, month, day);
+  }
+
+
 
   render() {
     const treeHouse = this.props.treeHouse;
