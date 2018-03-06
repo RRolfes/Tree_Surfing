@@ -1,6 +1,8 @@
 import React from 'react';
 import SearchBarContainer from '../search_bar/search_bar_container';
 import { Link, withRouter } from 'react-router-dom';
+import SignUpModal from '../sign_up/sign_up_modal';
+
 
 class SearchBar extends React.Component {
   constructor(props){
@@ -45,7 +47,7 @@ class SearchBar extends React.Component {
         <SearchBarContainer />
         </div>
         <div className="right-nav">
-          <div>{this.welcome()}</div>
+          <SignUpModal />
         </div>
       </div>
     );
@@ -54,3 +56,6 @@ class SearchBar extends React.Component {
 }
 
 export default SearchBar;
+
+
+// <div>{this.welcome()}</div>
