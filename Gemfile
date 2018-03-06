@@ -38,7 +38,7 @@ gem 'font-awesome-sass', '~> 5.0.6'
 gem 'geocoder'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'byebug' anywhere in the code to stop execution and get a // debugger; console
   gem 'byebug', platform: :mri
 end
 

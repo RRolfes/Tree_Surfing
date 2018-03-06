@@ -15,7 +15,6 @@ import TreeHouseShowContainer from './tree_house_show/tree_house_show_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import NavBar from './nav_bar/nav_bar_container';
 
-
 const App = () => (
   <div>
       <header className="nav-bar"><NavBar /></header>

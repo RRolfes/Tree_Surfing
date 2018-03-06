@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Map from './tree_house_map';
 import { updateFilter } from '../../actions/filter_actions';
 import { resetLocation } from '../../actions/search_actions';
+import { fetchTreeHouses } from '../../actions/tree_house_actions';
+
 
 const mapStateToProps = ( { treeHouses, location } ) => ({
   treeHouses,
@@ -11,7 +13,8 @@ const mapStateToProps = ( { treeHouses, location } ) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   updateFilter: (bounds) => dispatch(updateFilter(bounds)),
-  resetLocation: () => (dispatch(resetLocation()))
+  resetLocation: () => (dispatch(resetLocation())),
+  fetchTreeHouses: (bounds) => dispatch(fetchTreeHouses(bounds)),
 });
 
 export default connect(

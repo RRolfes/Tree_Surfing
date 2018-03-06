@@ -7,10 +7,8 @@ export const changeFilter = (bounds) => ({
   bounds
 });
 
-// removed value from benchbnb
-// filter === bounds
 
 export const updateFilter = (bounds) => (dispatch, getState) => {
   dispatch(changeFilter(bounds));
-  return fetchTreeHouses(getState().filters)(dispatch);
+  fetchTreeHouses({bounds})(dispatch);
 };
