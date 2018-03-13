@@ -12,7 +12,6 @@ import Details from './details';
 import Features from './features';
 import Activites from './activities';
 import BookingWidgetContainer from '../bookings/booking_widget_container';
-import SignUpModal from '../sign_up/sign_up_modal';
 import NavBar from '../nav_bar/nav_bar_container';
 
 class TreeHouseShow extends React.Component {

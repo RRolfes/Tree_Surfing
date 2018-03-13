@@ -3,7 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 import TreeHouseMapContainer from '../tree_house_map/tree_house_map_container';
 import SearchBarContainer from '../search_bar/search_bar_container';
 import NavBarContainer from '../nav_bar/nav_bar_container';
-import SignUpModal from '../sign_up/sign_up_modal';
 import NavBar from '../nav_bar/nav_bar_container';
 
 let count = 0;

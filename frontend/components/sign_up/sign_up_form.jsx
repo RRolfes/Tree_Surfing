@@ -22,10 +22,6 @@ class SignUpForm extends React.Component {
 
   }
 
-  componentDidUpdate() {
-    console.log("hi");
-  }
-
   componentWillUnmount() {
     this.props.clearErrors();
   }
@@ -69,22 +65,23 @@ class SignUpForm extends React.Component {
 
 
   renderErrors() {
-    // return(
-    //   <ul className="errors">
-    //     {this.props.errors.map((error, i) => (
-    //       <li key={`error-${i}`}>
-    //         {error}
-    //       </li>
-    //     ))}
-    //   </ul>
-    // );
+    return(
+      <ul className="errors">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
     return (
       <div className="signup-form-container">
-        <form onSubmit={this.handleSubmit} className="signup-form-box">
-          <h2 className="login-header">Sign Up</h2>
+        <form onSubmit={this.handleSubmit} >
+          <h1 className="login-header">Sign Up</h1>
+          
           {this.renderErrors()}
           <div className="signup-form">
             <input
@@ -139,12 +136,6 @@ class SignUpForm extends React.Component {
 
             <input type="submit" value="Submit" className="submit-button" />
 
-            <br/>
-            Already a member?
-            <br/>
-            <Link to="/login" className="login_input" className="Link">
-              Sign In
-            </Link>
           </div>
 
         </form>

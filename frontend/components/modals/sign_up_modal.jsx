@@ -9,6 +9,10 @@ class SignUpModal extends React.Component {
     };
   }
 
+  componentWillUnmount() {
+    this.closeModal();
+  }
+
   openModal() {
     this.setState({
       open : true
