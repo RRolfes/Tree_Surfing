@@ -12,7 +12,8 @@ import Details from './details';
 import Features from './features';
 import Activites from './activities';
 import BookingWidgetContainer from '../bookings/booking_widget_container';
-
+import SignUpModal from '../sign_up/sign_up_modal';
+import NavBar from '../nav_bar/nav_bar_container';
 
 class TreeHouseShow extends React.Component {
   constructor(props) {
@@ -53,12 +54,13 @@ class TreeHouseShow extends React.Component {
 
       return (
         <div className="tree-house-detail-master">
-          <div className="tree-house-detail-photo-container" >
+          <div className="tree-house-detail-photo-container">
             <div className='tree-house-detail-photo' style={backgroundImageStyles}></div>
           </div>
+
           <div className='tree-house-detail-container'>
             <div className="tree-house-centered">
-              <div className="tree-house-content">
+              <div className="tree-house-content" >
                 <Intro
                   treeHouse={currentTreeHouse}
                   />

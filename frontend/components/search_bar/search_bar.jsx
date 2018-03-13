@@ -20,7 +20,6 @@ class SearchBar extends React.Component {
   queryHandler(e){
     if (e.keyCode == 13 || e.which == 13){
       this.props.searchLocation(this.state.query);
-      console.log('hello');
     }
   }
 

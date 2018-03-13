@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 .nav-bar-greeting-and-logout {
@@ -77,5 +77,5 @@
 }
 
 .logout-button {
-  display: flex
+  display: flex;
 }

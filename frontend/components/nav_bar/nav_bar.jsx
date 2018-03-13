@@ -1,10 +1,10 @@
 import React from 'react';
 import SearchBarContainer from '../search_bar/search_bar_container';
 import { Link, withRouter } from 'react-router-dom';
-// import SignUpModal from '../sign_up/sign_up_modal';
+import SignUpModal from '../modals/sign_up_modal';
 
 
-class SearchBar extends React.Component {
+class NavBar extends React.Component {
   constructor(props){
     super(props);
     this.welcome = this.welcome.bind(this);
@@ -29,9 +29,7 @@ class SearchBar extends React.Component {
     </div>;
     } else {
       return <div className="nav-bar-greeting-and-logout">
-        <Link to={`/login`}>
-          <button className="header-button"> Login </button>
-        </Link>
+        <SignUpModal />
       </div>;
     }
   }
@@ -45,6 +43,7 @@ class SearchBar extends React.Component {
             <img src='http://res.cloudinary.com/dreuhltzt/image/upload/v1518133771/Logo_foyk7n.png' ></img>
           </a>
         <SearchBarContainer />
+
         </div>
         <div className="right-nav">
           <div>{this.welcome()}</div>
@@ -55,4 +54,4 @@ class SearchBar extends React.Component {
 
 }
 
-export default SearchBar;
+export default NavBar;

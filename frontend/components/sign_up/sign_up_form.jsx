@@ -22,6 +22,10 @@ class SignUpForm extends React.Component {
 
   }
 
+  componentDidUpdate() {
+    console.log("hi");
+  }
+
   componentWillUnmount() {
     this.props.clearErrors();
   }
@@ -65,15 +69,15 @@ class SignUpForm extends React.Component {
 
 
   renderErrors() {
-    return(
-      <ul className="errors">
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+    // return(
+    //   <ul className="errors">
+    //     {this.props.errors.map((error, i) => (
+    //       <li key={`error-${i}`}>
+    //         {error}
+    //       </li>
+    //     ))}
+    //   </ul>
+    // );
   }
 
   render() {
