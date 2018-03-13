@@ -60,6 +60,12 @@
   font-weight: bold;
 }
 
+.switch-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .switch {
   cursor: pointer;
   text-align: center;
@@ -78,10 +84,4 @@
 .modal-and-switch {
   background: white;
   border-radius: 3px;
-}
-
-.switch-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
 }
