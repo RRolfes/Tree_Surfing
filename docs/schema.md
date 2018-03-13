@@ -4,7 +4,8 @@
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
-full_name       | string    | not null
+first           | string    | not null
+last            | string    | not null
 email           | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
@@ -15,7 +16,6 @@ occupation      | string    |
 image_url       | string    |
 age             | integer   |
 about           | text      |
-host            | boolean   | not null
 
 Association: has_many tree_houses
 Association: has_many bookings (via tree_houses; as host)
@@ -30,7 +30,7 @@ lng             | float     | not null
 lat             | float     | not null
 city            | string    | not null
 country         | string    | not null
-description     | string    | 
+description     | string    |
 image_url       | string    |
 
 Association: belongs_to user

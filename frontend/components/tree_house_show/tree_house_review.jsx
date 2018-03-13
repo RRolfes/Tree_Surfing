@@ -5,7 +5,7 @@ class Review extends React.Component {
   constructor(props){
     super(props);
     this.state ={
-      name: '',
+      first: '',
       photo: ''
     };
   }
@@ -15,7 +15,7 @@ class Review extends React.Component {
 
     this.props.fetchUser(review.user_id).then( user =>
       this.setState({
-        name: user.user.full_name,
+        first: user.user.first,
         photo: user.user.image_url
       })
     );
@@ -24,12 +24,12 @@ class Review extends React.Component {
   render() {
     const review = this.props.review;
 
-    if (this.state.name) {
+    if (this.state.first) {
       return(
         <div className="review-item">
           <div className="reviewer-profile">
             <img className='reviewer-photo' src={this.state.photo}></img>
-            {this.state.name.split(" ")[0]}
+            {this.state.first}
           </div>
           <div className="review-container">
             <div className="review-title">{review.title}</div>

@@ -8,7 +8,8 @@
   users: {
       1: {
         id: 1,
-        full_name: "Ryan Rolfes",
+        first: "Ryan",
+        last: "Rolfes",
         email: "RyanMRolfes@gmail.com",
         password_digest: "alsdkjfalkj34223"
         session_token: "akasdhfakj807q36"
@@ -17,9 +18,8 @@
         country: "United States",
         age: 25,
         occupation: "Software Developer",
-        image_url: "image_url.com"
-        about: "I am..."
-        host: true,
+        image_url: "image_url.com",
+        about: "I am...",
         bookings: [1, 5, 8],
         tree_houses: [1, 2]
       }

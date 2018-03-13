@@ -45,17 +45,6 @@
   border-radius: 2px;
 }
 
-.signup-button {
-  // display: flex;
-  // justify-content: space-between;
-  // width: 178px;
-  // padding: 5px;
-  // color: white;
-  // align-items: center;
-  // height: 20px;
-  // width: 50px;
-}
-
 .login-header {
   font-family: sans-serif;
   font-size: 28px;
@@ -69,7 +58,8 @@
 
 .errors {
   color: red;
-  // font-weight: bold;
+  margin-left: 35px;
+  margin-bottom: 5px;
 }
 
 link, .Link {
@@ -81,13 +71,20 @@ link, .Link {
 
 
 .submit-button {
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 5px;
-  padding: 2px;
-  text-align: center;
-  width: 100px;
-  background-color: red;
-  color: white;
-  margin: 5px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    width: 80%;
+    height: 25px;
+    padding-left: 15px;
+    font-size: medium;
+    border-radius: 2px;
+    background: red;
+    background-color: #FF5A5F;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 40px;
 }

@@ -22,8 +22,8 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  validates :full_name, :email, :password_digest, :session_token,
-            :city, :country, :gender, presence: true
+  validates :first, :last, :email, :password_digest, :session_token,
+            :city, :country, presence: true
   validates :email, :session_token, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: :true
 

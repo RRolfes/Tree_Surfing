@@ -21,7 +21,7 @@ class About extends React.Component {
               <img className="about-host-photo" src={'http://res.cloudinary.com/dreuhltzt/image/upload/v1520240540/John_uj22dz.webp'}></img>
               <div className="about-hosted-by">
                 <div className="hosted-by">Hosted by</div>
-              <div className="host-name">{host.full_name}</div>
+              <div className="host-name">{host.first} + ' ' + {host.last}</div>
             </div>
             </div>
             <div className="description-and-amenities">
@@ -58,16 +58,3 @@ class About extends React.Component {
 }
 
 export default About;
-
-// <div className="host-profile">
-//   <div className="host-name">Host: {host.full_name}</div>
-//   <div className="host-photo-container">
-//     <img className='host-photo' src={host.image_url}></img>
-//   </div>
-//   <ul className="host-info">
-//     <li><b>Hometown</b>: {host.city}</li>
-//     <li><b>Age</b>: {host.age}</li>
-//     <li><b>Occupation</b>: {host.occupation}</li>
-//     <li><b>About</b>: {host.about}</li>
-//   </ul>
-// </div>

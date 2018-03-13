@@ -5,13 +5,12 @@ class SignUpForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      full_name: '',
+      first: '',
+      last: '',
       email: '',
       password: '',
       city: '',
-      country: '',
-      gender: '',
-      host: false
+      country: ''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -81,58 +80,51 @@ class SignUpForm extends React.Component {
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit} >
           <h1 className="login-header">Sign Up</h1>
-          
+
           {this.renderErrors()}
           <div className="signup-form">
             <input
               type="text"
-              placeholder="First Last"
-              value={this.state.full_name}
-              onChange={this.update("full_name")}
+              placeholder="First Name"
+              value={this.state.first}
+              onChange={this.update("first")}
               className="signup-input"
               />
             <input
               type="text"
-              placeholder="Email"
+              placeholder="Last Name"
+              value={this.state.last}
+              onChange={this.update("last")}
+              className="signup-input"
+              />
+            <input
+              type="text"
+              placeholder="Email address"
               value={this.state.email}
               onChange={this.update("email")}
               className="signup-input"
               />
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Create a Password"
               value={this.state.password}
               onChange={this.update("password")}
               className="signup-input"
               />
             <input
               type="text"
-              placeholder="City"
+              placeholder="Home City"
               value={this.props.city}
               onChange={this.update("city")}
               className="signup-input"
               />
             <input
               type="text"
-              placeholder="Country"
+              placeholder="Home Country"
               value={this.props.city}
               onChange={this.update("country")}
               className="signup-input"
               />
-
-            <div className="signup-button">
-              <div>Gender</div>
-              <button onClick={this.handleGender}>
-                {this.gender}
-              </button>
-            </div>
-
-            <div className="signup-button">
-              Host
-              <button onClick={this.handleHost}>
-                {this.host}
-              </button>
-            </div>
 
             <input type="submit" value="Submit" className="submit-button" />
 

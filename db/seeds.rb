@@ -1,5 +1,6 @@
 # User.create(
-#   full_name: '',
+#   first: '',
+#   last: '',
 #   email: '',
 #   password: '',
 #   city: '',
@@ -8,9 +9,7 @@
 #   occupation: '',
 #   image_url: '',
 #   age: ,
-#   gender: 'Male',
 #   about: '',
-#   host:
 # )
 
 # TreeHouse.create!(
@@ -58,7 +57,8 @@ TreeHouse.destroy_all
 
 ActiveRecord::Base.transaction do
   user1 = User.create!(
-    full_name: 'Ryan Rolfes',
+    first: 'Ryan',
+    last: 'Rolfes',
     email: 'RyanMRolfes@gmail.com',
     password: 'password',
     city: 'San Francisco',
@@ -66,14 +66,13 @@ ActiveRecord::Base.transaction do
     country: 'United States',
     occupation: 'Software Developer',
     image_url: 'http://s3-us-west-2.amazonaws.com/aa-progress-tracker/students/avatars/000/002/119/medium/Ryan_Rolfes.jpg',
-    age: 25,
-    gender: 'Male',
-    about: 'Tree house aficionado!',
-    host: true
+    age: 26,
+    about: 'Tree house aficionado!'
   )
 
   user2 = User.create!(
-    full_name: 'Guest',
+    first: 'Guest',
+    last: 'Guest',
     email: 'Guest@TreeSurfing.com',
     password: 'password',
     city: 'San Francisco',
@@ -82,13 +81,12 @@ ActiveRecord::Base.transaction do
     occupation: 'Software Development',
     image_url: 'https://s-media-cache-ak0.pinimg.com/236x/21/75/f8/2175f8c734a566dbb151c2a0325cdc57--free-monkey-monkey-monkey.jpg',
     age: 30,
-    gender: 'Male',
-    about: 'A welcome guest!',
-    host: true
+    about: 'A welcome guest!'
   )
 
   user3 = User.create!(
-    full_name: 'John Eagleton',
+    first: 'John',
+    last: 'Eagleton',
     email: 'JEagleton@me.com',
     password: 'password',
     city: 'San Francisco',
@@ -97,9 +95,7 @@ ActiveRecord::Base.transaction do
     occupation: 'Optometrist',
     image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoqqXROdHAlPh3acGl815N0XGZnRrVGskMgoIz_1zW_2jwKC8',
     age: 50,
-    gender: 'Male',
-    about: 'Proud owner of the Eagle Nest tree house!',
-    host: true
+    about: 'Proud owner of the Eagle Nest tree house!'
   )
 
   # 1
