@@ -53,26 +53,29 @@ class LogInForm extends React.Component {
           <h2 className="login-header">Please Login</h2>
           {this.renderErrors()}
           <div className="login-form">
-            <input type="text"
-              value={this.state.email}
-              onChange={this.update('email')}
-              className="login-input"
-              placeholder="Email"
-              />
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              className="login-input"
-              placeholder="Password"
-              />
-            <input
-              className="login_input"
-              className="submit-button"
-              type="submit"
-              value="Submit" />
+            <div className="input-icon-container">
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className="login-input"
+                placeholder="Email address"
+                />
+              <i className="fas fa-envelope"></i>
+            </div>
+            <div className="input-icon-container">
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="login-input"
+                placeholder="Password"
+                />
+              <i className="fas fa-key"></i>
+            </div>
+            <input type="submit" value="Sign In" className="submit-button" />
+
             <button
-              className="login_input"
+              className="submit-button guest-login"
               onClick={this.handleSubmit}>
               Guest Login
             </button>
