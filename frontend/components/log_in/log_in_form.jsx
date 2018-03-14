@@ -80,12 +80,6 @@ class LogInForm extends React.Component {
               Guest Login
             </button>
             Not a member yet?
-            <Link
-              to="/signup"
-              className="login_input"
-              className="Link">
-              Sign Up
-            </Link>
           </div>
         </form>
       </div>

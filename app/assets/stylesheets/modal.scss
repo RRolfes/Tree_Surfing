@@ -49,10 +49,19 @@
 
 }
 
+.modal-text {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.modal-text:hover {
+  border-bottom: 1px solid black;
+}
+
 .modal-input {
   cursor: pointer;
 }
+
 .modal-input:hover {
-  text-decoration: underline;
+  font-weight: bold;
 
 }

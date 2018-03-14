@@ -31,7 +31,7 @@ class SignUpModal extends React.Component {
 
     return(
       <section>
-        <input className="modal-input" type="button" value="Sign Up" onClick={ () => this.openModal()}/>
+        <input className="modal-input" type="button" value="Join TreeSurfing" onClick={ () => this.openModal()}/>
         <div className={`modal-container ${open}`}>
           <div className="modal-contents">
             <SignUpFormContainer />
