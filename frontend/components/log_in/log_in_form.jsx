@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import SignUpModal from '../modals/sign_up_modal';
+
 
 class LogInForm extends React.Component {
   constructor(props) {
@@ -80,6 +82,7 @@ class LogInForm extends React.Component {
               Guest Login
             </button>
             Not a member yet?
+
           </div>
         </form>
       </div>
