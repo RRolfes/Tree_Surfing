@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router-dom';
 
-
-// need: tree_id, session
-
 class ReviewForm extends React.Component {
   constructor(props){
     super(props);
@@ -12,11 +9,17 @@ class ReviewForm extends React.Component {
       title: '',
       comment: '',
       tree_house_id: this.props.treeHouseId,
-      user_id: this.props.session.currentUser.id,
+      user_id: null,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.errors = null;
+  }
+
+  componentDidMount() {
+    const userId = this.props.session ? this.props.session.currentUser.id : null;
+    debugger;
+    this.setState({ user_id: userId});
   }
 
   update(field) {

@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBarContainer from '../search_bar/search_bar_container';
 import { Link, withRouter } from 'react-router-dom';
 import SignUpModal from '../modals/sign_up_modal';
+import LogInModal from '../modals/log_in_modal';
 
 
 class NavBar extends React.Component {
@@ -29,6 +30,7 @@ class NavBar extends React.Component {
     </div>;
     } else {
       return <div className="nav-bar-greeting-and-logout">
+        <LogInModal />
         <SignUpModal />
       </div>;
     }

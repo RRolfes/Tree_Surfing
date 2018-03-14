@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 import TreeHouseIndexContainer from './tree_house_index/tree_house_index_container';
-import SessionFormContainer from './session_form/session_form_container';
+import LogInFormContainer from './log_in_form/log_in_form_container';
 import SignUpFormContainer from './sign_up/sign_up_form_container';
 import TreeHouseShowContainer from './tree_house_show/tree_house_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -21,9 +21,9 @@ const App = () => (
         <NavBar/>
       </header>
       <div className="main-content">
-        <AuthRoute path="/login" component={SessionFormContainer} />
+        <AuthRoute path="/login" component={LogInFormContainer} />
         <AuthRoute path="/signup" component={SignUpFormContainer} />
-        <ProtectedRoute path="/treehouses/:treeHouseId" component={TreeHouseShowContainer} />
+        <Route path="/treehouses/:treeHouseId" component={TreeHouseShowContainer} />
         <Route exact path="/" component={TreeHouseIndexContainer} />
         <Route exact path="/treehouses" component={TreeHouseIndexContainer} />
       </div>

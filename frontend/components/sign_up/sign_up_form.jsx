@@ -81,7 +81,6 @@ class SignUpForm extends React.Component {
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit} >
           <h1 className="login-header">Sign Up</h1>
-
           {this.renderErrors()}
           <div className="signup-form">
             <div className="input-icon-container">
@@ -127,8 +126,6 @@ class SignUpForm extends React.Component {
                 className="signup-input"
                 />
               <i className="fas fa-key"></i>
-
-
             </div>
 
             <div className="input-icon-container">
@@ -142,19 +139,17 @@ class SignUpForm extends React.Component {
               <i className="far fa-building"></i>
             </div>
 
-          <div className="input-icon-container">
-            <input
-              type="text"
-              placeholder="Home Country"
-              value={this.props.city}
-              onChange={this.update("country")}
-              className="signup-input"
-              />
-            <i className="fas fa-globe"></i>
-          </div>
-
+            <div className="input-icon-container">
+              <input
+                type="text"
+                placeholder="Home Country"
+                value={this.props.city}
+                onChange={this.update("country")}
+                className="signup-input"
+                />
+              <i className="fas fa-globe"></i>
+            </div>
             <input type="submit" value="Submit" className="submit-button" />
-
           </div>
 
         </form>

@@ -43,8 +43,9 @@ class TreeHouseShow extends React.Component {
       const bookings = this.props.treeHouses.currentTreeHouse.bookings;
       const host = this.state.host;
       const createBooking = this.props.createBooking;
-      const userId = this.props.session.currentUser.id;
+      const userId = this.props.session.currentUser ? this.props.session.currentUser.id : null;
       const history = this.props.history;
+      // const
 
       const backgroundImageStyles = {
         backgroundImage: `url(${currentTreeHouse.image_url})`
@@ -90,18 +91,18 @@ class TreeHouseShow extends React.Component {
                       createReview={this.props.createReview}
                       />
                   </div>
+                  <ul className="review-item-container">
+                    {reviews.map( review =>
+                      <li key={review.id}>
+                        <Review
+                          fetchUser={this.props.fetchUser}
+                          review={review}
+                          />
+                      </li>
+                    )}
+                  </ul>
                 </div>
 
-                <ul className="review-item-container">
-                  {reviews.map( review =>
-                    <li key={review.id}>
-                      <Review
-                        fetchUser={this.props.fetchUser}
-                        review={review}
-                        />
-                    </li>
-                  )}
-                </ul>
               </div>
             </div>
           </div>
