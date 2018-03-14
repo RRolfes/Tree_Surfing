@@ -30,8 +30,12 @@ class NavBar extends React.Component {
     </div>;
     } else {
       return <div className="nav-bar-greeting-and-logout">
-        <LogInModal />
-        <SignUpModal />
+        <div className="modal-text">
+          <LogInModal />
+        </div>
+        <div className="modal-text">
+          <SignUpModal />
+        </div>
       </div>;
     }
   }

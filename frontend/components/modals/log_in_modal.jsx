@@ -31,7 +31,7 @@ class LogInModal extends React.Component {
 
     return(
       <section>
-        <input type="button" value="Sign In" onClick={ () => this.openModal()}/>
+        <input className="modal-input" type="button" value="Log In" onClick={ () => this.openModal()}/>
         <div className={`modal-container ${open}`}>
           <div className="modal-contents">
             <LogInFormContainer />

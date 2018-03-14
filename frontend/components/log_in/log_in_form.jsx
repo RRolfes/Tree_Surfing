@@ -72,7 +72,7 @@ class LogInForm extends React.Component {
                 />
               <i className="fas fa-key"></i>
             </div>
-            <input type="submit" value="Sign In" className="submit-button" />
+            <input type="submit" value="Log In" className="submit-button" />
 
             <button
               className="submit-button guest-login"
