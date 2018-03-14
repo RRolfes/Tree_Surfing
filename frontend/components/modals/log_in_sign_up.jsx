@@ -56,7 +56,7 @@ class LogInSignUp extends React.Component {
       this.setState({
         logIn: true,
         signUp: false,
-        opposite: 'Join TreeSurfing'
+        opposite: 'Sign Up'
       });
     }
   }
@@ -74,14 +74,18 @@ class LogInSignUp extends React.Component {
       current = (
         <div className="modal-and-switch">
           <LogInFormContainer />
-          <input className="switch" type="button" value={opposite} onClick={ () => this.switchModal()}/>
+          <div className="switch-container">
+            <input className="switch" type="button" value={opposite} onClick={ () => this.switchModal()}/>
+          </div>
         </div>
       );
     } else if (open && signUp) {
       current = (
         <div className="modal-and-switch">
           <SignUpFormContainer />
-          <input className="switch" type="button" value={opposite} onClick={ () => this.switchModal()}/>
+          <div className="switch-container">
+            <input className="switch" type="button" value={opposite} onClick={ () => this.switchModal()}/>
+          </div>
         </div>
       );
     }

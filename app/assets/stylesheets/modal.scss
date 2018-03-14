@@ -16,7 +16,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
   }
 
 
@@ -49,10 +49,6 @@
   font-weight: 400;
 }
 
-.modal-input:hover {
-  border-bottom: 1px solid black;
-}
-
 .modal-input {
   cursor: pointer;
   border-bottom: 1px solid #e6e6e6;
@@ -60,16 +56,32 @@
 }
 
 .modal-input:hover {
+  border-bottom: 1px solid black;
   font-weight: bold;
 }
 
 .switch {
   cursor: pointer;
-  width: 100%;
   text-align: center;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 16px;
+  margin-bottom: 8px;
+
+}
+
+.switch:hover {
+  border-bottom: 1px solid green;
+  color: green;
+  font-weight: bold;
 }
 
 .modal-and-switch {
   background: white;
   border-radius: 3px;
+}
+
+.switch-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }

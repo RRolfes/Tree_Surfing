@@ -150,8 +150,8 @@ class SignUpForm extends React.Component {
               <i className="fas fa-globe"></i>
             </div>
             <input type="submit" value="Submit" className="submit-button" />
+            Already a member?
           </div>
-
         </form>
       </div>
     );
