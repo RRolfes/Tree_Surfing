@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
@@ -83,41 +84,65 @@ class SignUpForm extends React.Component {
 
           {this.renderErrors()}
           <div className="signup-form">
-            <input
-              type="text"
-              placeholder="First Name"
-              value={this.state.first}
-              onChange={this.update("first")}
-              className="signup-input"
-              />
-            <input
-              type="text"
-              placeholder="Last Name"
-              value={this.state.last}
-              onChange={this.update("last")}
-              className="signup-input"
-              />
-            <input
-              type="text"
-              placeholder="Email address"
-              value={this.state.email}
-              onChange={this.update("email")}
-              className="signup-input"
-              />
-            <input
-              type="password"
-              placeholder="Create a Password"
-              value={this.state.password}
-              onChange={this.update("password")}
-              className="signup-input"
-              />
-            <input
-              type="text"
-              placeholder="Home City"
-              value={this.props.city}
-              onChange={this.update("city")}
-              className="signup-input"
-              />
+            <div className="input-icon-container">
+              <input
+                type="text"
+                placeholder="First Name"
+                value={this.state.first}
+                onChange={this.update("first")}
+                className="signup-input"
+                />
+              <i className="fas fa-user"></i>
+            </div>
+
+            <div className="input-icon-container">
+              <input
+                type="text"
+                placeholder="Last Name"
+                value={this.state.last}
+                onChange={this.update("last")}
+                className="signup-input"
+                />
+              <i className="fas fa-user"></i>
+            </div>
+
+            <div className="input-icon-container">
+              <input
+                type="text"
+                placeholder="Email address"
+                value={this.state.email}
+                onChange={this.update("email")}
+                className="signup-input"
+                />
+              <i className="fas fa-envelope"></i>
+
+            </div>
+
+            <div className="input-icon-container">
+              <input
+                type="password"
+                placeholder="Create a Password"
+                value={this.state.password}
+                onChange={this.update("password")}
+                className="signup-input"
+                />
+              <i className="fas fa-key"></i>
+
+
+            </div>
+
+            <div className="input-icon-container">
+              <input
+                type="text"
+                placeholder="Home City"
+                value={this.props.city}
+                onChange={this.update("city")}
+                className="signup-input"
+                />
+              <i className="far fa-building"></i>
+            </div>
+
+          <div className="input-icon-container">
             <input
               type="text"
               placeholder="Home Country"
@@ -125,6 +150,8 @@ class SignUpForm extends React.Component {
               onChange={this.update("country")}
               className="signup-input"
               />
+            <i className="fas fa-globe"></i>
+          </div>
 
             <input type="submit" value="Submit" className="submit-button" />
 

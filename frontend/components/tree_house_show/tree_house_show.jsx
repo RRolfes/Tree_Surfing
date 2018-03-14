@@ -115,26 +115,4 @@ class TreeHouseShow extends React.Component {
   }
 }
 
-// <div className='bookings-table-and-reviews-index-container'>
-//   <div className="bookings-table">
-//     <BookingForm
-//       bookings={bookings}
-//       createBooking={this.props.createBooking}
-//       session={this.props.session}
-//       treeHouseId={currentTreeHouse.id}
-//       booking={this.props.booking}
-//       />
-//   </div>
-//
-// <div className="reviews-table">
-//   <div className="review-form-container">
-//     <ReviewForm
-//       treeHouseId={currentTreeHouse.id}
-//       session={this.props.session}
-//       createReview={this.props.createReview}
-//       />
-//   </div>
-// </div>
-// </div>
-
 export default withRouter(TreeHouseShow);

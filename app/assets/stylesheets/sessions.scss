@@ -32,17 +32,22 @@
   align-items: center;
 }
 
-.login-input, .signup-input, .signup-button {
+.input-icon-container {
   display: flex;
+  align-items: center;
+  width: 85%;
   justify-content: space-between;
-  padding: 5px;
   border: 1px solid lightgray;
+  border-radius: 2px;
+  margin: 10px;
+}
+
+.login-input, .signup-input, .signup-button {
   margin: 5px;
   width: 80%;
   height: 25px;
   padding-left: 15px;
   font-size: medium;
-  border-radius: 2px;
 }
 
 .login-header {
