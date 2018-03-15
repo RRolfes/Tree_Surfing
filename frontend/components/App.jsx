@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 import TreeHouseIndexContainer from './tree_house_index/tree_house_index_container';
-import LogInFormContainer from './log_in_form/log_in_form_container';
+import LogInFormContainer from './log_in/log_in_form_container';
 import SignUpFormContainer from './sign_up/sign_up_form_container';
 import TreeHouseShowContainer from './tree_house_show/tree_house_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
