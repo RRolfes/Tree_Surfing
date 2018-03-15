@@ -31,9 +31,7 @@ class LogInForm extends React.Component {
     } else {
       user = this.state;
     }
-    this.props.login(user).then( () => {
-      this.props.history.push('/login');
-    });
+    this.props.login(user);
   }
 
   renderErrors() {
