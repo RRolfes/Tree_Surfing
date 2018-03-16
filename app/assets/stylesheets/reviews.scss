@@ -96,15 +96,40 @@
   }
 
   .review-body-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    float: right;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 25px;
 
 
     .review-body {
       float: right;
-      width: 85%;
       white-space: pre-wrap;
       padding-bottom: 25px;
-      border-bottom: 1px solid #e6e6e6;
 
+    }
+
+    .helpful-box {
+      display: flex;
+      flex-direction: row;
+      width: 105px;
+      padding: 12px;
+      color: #fff;
+      background-color: #40d9ac;
+
+      .fas {
+        color: white;
+      }
+
+      .helpful-text {
+        font-weight: 600;
+      }
+    }
+
+    .helpful-box:hover {
+      cursor: pointer;
     }
   }
 

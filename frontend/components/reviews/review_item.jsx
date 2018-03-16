@@ -21,7 +21,12 @@ class ReviewItem extends React.Component {
           <div className="review-body">
             {review.comment}
           </div>
+          <div className="helpful-box">
+            <i className="fas fa-thumbs-up" ></i>
+            <div className="helpful-text">Helpful {review.helpfuls}</div>
+          </div>
         </div>
+
       </div>
     );
   }
