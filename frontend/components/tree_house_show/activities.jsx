@@ -1,14 +1,7 @@
 import React from 'react';
 
 class Activites extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
-
   render() {
-    // sections are identical so I kept the features styling
-    // refactor to have one set that applies to both
     const treeHouse = this.props.treeHouse;
     return(
       <div className="features-container">

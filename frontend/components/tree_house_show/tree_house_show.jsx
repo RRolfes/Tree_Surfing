@@ -1,11 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link, withRouter } from 'react-router-dom';
-import Review from './tree_house_review';
-import ReviewForm from './review_form';
-import { createReview } from '../../util/review_api_util';
 
-import BookingForm from './booking_form';
 import Intro from './intro';
 import About from './about';
 import Details from './details';
@@ -82,27 +78,6 @@ class TreeHouseShow extends React.Component {
                   userId={userId}
                   history={history}
                   />
-
-                <div className="reviews-table">
-                  <div className="review-form-container">
-                    <ReviewForm
-                      treeHouseId={currentTreeHouse.id}
-                      session={this.props.session}
-                      createReview={this.props.createReview}
-                      />
-                  </div>
-                  <ul className="review-item-container">
-                    {reviews.map( review =>
-                      <li key={review.id}>
-                        <Review
-                          fetchUser={this.props.fetchUser}
-                          review={review}
-                          />
-                      </li>
-                    )}
-                  </ul>
-                </div>
-
               </div>
             </div>
           </div>

@@ -18,6 +18,7 @@ class BookingWidget extends React.Component {
     this.handleEndDate = this.handleEndDate.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clearUserMessage = this.clearUserMessage.bind(this);
   }
 
   componentDidMount() {
@@ -38,14 +39,21 @@ class BookingWidget extends React.Component {
 
   handleStartDate(e) {
     this.setState({ startDate: e.target.value });
+    this.clearUserMessage();
   }
 
   handleEndDate(e) {
     this.setState({ endDate: e.target.value });
+    this.clearUserMessage();
   }
 
   handleSelect(e) {
     this.setState({ selected: e.target.value });
+    this.clearUserMessage();
+  }
+
+  clearUserMessage() {
+    this.setState({ userMessage: "" });
   }
 
   craeteDateObject(date) {
@@ -60,7 +68,6 @@ class BookingWidget extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-
     const userId = this.props.userId;
     const treeHouseId = this.props.treeHouse.id;
     const bookings = this.props.treeHouse.bookings;
@@ -72,20 +79,20 @@ class BookingWidget extends React.Component {
 
     let valid = true;
     bookings.forEach( booking => {
-        let bookingStart = this.craeteDateObject(booking.start_date);
-        let bookingEnd = this.craeteDateObject(booking.end_date);
+      let bookingStart = this.craeteDateObject(booking.start_date);
+      let bookingEnd = this.craeteDateObject(booking.end_date);
 
-        if (endDate > bookingStart && endDate <= bookingEnd) {
-          console.log("end in between bookin start/end");
-          valid = false;
-        } else if (startDate < bookingEnd && endDate >= bookingEnd) {
-          console.log("other");
-          valid = false;
-        } else if (startDate === bookingStart || endDate === bookingEnd) {
-          console.log("same start or end");
-          valid = false;
-        }
-      });
+      if (endDate > bookingStart && endDate <= bookingEnd) {
+        console.log("end in between bookin start/end");
+        valid = false;
+      } else if (startDate < bookingEnd && endDate >= bookingEnd) {
+        console.log("other");
+        valid = false;
+      } else if (startDate === bookingStart || endDate === bookingEnd) {
+        console.log("same start or end");
+        valid = false;
+      }
+    });
 
 
     const booking = {
@@ -104,9 +111,11 @@ class BookingWidget extends React.Component {
       this.setState({userMessage: "Invalid end date"});
     } else if(!valid) {
       this.setState({userMessage: "Conflicts with existing booking"});
+    } else if (!userId){
+      this.setState({userMessage: "Please log in to book"});
     } else {
       this.props.createBooking(booking);
-      this.props.history.push('./');
+      // this.props.history.push('./');
     }
   }
 
@@ -129,21 +138,21 @@ class BookingWidget extends React.Component {
         </div>
         <div className="booking-form-conatiner">
           <form  onSubmit={this.handleSubmit}>
-              <div className="error-message">
-                <span>
-                  {this.state.userMessage}
-                </span>
+            <div className="error-message">
+              <span>
+                {this.state.userMessage}
+              </span>
+            </div>
+            <div className="check-in-check-out">
+              <div className="check-in">
+                <label className="check-in-text">Check In</label>
+                <input type="date" className="start-date" onChange={this.handleStartDate} value={this.state.startDate}></input>
               </div>
-              <div className="check-in-check-out">
-                <div className="check-in">
-                  <label className="check-in-text">Check In</label>
-                  <input type="date" className="start-date" onChange={this.handleStartDate} value={this.state.startDate}></input>
-                </div>
-                <div className="check-out">
-                  <label className="check-out-text">Check Out</label>
-                  <input type="date" className="end-date" onChange={this.handleEndDate} value={this.state.endDate}></input>
-                </div>
+              <div className="check-out">
+                <label className="check-out-text">Check Out</label>
+                <input type="date" className="end-date" onChange={this.handleEndDate} value={this.state.endDate}></input>
               </div>
+            </div>
             <div className="guest-selector-container">
               <div className="">
                 <label className="selector-text">Guests</label>

@@ -1,14 +1,8 @@
 import React from 'react';
 
 class Details extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
-
   render() {
     const treeHouse = this.props.treeHouse;
-
     return(
       <div className="details-container">
         <div className="details-text">

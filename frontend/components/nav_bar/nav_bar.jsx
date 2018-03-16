@@ -1,8 +1,6 @@
 import React from 'react';
 import SearchBarContainer from '../search_bar/search_bar_container';
 import { Link, withRouter } from 'react-router-dom';
-import SignUpModal from '../modals/sign_up_modal';
-import LogInModal from '../modals/log_in_modal';
 import LogInSignUp from '../modals/log_in_sign_up';
 
 

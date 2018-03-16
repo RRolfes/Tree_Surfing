@@ -17,8 +17,7 @@ class ReviewForm extends React.Component {
   }
 
   componentDidMount() {
-    const userId = this.props.session ? this.props.session.currentUser.id : null;
-    debugger;
+    const userId = this.props.session.currentUser.id ? this.props.session.currentUser.id : null;
     this.setState({ user_id: userId});
   }
 

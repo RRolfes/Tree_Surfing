@@ -1,11 +1,6 @@
 import React from 'react';
 
 class About extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
-
   render() {
     const treeHouse = this.props.treeHouse;
     const host = this.props.host;
@@ -21,7 +16,7 @@ class About extends React.Component {
               <img className="about-host-photo" src={'http://res.cloudinary.com/dreuhltzt/image/upload/v1520240540/John_uj22dz.webp'}></img>
               <div className="about-hosted-by">
                 <div className="hosted-by">Hosted by</div>
-              <div className="host-name">{host.first} + ' ' + {host.last}</div>
+              <div className="host-name">{host.first} {host.last}</div>
             </div>
             </div>
             <div className="description-and-amenities">
