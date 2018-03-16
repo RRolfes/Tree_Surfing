@@ -2,14 +2,20 @@ import React from 'react';
 import ReviewItem from './review_item';
 
 class ReviewsIndex extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+
   render() {
-    const reviews = this.props.reviews;
+    const reviews = this.props.reviews.reverse();
+    console.log(reviews);
 
     return(
       <div className="review-index-container">
         <div className="review-index-header-contianer">
           <div className="reviews-count">
-            {Object.keys(reviews).length} Reviews
+            {reviews.length} Reviews
           </div>
           <div className="reviews-best-recent">
             <div className="reviews-best">Best</div>
