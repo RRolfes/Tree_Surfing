@@ -1,55 +1,101 @@
 //ReviewsIndex
 
 .review-index-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  padding-left: 12px;
 
   .review-index-header-contianer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
 
     .reviews-count {
 
     }
 
     .reviews-best-recent {
+      display: flex;
+      width: 100px;
+      justify-content: space-between;
+      font-weight: 400;
 
+      .reviews-best, .reviews-recent {
+        color: grey;
+        text-decoration: underline;
+      }
+
+      .reviews-best:hover, .reviews-recent:hover {
+        text-decoration-color: black;
+        color: black;
+        cursor: pointer;
+        font-size: 16px;
+      }
     }
+
   }
 }
 
 //ReviewItem
 
 .review-item-container {
-  // display: flex;
-  // flex-direction: row;
+  padding-bottom: 25px;
+
 
   .reviewer-photo-header-container {
     display: flex;
     flex-direction: row;
     align-items: center;
 
-    .reviewer-photo {
-      width: 20%;
-      width: 85px;
-      height: 85px;
-      border-radius: 50px;
+    .review-photo-container {
+      width: 15%;
+
+      .reviewer-photo {
+        width: 20%;
+        width: 85px;
+        height: 85px;
+        border-radius: 50px;
+      }
     }
 
     .reviewer-name-date {
-      padding-left: 12px;
-      width: 80%;
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+
       .reviewer-name {
         font-weight: 600;
         line-height: 1.1;
-        font-size: 20px;
+        font-size: 23px;
+      }
+
+      .review-date {
+        color: grey;
+        font-weight: 500;
       }
     }
+
   }
 
   .review-content-container {
-    // width: 80%;
-
+    float: right;
   }
+
+  .review-body-container {
+
+
+    .review-body {
+      float: right;
+      width: 85%;
+      white-space: pre-wrap;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #e6e6e6;
+
+    }
+  }
+
 }

@@ -12,7 +12,9 @@ class ReviewsIndex extends React.Component {
             {Object.keys(reviews).length} Reviews
           </div>
           <div className="reviews-best-recent">
-            Best / Recent
+            <div className="reviews-best">Best</div>
+            /
+            <div className="reviews-recent">Recent</div>
           </div>
         </div>
         {reviews.map( review => (

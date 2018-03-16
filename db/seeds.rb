@@ -521,7 +521,13 @@ ActiveRecord::Base.transaction do
     tree_house_id: treeHouse1.id,
     user_id: user1.id,
     title: "Awesome stay!",
-    comment: "My girlfriend and I stayed the weekend here and had a blast!",
+    comment: "The Eagle's Nest is a magical place. Perched high in the trees, this is an amazing place to relax, recharge and reconnect amidst the beauty of Salmon Creek Ranch and the warm hospitality of Lesley and John. The love and care that has gone into creating this masterpiece of a treehouse is readily apparent, from the copper shower to the gorgeous bed to the tall windows. It's inspiring to see craft done at such as masterful level, and a real treat to live and sleep amongst it.
+
+There's plenty of hiking trails on the ranch, and the ocean is also close by with great hiking at the Doran Regional Park or Sonoma Coast State Park. Wildflower bakery in nearby Freestone is fantastic, and foodies will love Sebastopol. If you're looking to really treat yourself, check out the cedar enzyme bath and massage packages at the Osmosis Day Spa also close by (https://www.osmosis.com/). This region of California offers so much goodness and fun adventures!
+
+Eagle's Nest is the perfect place to celebrate a birthday, anniversary, or simply taking care of yourself and enjoying all the beauty that life has to offer. Our weekend here restored my energy and my excitement. Staying here gave my inner child her absolute dream getaway!! I can't wait to come back soon - and it's close enough to San Francisco that weekdays are a real possibility.
+
+PS: Make sure to check out the Mercantile store near the ranch entrance for steaks, sausages, duck eggs, kale, and eggs all from Salmon Creek Ranch! It's open 24/7. You can bring your table to the farm :)",
     img_url: user1.image_url,
     date: '09/17/2017',
     reviewer_name: user1.first
