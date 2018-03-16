@@ -23,7 +23,7 @@ const TreeHousesReducer = ( state = {}, action ) => {
 
   switch(action.type) {
     case RECEIVE_REVIEW:
-      newState.currentTreeHouse.reviews.push(action.review);
+      newState.currentTreeHouse.reviews.unshift(action.review);
       return newState;
     case RECEIVE_BOOKING:
       newState.currentTreeHouse.bookings.unshift(action.booking);

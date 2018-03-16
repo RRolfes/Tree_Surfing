@@ -68,7 +68,7 @@ class LogInSignUp extends React.Component {
     let signUp = this.state.signUp;
     let opposite = this.state.opposite;
 
-    let current = null;
+    let current;
 
     if (open && logIn) {
       current = (

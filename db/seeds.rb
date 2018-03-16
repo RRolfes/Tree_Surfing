@@ -529,8 +529,9 @@ Eagle's Nest is the perfect place to celebrate a birthday, anniversary, or simpl
 
 PS: Make sure to check out the Mercantile store near the ranch entrance for steaks, sausages, duck eggs, kale, and eggs all from Salmon Creek Ranch! It's open 24/7. You can bring your table to the farm :)",
     img_url: user1.image_url,
-    date: '09/17/2017',
-    reviewer_name: user1.first
+    date: '02/17/2018',
+    reviewer_name: user1.first,
+    helpfuls: 10
   )
 
   Review.create!(
@@ -540,7 +541,8 @@ PS: Make sure to check out the Mercantile store near the ranch entrance for stea
     comment: "Loved the tree house design and all the ammeneties up there!",
     img_url: user2.image_url,
     date: '08/03/2017',
-    reviewer_name: user2.first
+    reviewer_name: user2.first,
+    helpfuls: 1
   )
 
   Review.create!(
@@ -549,8 +551,9 @@ PS: Make sure to check out the Mercantile store near the ranch entrance for stea
     title: "Lovely Place!",
     comment: "This is my favorite place in the world - hope you love it to!",
     img_url: user3.image_url,
-    date: '02/14/2018',
-    reviewer_name: user3.first
+    date: '02/14/2017',
+    reviewer_name: user3.first,
+    helpfuls: 3
   )
 
   Booking.create!(

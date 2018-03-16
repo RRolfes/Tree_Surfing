@@ -20,7 +20,8 @@ class Api::ReviewsController < ApplicationController
       :tree_house_id,
       :img_url,
       :date,
-      :name
+      :name,
+      :helpfuls
     )
   end
 end
