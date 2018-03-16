@@ -65,7 +65,7 @@ ActiveRecord::Base.transaction do
     state: 'California',
     country: 'United States',
     occupation: 'Software Developer',
-    image_url: 'http://s3-us-west-2.amazonaws.com/aa-progress-tracker/students/avatars/000/002/119/medium/Ryan_Rolfes.jpg',
+    image_url: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1521164950/ryan_rolfes.png',
     age: 26,
     about: 'Tree house aficionado!'
   )

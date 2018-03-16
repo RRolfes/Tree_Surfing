@@ -14,9 +14,42 @@
     }
 
     .reviews-best-recent {
-      
+
     }
   }
 }
 
 //ReviewItem
+
+.review-item-container {
+  // display: flex;
+  // flex-direction: row;
+
+  .reviewer-photo-header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .reviewer-photo {
+      width: 20%;
+      width: 85px;
+      height: 85px;
+      border-radius: 50px;
+    }
+
+    .reviewer-name-date {
+      padding-left: 12px;
+      width: 80%;
+      .reviewer-name {
+        font-weight: 600;
+        line-height: 1.1;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .review-content-container {
+    // width: 80%;
+
+  }
+}
