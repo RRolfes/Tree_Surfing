@@ -7,6 +7,7 @@ import About from './about';
 import Details from './details';
 import Features from './features';
 import Activites from './activities';
+import ReviewsIndex from '../reviews/reviews_index';
 import BookingWidgetContainer from '../bookings/booking_widget_container';
 import NavBar from '../nav_bar/nav_bar_container';
 
@@ -77,6 +78,9 @@ class TreeHouseShow extends React.Component {
                   treeHouse={currentTreeHouse}
                   userId={userId}
                   history={history}
+                  />
+                <ReviewsIndex
+                  reviews={reviews}
                   />
               </div>
             </div>

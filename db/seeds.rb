@@ -532,9 +532,9 @@ ActiveRecord::Base.transaction do
     user_id: user2.id,
     title: "Cool Spot!",
     comment: "Loved the tree house design and all the ammeneties up there!",
-    img_url: user1.image_url,
+    img_url: user2.image_url,
     date: '08/03/2017',
-    reviewer_name: user1.first
+    reviewer_name: user2.first
   )
 
   Review.create!(
@@ -542,9 +542,9 @@ ActiveRecord::Base.transaction do
     user_id: user3.id,
     title: "Lovely Place!",
     comment: "This is my favorite place in the world - hope you love it to!",
-    img_url: user1.image_url,
+    img_url: user3.image_url,
     date: '02/14/2018',
-    reviewer_name: user1.first
+    reviewer_name: user3.first
   )
 
   Booking.create!(
