@@ -521,21 +521,30 @@ ActiveRecord::Base.transaction do
     tree_house_id: treeHouse1.id,
     user_id: user1.id,
     title: "Awesome stay!",
-    comment: "My girlfriend and I stayed the weekend here and had a blast!"
+    comment: "My girlfriend and I stayed the weekend here and had a blast!",
+    img_url: user1.image_url,
+    date: '09/17/2017',
+    reviewer_name: user1.first
   )
 
   Review.create!(
     tree_house_id: treeHouse1.id,
     user_id: user2.id,
     title: "Cool Spot!",
-    comment: "Loved the tree house design and all the ammeneties up there!"
+    comment: "Loved the tree house design and all the ammeneties up there!",
+    img_url: user1.image_url,
+    date: '08/03/2017',
+    reviewer_name: user1.first
   )
 
   Review.create!(
     tree_house_id: treeHouse1.id,
     user_id: user3.id,
     title: "Lovely Place!",
-    comment: "This is my favorite place in the world - hope you love it to!"
+    comment: "This is my favorite place in the world - hope you love it to!",
+    img_url: user1.image_url,
+    date: '02/14/2018',
+    reviewer_name: user1.first
   )
 
   Booking.create!(
