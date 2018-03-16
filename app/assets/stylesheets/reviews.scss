@@ -14,29 +14,39 @@
     margin-bottom: 20px;
     font-size: 15px;
 
-    .reviews-count {
-
-    }
-
     .reviews-best-recent {
       display: flex;
-      width: 100px;
+      width: 110px;
       justify-content: space-between;
       font-weight: 400;
 
-      .reviews-best, .reviews-recent {
-        color: grey;
-        text-decoration: underline;
+      .reviews-best-black {
+        border-bottom: 1px solid #a1a1a1;
+        color: black;
+        font-weight: 400;
       }
 
-      .reviews-best:hover, .reviews-recent:hover {
-        text-decoration-color: black;
+      .reviews-best-grey {
+        border-bottom: 1px solid #a1a1a1;
+        color: #a1a1a1;
+      }
+
+      .reviews-recent-black {
+        border-bottom: 1px solid #a1a1a1;
         color: black;
+        font-weight: 400;
+      }
+
+      .reviews-recent-grey {
+        border-bottom: 1px solid #a1a1a1;
+        color: #a1a1a1;
+      }
+
+      .reviews-best-grey:hover, .reviews-recent-grey:hover, .reviews-recent-black:hover, .reviews-best-black:hover {
+        border-bottom: 1px solid black;
         cursor: pointer;
-        font-size: 16px;
       }
     }
-
   }
 }
 

@@ -4,10 +4,10 @@ import ReviewItem from './review_item';
 class ReviewsIndex extends React.Component {
   constructor(props) {
     super(props);
-      this.state = {
-        order: "Recent",
-        reviews: ['a', 'b', 'c']
-      };
+    this.state = {
+      order: "recent",
+      reviews: ['a', 'b', 'c']
+    };
 
     this.handleOrder = this.handleOrder.bind(this);
     this.sortByDate = this.sortByDate.bind(this);
@@ -30,12 +30,10 @@ class ReviewsIndex extends React.Component {
   handleOrder(e) {
     if (e.target.value === "Best") {
       this.sortByHelpfuls();
-      this.setState( {order: "Best" });
-      console.log(this.props);
+      this.setState( {order: "best" });
     } else if (e.target.value === "Recent") {
       this.sortByDate();
-      this.setState( {order: "Recent" });
-      console.log(this.props);
+      this.setState( {order: "recent" });
     }
   }
 
@@ -43,30 +41,35 @@ class ReviewsIndex extends React.Component {
 
   render() {
     const reviews = this.props.reviews;
-
-    // let test = reviews.sort(function(a, b) {
-    //   return b.helpfuls - a.helpfuls;
-    // });
-
-
+    let order = this.state.order;
+    
     return(
       <div className="review-index-container">
         <div className="review-index-header-contianer">
           <div className="reviews-count">
             {reviews.length} Reviews
           </div>
-          <div className="reviews-best-recent">
-            <input className="reviews-best" type="button" onClick={this.handleOrder} value="Best"/>
-            /
-            <input className="reviews-recent" type="button" onClick={this.handleOrder} value="Recent"/ >
-          </div>
-        </div>
-        {reviews.map( review => (
-          <ReviewItem key={review.id} review={review}/>
-        ))}
-      </div>
-    );
-  }
-}
+          <div className={"reviews-best-recent"}>
+            {order === "recent" ? (
+              <input className={"reviews-recent-black"} type="button" onClick={this.handleOrder} value="Recent"/ >
+              ) : (
+                <input className={"reviews-recent-grey"} type="button" onClick={this.handleOrder} value="Recent"/ >
+                )}
+                /
+                {order === "best" ? (
+                  <input className={"reviews-best-black"} type="button" onClick={this.handleOrder} value="Best"/>
+                ) : (
+                  <input className={"reviews-best-grey"} type="button" onClick={this.handleOrder} value="Best"/ >
+                  )}
 
-export default ReviewsIndex;
+                </div>
+              </div>
+              {reviews.map( review => (
+                <ReviewItem key={review.id} review={review}/>
+              ))}
+            </div>
+          );
+        }
+      }
+
+      export default ReviewsIndex;
