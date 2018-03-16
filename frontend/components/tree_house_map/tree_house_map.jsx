@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const mapCenter = { lat: 37.775, lng: -121.671 };
+const mapCenter = { lat: 37.09024, lng: -95.712891 };
 
 const options = {
   center: mapCenter,
-  zoom: 8,
+  zoom: 4,
   scrollwheel: false
 };
 
@@ -38,6 +38,8 @@ class Map extends React.Component {
 
       const lat = this.props.location.lat;
       const lng = this.props.location.lng;
+      console.log(lat);
+      console.log(lng);
       const northEast = this.props.location.northeast;
       const southWest = this.props.location.southwest;
       const newLatLng = new google.maps.LatLng(lat, lng);

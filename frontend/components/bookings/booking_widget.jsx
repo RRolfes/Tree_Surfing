@@ -128,6 +128,15 @@ class BookingWidget extends React.Component {
       options.push(<option key={i} value={i}>{ i + " Guest"}</option>);
     }
 
+    if (options.length === 0) {
+      options = [
+        <option key={1} value={1}>{ "1 Guest"}</option>,
+        <option key={2} value={2}>{ "2 Guest"}</option>,
+        <option key={3} value={3}>{ "3 Guest"}</option>,
+        <option key={4} value={4}>{ "4 Guest"}</option>,
+      ];
+    }
+
     let fixed = this.state.fixed ? ("widget-fixed") : ("");
 
     return(
