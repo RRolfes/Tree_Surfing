@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import TreeHouseMapContainer from '../tree_house_map/tree_house_map_container';
 import SearchBarContainer from '../search_bar/search_bar_container';
+import TreeHouseTileIndex from './tree_house_tile_index';
 
 class TreeHouseIndex extends React.Component {
   constructor(props) {
@@ -13,7 +14,6 @@ class TreeHouseIndex extends React.Component {
 
     const treeHouses = this.props.treeHouses;
     let treeHouseNumber = Object.keys(treeHouses).length;
-
     let message;
 
     if (treeHouseNumber === 0) {
@@ -38,18 +38,7 @@ class TreeHouseIndex extends React.Component {
         <div className="index-map-container">
           <div className="tree-house-index">
             <ul className="index-list">
-              {Object.keys(treeHouses).map((key, idx) =>
-                <li key={idx} className="tree-house-index-item" >
-                  <Link to={`/treehouses/${key}`}>
-                    <img className=".map-img" src={treeHouses[key].image_url}></img>
-                  </Link>
-                  <ul className="tree-house-info">
-                    <li>{treeHouses[key].name}</li>
-                    <li>{treeHouses[key].city}</li>
-                    <li>{treeHouses[key].country}</li>
-                  </ul>
-                </li>
-              )}
+              <TreeHouseTileIndex treeHouses={treeHouses}/>
             </ul>
             {message}
           </div>
