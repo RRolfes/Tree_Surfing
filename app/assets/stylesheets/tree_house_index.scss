@@ -2,42 +2,134 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.tree-house-index {
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.index-map-container {
   display: flex;
-  flex-direction: column;
-  width: 33.333%;
-  box-sizing: border-box;
+  margin: 10px;
+  position: relative;
+  margin-top: 90px;
 }
 
-
-.index-list {
+.map-container {
+  display: flex;
+  width: 40%;
+  height: 86%;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.tree-house-index-item {
-  display: flex;
-  flex-direction: column;
+  position: fixed;
+  margin-right: 10px;
+  right: 0;
   border: 1px solid #e6e6e6;
-  box-shadow: 3px 3px 3px 0px #e6e6e6;
   border-radius: 3px;
-  margin-bottom: 30px;
 }
 
-.tree-house-info {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-between;
-}
-
-.tree-house-photo {
+.map {
   width: 100%;
-  height: 300px;
+  height: 100%;
+  border-radius: 3px;
 }
 
+
+body {
+  background: #fafafa;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.tree-house-index {
+  width: 58%;
+
+  .tree-house-tile-index-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .tree-house-tile-container {
+      display: flex;
+      flex-direction: column;
+      width: 31%;
+      height: 300px;
+
+      .tree-house-img {
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+      }
+
+      .tree-house-info {
+        width: 100%;
+        height: 30%;
+      }
+    }
+  }
+
+}
+
+
+
+// .tree-house-index {
+//   display: flex;
+//   flex-direction: column;
+//   width: 58%;
+//   box-sizing: border-box;
+// }
+//
+//
+// .index-list {
+//   box-sizing: border-box;
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+// }
+//
+// .tree-house-tile-index-container {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+// }
+//
+// .tree-house-tile-container {
+//   width: 31%;
+//   margin: 8px 8px 25px;
+//   font-family: sans-serif;
+//   line-height: 20px;
+//   color: #484848;
+//   height: 210px;
+//
+//   .tree-house-img {
+//     width: 100%;
+//     height: 80%;
+//   }
+//
+//   .tree-house-info {
+//     height: 20%;
+//     display: flex;
+//     flex-direction: column;
+//     // flex-grow: 1;
+//     justify-content: space-between;
+//   }
+//
+// }
+//
+//
+//
+// .tree-house-info {
+//   height: 20%;
+//   display: flex;
+//   flex-direction: column;
+//   // flex-grow: 1;
+//   justify-content: space-between;
+// }
+//
+// .tree-house-photo {
+//   width: 100%;
+//   // height: 300px;
+// }
+//
+// .tree-house-img {
+//   height: 100%;
+// }
 .no-results{
   text-align: left;
 

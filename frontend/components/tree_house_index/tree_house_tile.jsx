@@ -12,16 +12,18 @@ class TreeHouseTile extends React.Component {
     const treeHouse = this.props.treeHouse;
     return(
       <div className="tree-house-tile-container">
-        <li key={treeHouse.id} className="tree-house-index-item" >
+        <div className="tree-house-img">
           <Link to={`/treehouses/${treeHouse.id}`}>
-            <img className=".map-img" src={treeHouse.image_url}></img>
+            <img src={treeHouse.image_url}></img>
           </Link>
-          <ul className="tree-house-info">
+        </div>
+        <div className="tree-house-info">
+          <ul >
             <li>{treeHouse.name}</li>
             <li>{treeHouse.city}</li>
             <li>{treeHouse.country}</li>
           </ul>
-        </li>
+        </div>
       </div>
     );
   }
