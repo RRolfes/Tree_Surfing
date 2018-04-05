@@ -6,22 +6,25 @@
 
 .index-map-container {
   display: flex;
-  margin: 10px;
+  // margin: 10px;
   position: relative;
   margin-top: 90px;
+  align-content: center;
+
 
   .map-container {
     display: flex;
     width: 35%;
-    height: 86%;
+    height: 100%;
     box-sizing: border-box;
     position: fixed;
-    margin-right: 10px;
+    // margin-right: 10px;
     right: 0;
     border: 1px solid #e6e6e6;
     border-radius: 3px;
 
     .map {
+      padding-left: 10px;
       width: 100%;
       height: 100%;
       border-radius: 3px;
@@ -30,41 +33,43 @@
 
   .tree-house-index {
     width: 65%;
-    // margin-left: 10px;
-    // margin-right: 10px;
+
 
     .tree-house-tile-index-container {
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
-      align-self: flex-start;
-      flex-grow: 1;
-      // justify-content: space-between;
-
-      // a {
-      //   width: 33%;
-      // }
+      // align-self: flex-start;
+      padding-left: 10px;
+      padding-right: 2px;
 
       .tree-house-tile-container {
         display: flex;
         flex-direction: column;
-        // width: 31%;
-        height: 300px;
-        margin: 5px;
-        min-width: 150px;
+        min-width: 240px;
         width: 30%;
-        margin: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 25px;
+        // border: 1px solid #e6e6e6;
+        box-shadow: 3px 3px 3px 0px #e6e6e6;
+        border-radius: 3px;
 
         .tree-house-img-container {
           width: 100%;
           height: 70%;
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
         }
         .tree-house-img {
           // width: 100%;
           // height: 70%;
           background-size: cover;
           width: 100%;
-          height: 250px;
+          height: 200px;
+          background-size: cover;
+          background-position: 50% 50%;
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
 
           // img {
           //   width: 100%;
@@ -76,18 +81,21 @@
         .tree-house-info {
           width: 100%;
           height: 30%;
+          border-left: 1px solid #e6e6e6;
+          border-bottom-left-radius: 3px;
+
         }
       }
     }
-}
+  }
 
 
 
 
-body {
-  background: #fafafa;
-  font-family: 'Roboto', sans-serif;
-}
+  body {
+    background: #fafafa;
+    font-family: 'Roboto', sans-serif;
+  }
 
 
 

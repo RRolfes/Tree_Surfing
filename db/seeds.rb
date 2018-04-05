@@ -104,7 +104,7 @@ ActiveRecord::Base.transaction do
     lng: -123.006,
     lat: 38.354,
     name: 'Eagle\'s Nest Tree House',
-    city: 'San Francisco',
+    city: 'Bodega Bay',
     state: 'California',
     country: 'United States',
     image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1476482092/campground-photos/abvqx8gl26smow3uxgk8.jpg',
