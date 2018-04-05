@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const mapCenter = { lat: 37.178261, lng: -121.131211 };
+const mapCenter = { lat: 37.178261, lng: -91.031211 };
 
 const options = {
   center: mapCenter,
-  zoom: 7,
+  zoom: 3,
   scrollwheel: false
 };
 
