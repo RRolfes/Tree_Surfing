@@ -13,7 +13,7 @@
 
 .map-container {
   display: flex;
-  width: 40%;
+  width: 35%;
   height: 86%;
   box-sizing: border-box;
   position: fixed;
@@ -37,33 +37,35 @@ body {
 
 
 .tree-house-index {
-  width: 58%;
+  width: 65%;
+  // margin-left: 10px;
+  // margin-right: 10px;
 
   .tree-house-tile-index-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    justify-content: space-between;
+    align-self: flex-start;
+    flex-grow: 1;
+    // justify-content: space-between;
 
     a {
-      width: 31%;
+      width: 33%;
     }
 
     .tree-house-tile-container {
       display: flex;
       flex-direction: column;
       // width: 31%;
-      height: 250px;
+      height: 300px;
       margin: 5px;
+      min-width: 150px;
 
       .tree-house-img {
         width: 100%;
         height: 70%;
-        background-repeat: no-repeat;
         background-size: cover;
-        background-position: 50% 50%;
-        width: 100%;
+        // width: 100%;
         height: 100%;
 
         img {
