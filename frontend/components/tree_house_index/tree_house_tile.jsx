@@ -16,18 +16,22 @@ class TreeHouseTile extends React.Component {
     // debugger;
 
     return(
-      <Link className="tree-house-link" to={`/treehouses/${treeHouse.id}`}>
         <div className="tree-house-tile-container">
-          <div className="tree-house-img" style={treeHousePhoto}></div>
-          <div className="tree-house-info">
-            <ul >
-              <li>{treeHouse.name}</li>
-              <li>{treeHouse.city}</li>
-              <li>{treeHouse.country}</li>
-            </ul>
-          </div>
+          <Link to={`/treehouses/${treeHouse.id}`}>
+            <div className="tree-house-img-container">
+              <div className="tree-house-img" style={treeHousePhoto}></div>
+            </div>
+          </Link>
+          <Link to={`/treehouses/${treeHouse.id}`}>
+            <div className="tree-house-info">
+              <ul >
+                <li>{treeHouse.name}</li>
+                <li>{treeHouse.city}</li>
+                <li>{treeHouse.country}</li>
+              </ul>
+            </div>
+          </Link>
         </div>
-      </Link>
     );
   }
 }

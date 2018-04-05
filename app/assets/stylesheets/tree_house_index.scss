@@ -9,25 +9,79 @@
   margin: 10px;
   position: relative;
   margin-top: 90px;
+
+  .map-container {
+    display: flex;
+    width: 35%;
+    height: 86%;
+    box-sizing: border-box;
+    position: fixed;
+    margin-right: 10px;
+    right: 0;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+
+    .map {
+      width: 100%;
+      height: 100%;
+      border-radius: 3px;
+    }
+  }
+
+  .tree-house-index {
+    width: 65%;
+    // margin-left: 10px;
+    // margin-right: 10px;
+
+    .tree-house-tile-index-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-self: flex-start;
+      flex-grow: 1;
+      // justify-content: space-between;
+
+      // a {
+      //   width: 33%;
+      // }
+
+      .tree-house-tile-container {
+        display: flex;
+        flex-direction: column;
+        // width: 31%;
+        height: 300px;
+        margin: 5px;
+        min-width: 150px;
+        width: 30%;
+        margin: 10px;
+
+        .tree-house-img-container {
+          width: 100%;
+          height: 70%;
+        }
+        .tree-house-img {
+          // width: 100%;
+          // height: 70%;
+          background-size: cover;
+          width: 100%;
+          height: 250px;
+
+          // img {
+          //   width: 100%;
+          //   height: 100%;
+          //   border: none;
+          // }
+        }
+
+        .tree-house-info {
+          width: 100%;
+          height: 30%;
+        }
+      }
+    }
 }
 
-.map-container {
-  display: flex;
-  width: 35%;
-  height: 86%;
-  box-sizing: border-box;
-  position: fixed;
-  margin-right: 10px;
-  right: 0;
-  border: 1px solid #e6e6e6;
-  border-radius: 3px;
-}
 
-.map {
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-}
 
 
 body {
@@ -36,51 +90,6 @@ body {
 }
 
 
-.tree-house-index {
-  width: 65%;
-  // margin-left: 10px;
-  // margin-right: 10px;
-
-  .tree-house-tile-index-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-self: flex-start;
-    flex-grow: 1;
-    // justify-content: space-between;
-
-    a {
-      width: 33%;
-    }
-
-    .tree-house-tile-container {
-      display: flex;
-      flex-direction: column;
-      // width: 31%;
-      height: 300px;
-      margin: 5px;
-      min-width: 150px;
-
-      .tree-house-img {
-        width: 100%;
-        height: 70%;
-        background-size: cover;
-        // width: 100%;
-        height: 100%;
-
-        img {
-          width: 100%;
-          height: 100%;
-          border: none;
-        }
-      }
-
-      .tree-house-info {
-        width: 100%;
-        height: 30%;
-      }
-    }
-  }
 
 }
 
