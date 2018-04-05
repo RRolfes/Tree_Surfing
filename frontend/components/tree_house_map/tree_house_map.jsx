@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const mapCenter = { lat: 37.09024, lng: -95.712891 };
+const mapCenter = { lat: 37.178261, lng: -121.131211 };
 
 const options = {
   center: mapCenter,
-  zoom: 4,
+  zoom: 7,
   scrollwheel: false
 };
-
-let i = 2;
 
 class Map extends React.Component {
 

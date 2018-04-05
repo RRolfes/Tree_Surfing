@@ -12,11 +12,9 @@ class TreeHouseTile extends React.Component {
     const treeHouse = this.props.treeHouse;
     return(
       <div className="tree-house-tile-container">
-        <div className="tree-house-img">
-          <Link to={`/treehouses/${treeHouse.id}`}>
-            <img src={treeHouse.image_url}></img>
-          </Link>
-        </div>
+        <Link className="tree-house-img" to={`/treehouses/${treeHouse.id}`}>
+          <img src={treeHouse.image_url}></img>
+        </Link>
         <div className="tree-house-info">
           <ul >
             <li>{treeHouse.name}</li>
