@@ -3,7 +3,9 @@ import React from 'react';
 class EditProfile extends React.Component {
   constructor(props) {
     super(props);
-
+      this.state = {
+        currentComponent: 'edit'
+      };
   }
 
   render() {
