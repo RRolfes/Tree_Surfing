@@ -11,7 +11,13 @@ class EditProfile extends React.Component {
   render() {
     return(
       <div className="edit-profile-container">
-
+        <div className="click-options">
+          <button>Edit Profile</button>
+          <button>Trips</button>
+          <button>Photos</button>
+          <button>Trust & Verification</button>
+          <button>Reviews</button>
+        </div>
       </div>
     );
   }
