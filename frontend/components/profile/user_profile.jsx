@@ -1,6 +1,6 @@
 import React from 'react';
 
-class UserProfile extends React.Component {
+class EditProfile extends React.Component {
   constructor(props) {
     super(props);
 
@@ -8,11 +8,11 @@ class UserProfile extends React.Component {
 
   render() {
     return(
-      <div className="user-profile-container">
+      <div className="edit-profile-container">
 
       </div>
     );
   }
 }
 
-export default UserProfile;
+export default EditProfile;
