@@ -31,7 +31,6 @@ class TreeHouseIndex extends React.Component {
     }
 
     return (
-
       <div className="index-page-master">
         <div className="index-map-container">
           <div className="tree-house-index">
