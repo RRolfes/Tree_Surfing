@@ -22,6 +22,16 @@ const Protected = ({ component: Component, path, loggedIn }) => (
   )} />
 );
 
+const User = ( { component: Component, path, loggedIn } ) => (
+  <Route path={path} render={(props) => (
+    !loggedIn ? (
+      <Redirect to='/' />
+    ) : (
+      <Component {...props}/>
+    )
+  )} />
+);
+
 const mapStateToProps = state => (
   {loggedIn: Boolean(state.session.currentUser)}
 );
