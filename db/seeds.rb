@@ -57,103 +57,103 @@ TreeHouse.destroy_all
 
 ActiveRecord::Base.transaction do
   user1 = User.create!(
-    first: 'Ryan',
-    last: 'Rolfes',
-    email: 'RyanMRolfes@gmail.com',
-    password: 'password',
-    city: 'San Francisco',
-    state: 'California',
-    country: 'United States',
-    occupation: 'Software Developer',
-    image_url: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1521164950/ryan_rolfes.png',
-    age: 26,
-    about: 'Tree house aficionado!'
+  first: 'Ryan',
+  last: 'Rolfes',
+  email: 'RyanMRolfes@gmail.com',
+  password: 'password',
+  city: 'San Francisco',
+  state: 'California',
+  country: 'United States',
+  occupation: 'Software Developer',
+  image_url: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1521164950/ryan_rolfes.png',
+  age: 26,
+  about: 'Tree house aficionado!'
   )
 
   user2 = User.create!(
-    first: 'Guest',
-    last: 'Guest',
-    email: 'Guest@TreeSurfing.com',
-    password: 'password',
-    city: 'San Francisco',
-    state: 'California',
-    country: 'United States',
-    occupation: 'Software Development',
-    image_url: 'https://s-media-cache-ak0.pinimg.com/236x/21/75/f8/2175f8c734a566dbb151c2a0325cdc57--free-monkey-monkey-monkey.jpg',
-    age: 30,
-    about: 'A welcome guest!'
+  first: 'Guest',
+  last: 'Guest',
+  email: 'Guest@TreeSurfing.com',
+  password: 'password',
+  city: 'San Francisco',
+  state: 'California',
+  country: 'United States',
+  occupation: 'Software Development',
+  image_url: 'https://s-media-cache-ak0.pinimg.com/236x/21/75/f8/2175f8c734a566dbb151c2a0325cdc57--free-monkey-monkey-monkey.jpg',
+  age: 30,
+  about: 'A welcome guest!'
   )
 
   user3 = User.create!(
-    first: 'John',
-    last: 'Eagleton',
-    email: 'JEagleton@me.com',
-    password: 'password',
-    city: 'San Francisco',
-    state: 'California',
-    country: 'United States',
-    occupation: 'Optometrist',
-    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoqqXROdHAlPh3acGl815N0XGZnRrVGskMgoIz_1zW_2jwKC8',
-    age: 50,
-    about: 'Proud owner of the Eagle Nest tree house!'
+  first: 'John',
+  last: 'Eagleton',
+  email: 'JEagleton@me.com',
+  password: 'password',
+  city: 'San Francisco',
+  state: 'California',
+  country: 'United States',
+  occupation: 'Optometrist',
+  image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoqqXROdHAlPh3acGl815N0XGZnRrVGskMgoIz_1zW_2jwKC8',
+  age: 50,
+  about: 'Proud owner of the Eagle Nest tree house!'
   )
 
   user4 = User.create(
-    first: 'Catie',
-    last: 'Yagher',
-    email: 'CaitlinYagher@gmail.com',
-    password: 'password',
-    city: 'San Francisco',
-    state: 'California',
-    country: 'United States',
-    occupation: 'Customer Success Manager',
-    image_url: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png',
-    age: 26,
-    about: 'Happy and fun outdoor adventure lover!',
+  first: 'Catie',
+  last: 'Yagher',
+  email: 'CaitlinYagher@gmail.com',
+  password: 'password',
+  city: 'San Francisco',
+  state: 'California',
+  country: 'United States',
+  occupation: 'Customer Success Manager',
+  image_url: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png',
+  age: 26,
+  about: 'Happy and fun outdoor adventure lover!',
   )
 
   # 1
   treeHouse1 = TreeHouse.create!(
-    user_id: user3.id,
-    lng: -123.006,
-    lat: 38.354,
-    name: 'Eagle\'s Nest Tree House',
-    city: 'Bodega Bay',
-    state: 'California',
-    country: 'United States',
-    image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1476482092/campground-photos/abvqx8gl26smow3uxgk8.jpg',
-    description: 'The Eagle\'s Nest Treehouse Farm Stay combines a wilderness experience, sumptuous old growth redwoods, but the comforts of a guest house, with complete privacy and tranquility, yet is within easy driving distance of some of the best that California has to offer. This farm stay and wilderness experience is located on a working ranch on the Sonoma coast. We are less than 90 minutes north of San Francisco and half that from California\'s premier wine-growing regions of the Napa-Sonoma Valleys. We are also smack dab in the middle of some of California\'s most breathtaking coast. You are near enough to civilization, but it feels like you are in the most remote and peaceful spot on earth. During the day you can explore the ranch operations including our ducks, cows, goats and livestock guardian dogs, learn about sustainable organic farming practices and where your (best) food comes from, hike the forest trails and enjoy nature at its best. At night you can see all the stars since SF is over 60 miles away and does not significantly pollute our night sky.',
-    rating: '98%',
-    bed: true,
-    water: true,
-    electricity: true,
-    check_in: '2pm',
-    check_out: '12pm',
-    cancellation_policy: 'Moderate',
-    on_arrival: 'Meet and greet',
-    minimum_nights: 'None',
-    accepts_bookings: '1 month out',
-    toilets: true,
-    showers: true,
-    picnic_table: true,
-    trash: false,
-    wifi: false,
-    biking: true,
-    boating: true,
-    fishing: true,
-    hiking: true,
-    horseback: true,
-    paddling: true,
-    swimming: true,
-    wildlife_watching: true,
-    climbing: false,
-    price: 360,
-    max_guests: 4
+  user_id: user3.id,
+  lng: -123.006,
+  lat: 38.354,
+  name: 'Eagle\'s Nest Tree House',
+  city: 'Bodega Bay',
+  state: 'California',
+  country: 'United States',
+  image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1476482092/campground-photos/abvqx8gl26smow3uxgk8.jpg',
+  description: 'The Eagle\'s Nest Treehouse Farm Stay combines a wilderness experience, sumptuous old growth redwoods, but the comforts of a guest house, with complete privacy and tranquility, yet is within easy driving distance of some of the best that California has to offer. This farm stay and wilderness experience is located on a working ranch on the Sonoma coast. We are less than 90 minutes north of San Francisco and half that from California\'s premier wine-growing regions of the Napa-Sonoma Valleys. We are also smack dab in the middle of some of California\'s most breathtaking coast. You are near enough to civilization, but it feels like you are in the most remote and peaceful spot on earth. During the day you can explore the ranch operations including our ducks, cows, goats and livestock guardian dogs, learn about sustainable organic farming practices and where your (best) food comes from, hike the forest trails and enjoy nature at its best. At night you can see all the stars since SF is over 60 miles away and does not significantly pollute our night sky.',
+  rating: '98%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '2pm',
+  check_out: '12pm',
+  cancellation_policy: 'Moderate',
+  on_arrival: 'Meet and greet',
+  minimum_nights: 'None',
+  accepts_bookings: '1 month out',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: false,
+  wifi: false,
+  biking: true,
+  boating: true,
+  fishing: true,
+  hiking: true,
+  horseback: true,
+  paddling: true,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 360,
+  max_guests: 4
   )
 
   # 2
-  TreeHouse.create!(
-  user_id: user1.id,
+  treeHouse2 = TreeHouse.create!(
+  user_id: user4.id,
   lat: 36.362,
   lng: -121.856,
   name: 'Big Sur Luxery Tree House',
@@ -161,72 +161,157 @@ ActiveRecord::Base.transaction do
   state: 'California',
   country: 'United States',
   image_url: 'http://www.postranchinn.com/wp-content/themes/post_ranch_inn/images/bg-tree-xl.jpg',
-  description: 'Big Sur luxery tree house!'
+  description: "Tree Houses are free-standing structures built on stilts nine feet off the forest floor with a stairway to each entrance. Triangular in shape, each room features a King bed, window seat, desk, fireplace, and skylight to watch the stars from bed each evening.
+
+These rooms offer a luxurious opportunity for anyone who has ever dreamed of sleeping amongst the trees.  Please note the minimum age for guests is 18 years old and pets are not allowed.",
+  rating: '98%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '2pm',
+  check_out: '12pm',
+  cancellation_policy: 'Moderate',
+  on_arrival: 'Meet and greet',
+  minimum_nights: 'None',
+  accepts_bookings: '1 month out',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: false,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 995,
+  max_guests: 2
   )
 
   # 3
   TreeHouse.create!(
-    user_id: user1.id,
-    lng: -84.388,
-    lat: 33.749,
-    name: 'Secluded Intown Tree House',
-    city: 'Atlanta',
-    state: 'Georgia',
-    country: 'United States',
-    image_url: 'https://a0.muscache.com/im/pictures/21162888/5a0f1151_original.jpg',
-    description: 'Awesome TreeHouse in Georgia with lots of windows and a light up bridge!'
+  user_id: user1.id,
+  lng: -84.388,
+  lat: 33.749,
+  name: 'Secluded Intown Tree House',
+  city: 'Atlanta',
+  state: 'Georgia',
+  country: 'United States',
+  image_url: 'https://a0.muscache.com/im/pictures/21162888/5a0f1151_original.jpg',
+  description: 'The treehouse has a Southern nature - gracious, calming, and comfortable. Centrally located within the heart of intown Atlanta, the treehouses are a hidden gem. The subject of TV and magazine features including the Today Show, "Treehouse Masters: Ultimate Treehouse IV", Architectural Digest, Travel + Leisure, Harper\'s Bazaar, and numerous others, they are often described as being the most relaxing, romantic, dreamy and unique place you\'ll ever stay. What could be better than falling asleep in the trees and waking up to birds singing around you--all within the city limits?',
+  rating: '100%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: '1 month out',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: false,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: false,
+  paddling: false,
+  swimming: false,
+  wildlife_watching: true,
+  climbing: false,
+  price: 375,
+  max_guests: 2
   )
 
   # 4
   TreeHouse.create!(
-    user_id: user1.id,
-    lng: -83.029,
-    lat: 34.722,
-    name: 'Bolt Farm Tree House',
-    city: 'Walhalla',
-    state: 'South Carolina',
-    country: 'United States',
-    image_url: 'https://a0.muscache.com/im/pictures/6ef18b6d-d14a-47dc-8e0d-1f2d2b2955a3.jpg',
-    description: 'Huge, romantic luxery tree house!'
+  user_id: user1.id,
+  lng: -83.029,
+  lat: 34.722,
+  name: 'Bolt Farm Tree House',
+  city: 'Walhalla',
+  state: 'South Carolina',
+  country: 'United States',
+  image_url: 'https://a0.muscache.com/im/pictures/6ef18b6d-d14a-47dc-8e0d-1f2d2b2955a3.jpg',
+  description: "
+LIVE LIKE KINGS & PLAY LIKE KIDS in this extraordinary, award-winning treehouse hidden in 40 acres of paradise! Cozy, whimsical & glamorous; 2 connecting treehouse decks transport you to utopia! Fireplace & AC, indoor plumbing, outdoor shower, record player, antiques!! Rest, reconnect & have an Unforgettable Experience!
+
+Featured in Architectural Digest, Buzzfeed, Insider Travel, TLC, The Knot, Gal Meets Glam, Borrowed & Blue, & more!
+
+Transport your spirit, and feel a thrill that can only be discovered in the treetops! Experience the one-of-a-kind blend of youthful bliss and grown-up luxury for yourself. The faster you get here, the sooner you change your pace and unwind in our wooden paradise.",
+  rating: '100%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: false,
+  paddling: false,
+  swimming: false,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   # 5
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: -22.863,
-    lng: -46.035,
-    name: 'Jungle House',
-    city: 'Monte Verde',
-    state: '',
-    country: 'Brazil',
-    image_url: 'https://a0.muscache.com/im/pictures/69769498/8b565228_original.jpg',
-    description: 'Cozy Tree House in Monte Verde'
+  user_id: user1.id,
+  lat: -22.863,
+  lng: -46.035,
+  name: 'Jungle House',
+  city: 'Monte Verde',
+  state: '',
+  country: 'Brazil',
+  image_url: 'https://a0.muscache.com/im/pictures/69769498/8b565228_original.jpg',
+  description: 'Cozy Tree House in Monte Verde'
   )
 
   # 6
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: 19.431,
-    lng: -155.225,
-    name: 'Surf Tree',
-    city: 'Volcano',
-    state: 'Hawaii',
-    country: 'United States',
-    image_url: 'https://a0.muscache.com/im/pictures/291713/b19c5c33_original.jpg',
-    description: 'Treehouse at Kilauea Volcano'
+  user_id: user1.id,
+  lat: 19.431,
+  lng: -155.225,
+  name: 'Surf Tree',
+  city: 'Volcano',
+  state: 'Hawaii',
+  country: 'United States',
+  image_url: 'https://a0.muscache.com/im/pictures/291713/b19c5c33_original.jpg',
+  description: 'Treehouse at Kilauea Volcano'
   )
 
   # 7
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: 38.206,
-    lng: -122.682,
-    name: 'Treehouse at Swallowtail Studio',
-    city: 'Peteluma',
-    state: 'California',
-    country: 'United States',
-    image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1485986996/campground-photos/e4tahv9qnivihw52ohjv.jpg',
-    description: 'Magical, Romantic Treehouse'
+  user_id: user1.id,
+  lat: 38.206,
+  lng: -122.682,
+  name: 'Treehouse at Swallowtail Studio',
+  city: 'Peteluma',
+  state: 'California',
+  country: 'United States',
+  image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1485986996/campground-photos/e4tahv9qnivihw52ohjv.jpg',
+  description: 'Magical, Romantic Treehouse'
   )
 
   # 4
@@ -244,161 +329,161 @@ ActiveRecord::Base.transaction do
 
   # 8
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: 37.794,
-    lng: -120.243,
-    name: 'Wondernut Farm',
-    city: 'Yosemite',
-    state: 'California',
-    country: 'United States',
-    image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1465450461/campground-photos/xmuu84zvdnepkzpuucq5.jpg',
-    description: 'Nestled into a small cluster of the dominant trees in our landscape our tree platform is built on a multi-trunked interior live oak'
+  user_id: user1.id,
+  lat: 37.794,
+  lng: -120.243,
+  name: 'Wondernut Farm',
+  city: 'Yosemite',
+  state: 'California',
+  country: 'United States',
+  image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1465450461/campground-photos/xmuu84zvdnepkzpuucq5.jpg',
+  description: 'Nestled into a small cluster of the dominant trees in our landscape our tree platform is built on a multi-trunked interior live oak'
   )
 
 
   #10
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: 47.538,
-    lng: -121.911,
-    name: 'Tree House Point',
-    city: 'Issaquah',
-    state: 'Washington',
-    country: 'United States',
-    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Treehouse-Point-c-940x1404.jpg',
-    description: 'Just outside Seattle in Issaquah, Washington, is the treehouse B&B named TreeHouse Point.'
+  user_id: user1.id,
+  lat: 47.538,
+  lng: -121.911,
+  name: 'Tree House Point',
+  city: 'Issaquah',
+  state: 'Washington',
+  country: 'United States',
+  image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Treehouse-Point-c-940x1404.jpg',
+  description: 'Just outside Seattle in Issaquah, Washington, is the treehouse B&B named TreeHouse Point.'
   )
 
   #11
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: -16.470,
-    lng: 145.345,
-    name: 'Silky Oaks Lodge',
-    city: 'Queensland',
-    state: 'Queensland',
-    country: 'Australia',
-    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Silky-Oaks-b-940x630.jpg',
-    description: 'Silky Oaks Lodge is a luxury tree house in the jungle around Queensland, Australia’s Mossman Gorge River.'
+  user_id: user1.id,
+  lat: -16.470,
+  lng: 145.345,
+  name: 'Silky Oaks Lodge',
+  city: 'Queensland',
+  state: 'Queensland',
+  country: 'Australia',
+  image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Silky-Oaks-b-940x630.jpg',
+  description: 'Silky Oaks Lodge is a luxury tree house in the jungle around Queensland, Australia’s Mossman Gorge River.'
   )
 
   #12
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: -36.848,
-    lng: 174.754,
-    name: 'Yellow Tree House',
-    city: 'Aukland',
-    state: 'Aukland',
-    country: 'New Zeland',
-    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Yellow-Treehouse-Restaurant-a.jpg',
-    description: 'The Yellow Tree House is built around a 40-meter-tall redwood tree.'
+  user_id: user1.id,
+  lat: -36.848,
+  lng: 174.754,
+  name: 'Yellow Tree House',
+  city: 'Aukland',
+  state: 'Aukland',
+  country: 'New Zeland',
+  image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Yellow-Treehouse-Restaurant-a.jpg',
+  description: 'The Yellow Tree House is built around a 40-meter-tall redwood tree.'
   )
 
   #13
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: 8.777,
-    lng: -83.222,
-    name: 'Finca Bellavista',
-    city: 'Puntarenas',
-    state: 'Puntarenas',
-    country: 'Costa Rica',
-    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Finca-Bellavista-c.jpg',
-    description: 'Finca Bellavista is a sustainable treehouse community in Costa Rica’s rainforest canopies. It’s quite possibly the coolest place on earth.'
+  user_id: user1.id,
+  lat: 8.777,
+  lng: -83.222,
+  name: 'Finca Bellavista',
+  city: 'Puntarenas',
+  state: 'Puntarenas',
+  country: 'Costa Rica',
+  image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Finca-Bellavista-c.jpg',
+  description: 'Finca Bellavista is a sustainable treehouse community in Costa Rica’s rainforest canopies. It’s quite possibly the coolest place on earth.'
   )
 
   #14
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: 66.071,
-    lng: 20.987,
-    name: 'TreeHotel',
-    city: 'Harads',
-    state: '',
-    country: 'Sweden',
-    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Treehotel-f-940x627.jpg',
-    description: 'The second-to-none Treehotel in Harads, Sweden, is absolutely incredible.'
+  user_id: user1.id,
+  lat: 66.071,
+  lng: 20.987,
+  name: 'TreeHotel',
+  city: 'Harads',
+  state: '',
+  country: 'Sweden',
+  image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Treehotel-f-940x627.jpg',
+  description: 'The second-to-none Treehotel in Harads, Sweden, is absolutely incredible.'
   )
 
   #15
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: 19.472,
-    lng: 109.885,
-    name: 'Nanshan Tree House',
-    city: 'Hainan',
-    state: '',
-    country: 'China',
-    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Nanshan-b.jpg',
-    description: 'On the island of Hainan in the South China Sea, the Nanshan Treehouse can house up to 20 people. The tree house is also near a Buddhist “theme park,” with a number of pagodas and temples.'
+  user_id: user1.id,
+  lat: 19.472,
+  lng: 109.885,
+  name: 'Nanshan Tree House',
+  city: 'Hainan',
+  state: '',
+  country: 'China',
+  image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Nanshan-b.jpg',
+  description: 'On the island of Hainan in the South China Sea, the Nanshan Treehouse can house up to 20 people. The tree house is also near a Buddhist “theme park,” with a number of pagodas and temples.'
   )
 
   #16
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: 35.826,
-    lng: 138.333,
-    name: 'Teahouse Tetsu',
-    city: 'Hokuto City',
-    state: '',
-    country: 'Japan',
-    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Teahouse-a.jpg',
-    description: 'The Teahouse Tetsu is exactly what it sounds like: a teahouse in a tree. It was designed by architect Terunobu Fujimori and sits among the cherry blossoms in Hokuto City, Japan.'
+  user_id: user1.id,
+  lat: 35.826,
+  lng: 138.333,
+  name: 'Teahouse Tetsu',
+  city: 'Hokuto City',
+  state: '',
+  country: 'Japan',
+  image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Teahouse-a.jpg',
+  description: 'The Teahouse Tetsu is exactly what it sounds like: a teahouse in a tree. It was designed by architect Terunobu Fujimori and sits among the cherry blossoms in Hokuto City, Japan.'
   )
 
   #17
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: 11.696,
-    lng: 102.531,
-    name: 'Soneva Kiri Treepod',
-    city: 'Sovena Kiri',
-    state: '',
-    country: 'Thailand',
-    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Soneva-Kiri-a-940x529.jpg',
-    description: 'The Soneva Kiri Resort on Koh Kood, Thailand, has a one-of-a-kind feature: “treepod” dining. Basically, you enter the pod from the jungle floor, then it’s hoisted into the canopy, where you can camp and relax on the deck. Oh, and you can be served a meal by a waiter on a zipline.'
+  user_id: user1.id,
+  lat: 11.696,
+  lng: 102.531,
+  name: 'Soneva Kiri Treepod',
+  city: 'Sovena Kiri',
+  state: '',
+  country: 'Thailand',
+  image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Soneva-Kiri-a-940x529.jpg',
+  description: 'The Soneva Kiri Resort on Koh Kood, Thailand, has a one-of-a-kind feature: “treepod” dining. Basically, you enter the pod from the jungle floor, then it’s hoisted into the canopy, where you can camp and relax on the deck. Oh, and you can be served a meal by a waiter on a zipline.'
   )
 
   #18
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: -39.873,
-    lng: -71.913,
-    name: 'Nothofagus Spiral',
-    city: 'Patagonia',
-    state: '',
-    country: 'Chile',
-    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Nothofagus-b-940x625.jpg',
-    description: 'The Nothofagus Hotel is among the treetops of the Huilo Huilo Biological Reserve in Chilean Patagonia.
+  user_id: user1.id,
+  lat: -39.873,
+  lng: -71.913,
+  name: 'Nothofagus Spiral',
+  city: 'Patagonia',
+  state: '',
+  country: 'Chile',
+  image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Nothofagus-b-940x625.jpg',
+  description: 'The Nothofagus Hotel is among the treetops of the Huilo Huilo Biological Reserve in Chilean Patagonia.
 
-'
+  '
   )
 
   #19
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: 45.0345,
-    lng: -79.437,
-    name: 'Muskoka Treehouse',
-    city: 'Lake Muskoka',
-    state: 'Ontario',
-    country: 'Canada',
-    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Muskoka-a.jpg',
-    description: 'Designer Lukasz Kos’s treehouse in Lake Muskoka, Ontario, is named the 4Treehouse. It was designed to minimize its impact on the surrounding trees. There are three levels to this treehouse, which looks like a Japanese lantern when lit up at night.'
+  user_id: user1.id,
+  lat: 45.0345,
+  lng: -79.437,
+  name: 'Muskoka Treehouse',
+  city: 'Lake Muskoka',
+  state: 'Ontario',
+  country: 'Canada',
+  image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Muskoka-a.jpg',
+  description: 'Designer Lukasz Kos’s treehouse in Lake Muskoka, Ontario, is named the 4Treehouse. It was designed to minimize its impact on the surrounding trees. There are three levels to this treehouse, which looks like a Japanese lantern when lit up at night.'
   )
 
   #20
   TreeHouse.create!(
-    user_id: user1.id,
-    lat: 35.9856,
-    lng: -84.994,
-    name: 'The Minister’s Treehouse',
-    city: 'Crossville',
-    state: 'Tennessee',
-    country: 'United States',
-    image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Minister%E2%80%99s-Treehouse-a.jpg',
-    description: 'The Minister’s Treehouse in Crossville, Tennessee, is possibly the world’s largest treehouse, standing 97 feet tall with over 80 rooms, and also serves as a church. Minister Horace Burgess started building it in 1993 and hasn’t stopped. The house is built around a massive oak with six other oaks used for support.'
+  user_id: user1.id,
+  lat: 35.9856,
+  lng: -84.994,
+  name: 'The Minister’s Treehouse',
+  city: 'Crossville',
+  state: 'Tennessee',
+  country: 'United States',
+  image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Minister%E2%80%99s-Treehouse-a.jpg',
+  description: 'The Minister’s Treehouse in Crossville, Tennessee, is possibly the world’s largest treehouse, standing 97 feet tall with over 80 rooms, and also serves as a church. Minister Horace Burgess started building it in 1993 and hasn’t stopped. The house is built around a massive oak with six other oaks used for support.'
   )
   #
   # #10
@@ -532,50 +617,69 @@ ActiveRecord::Base.transaction do
   # )
 
   Review.create!(
-    tree_house_id: treeHouse1.id,
-    user_id: user1.id,
-    title: "Awesome stay!",
-    comment: "The Eagle's Nest is a magical place. Perched high in the trees, this is an amazing place to relax, recharge and reconnect amidst the beauty of Salmon Creek Ranch and the warm hospitality of Lesley and John. The love and care that has gone into creating this masterpiece of a treehouse is readily apparent, from the copper shower to the gorgeous bed to the tall windows. It's inspiring to see craft done at such as masterful level, and a real treat to live and sleep amongst it.
+  tree_house_id: treeHouse1.id,
+  user_id: user1.id,
+  title: "Awesome stay!",
+  comment: "The Eagle's Nest is a magical place. Perched high in the trees, this is an amazing place to relax, recharge and reconnect amidst the beauty of Salmon Creek Ranch and the warm hospitality of Lesley and John. The love and care that has gone into creating this masterpiece of a treehouse is readily apparent, from the copper shower to the gorgeous bed to the tall windows. It's inspiring to see craft done at such as masterful level, and a real treat to live and sleep amongst it.
 
-There's plenty of hiking trails on the ranch, and the ocean is also close by with great hiking at the Doran Regional Park or Sonoma Coast State Park. Wildflower bakery in nearby Freestone is fantastic, and foodies will love Sebastopol. If you're looking to really treat yourself, check out the cedar enzyme bath and massage packages at the Osmosis Day Spa also close by (https://www.osmosis.com/). This region of California offers so much goodness and fun adventures!
+  There's plenty of hiking trails on the ranch, and the ocean is also close by with great hiking at the Doran Regional Park or Sonoma Coast State Park. Wildflower bakery in nearby Freestone is fantastic, and foodies will love Sebastopol. If you're looking to really treat yourself, check out the cedar enzyme bath and massage packages at the Osmosis Day Spa also close by (https://www.osmosis.com/). This region of California offers so much goodness and fun adventures!
 
-Eagle's Nest is the perfect place to celebrate a birthday, anniversary, or simply taking care of yourself and enjoying all the beauty that life has to offer. Our weekend here restored my energy and my excitement. Staying here gave my inner child her absolute dream getaway!! I can't wait to come back soon - and it's close enough to San Francisco that weekdays are a real possibility.
+  Eagle's Nest is the perfect place to celebrate a birthday, anniversary, or simply taking care of yourself and enjoying all the beauty that life has to offer. Our weekend here restored my energy and my excitement. Staying here gave my inner child her absolute dream getaway!! I can't wait to come back soon - and it's close enough to San Francisco that weekdays are a real possibility.
 
-PS: Make sure to check out the Mercantile store near the ranch entrance for steaks, sausages, duck eggs, kale, and eggs all from Salmon Creek Ranch! It's open 24/7. You can bring your table to the farm :)",
-    img_url: user1.image_url,
-    date: '02/17/2018',
-    reviewer_name: user1.first,
-    helpfuls: 10
+  PS: Make sure to check out the Mercantile store near the ranch entrance for steaks, sausages, duck eggs, kale, and eggs all from Salmon Creek Ranch! It's open 24/7. You can bring your table to the farm :)",
+  img_url: user1.image_url,
+  date: '02/17/2018',
+  reviewer_name: user1.first,
+  helpfuls: 10
   )
 
   Review.create!(
-    tree_house_id: treeHouse1.id,
-    user_id: user2.id,
-    title: "Cool Spot!",
-    comment: "Loved the tree house design and all the ammeneties up there!",
-    img_url: user2.image_url,
-    date: '08/03/2017',
-    reviewer_name: user2.first,
-    helpfuls: 1
+  tree_house_id: treeHouse1.id,
+  user_id: user2.id,
+  title: "Cool Spot!",
+  comment: "Loved the tree house design and all the ammeneties up there!",
+  img_url: user2.image_url,
+  date: '08/03/2017',
+  reviewer_name: user2.first,
+  helpfuls: 1
   )
 
   Review.create!(
-    tree_house_id: treeHouse1.id,
-    user_id: user3.id,
-    title: "Lovely Place!",
-    comment: "This is my favorite place in the world - hope you love it to!",
-    img_url: user3.image_url,
-    date: '02/14/2017',
-    reviewer_name: user3.first,
-    helpfuls: 3
+  tree_house_id: treeHouse1.id,
+  user_id: user3.id,
+  title: "Lovely Place!",
+  comment: "This is my favorite place in the world - hope you love it to!",
+  img_url: user3.image_url,
+  date: '02/14/2017',
+  reviewer_name: user3.first,
+  helpfuls: 3
+  )
+
+  Review.create!(
+  tree_house_id: treeHouse2.id,
+  user_id: user1.id,
+  title: "Incredible Stay!",
+  comment: "Wow! I cannot speak highly enough about this property. As soon as you arrive the worries of the outside world just melt away! The views are unforgettable and you will truly feel at peace in nature.",
+  img_url: user1.image_url,
+  date: '02/11/2017',
+  reviewer_name: user1.first,
+  helpfuls: 3
   )
 
   Booking.create!(
-    tree_house_id: treeHouse1.id,
-    user_id: user1.id,
-    start_date: '2017-08-08',
-    end_date: '2017-08-11',
-    confirmed: true
+  tree_house_id: treeHouse1.id,
+  user_id: user1.id,
+  start_date: '2017-08-08',
+  end_date: '2017-08-11',
+  confirmed: true
+  )
+
+  Booking.create!(
+  tree_house_id: treeHouse2.id,
+  user_id: user4.id,
+  start_date: '2017-08-08',
+  end_date: '2017-08-11',
+  confirmed: true
   )
 
 
