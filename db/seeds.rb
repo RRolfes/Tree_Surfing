@@ -56,227 +56,189 @@ User.destroy_all
 TreeHouse.destroy_all
 
 ActiveRecord::Base.transaction do
-  user1 = User.create!(
-  first: 'Ryan',
-  last: 'Rolfes',
-  email: 'RyanMRolfes@gmail.com',
-  password: 'password',
-  city: 'San Francisco',
-  state: 'California',
-  country: 'United States',
-  occupation: 'Software Developer',
-  image_url: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1521164950/ryan_rolfes.png',
-  age: 26,
-  about: 'Tree house aficionado!'
-  )
+  user1 = User.create!(first: 'Ryan', last: 'Rolfes', email: 'RyanMRolfes@gmail.com', password: 'password', city: 'San Francisco', state: 'California', country: 'United States', occupation: 'Software Developer', image_url: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1521164950/ryan_rolfes.png', age: 26, about: 'Tree house aficionado!')
+  user2 = User.create!(first: 'Guest', last: 'Guest', email: 'Guest@TreeSurfing.com', password: 'password', city: 'San Francisco', state: 'California', country: 'United States', occupation: 'Software Development', image_url: 'https://s-media-cache-ak0.pinimg.com/236x/21/75/f8/2175f8c734a566dbb151c2a0325cdc57--free-monkey-monkey-monkey.jpg', age: 30, about: 'A welcome guest!' )
+  user3 = User.create!(first: 'John', last: 'Eagleton', email: 'JEagleton@me.com', password: 'password', city: 'San Francisco', state: 'California', country: 'United States', occupation: 'Optometrist', image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoqqXROdHAlPh3acGl815N0XGZnRrVGskMgoIz_1zW_2jwKC8', age: 50, about: 'Proud owner of the Eagle Nest tree house!' )
+  user4 = User.create(first: 'Catie', last: 'Yagher', email: 'CaitlinYagher@gmail.com', password: 'password', city: 'San Francisco', state: 'California', country: 'United States', occupation: 'Customer Success Manager', image_url: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png', age: 26, about: 'Happy and fun outdoor adventure lover!' )
 
-  user2 = User.create!(
-  first: 'Guest',
-  last: 'Guest',
-  email: 'Guest@TreeSurfing.com',
-  password: 'password',
-  city: 'San Francisco',
-  state: 'California',
-  country: 'United States',
-  occupation: 'Software Development',
-  image_url: 'https://s-media-cache-ak0.pinimg.com/236x/21/75/f8/2175f8c734a566dbb151c2a0325cdc57--free-monkey-monkey-monkey.jpg',
-  age: 30,
-  about: 'A welcome guest!'
-  )
 
-  user3 = User.create!(
-  first: 'John',
-  last: 'Eagleton',
-  email: 'JEagleton@me.com',
-  password: 'password',
-  city: 'San Francisco',
-  state: 'California',
-  country: 'United States',
-  occupation: 'Optometrist',
-  image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoqqXROdHAlPh3acGl815N0XGZnRrVGskMgoIz_1zW_2jwKC8',
-  age: 50,
-  about: 'Proud owner of the Eagle Nest tree house!'
-  )
+  user5 = User.create!({:first=>"Zyah", :last=>"Duffman", :email=>"ZyahDuffman326@gmail.com", :password=>"password", :city=>"Charleston", :state=>"West Virginia", :country=>"USA", :occupation=>"Head teacher", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>33, :about=>"Treehouse Lover!"})
+  user6 = User.create!({:first=>"Briana", :last=>"Caswell", :email=>"BrianaCaswell879@gmail.com", :password=>"password", :city=>"Sacramento", :state=>"California", :country=>"USA", :occupation=>"Editor", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>18, :about=>"Treehouse Lover!"})
+  user7 = User.create!({:first=>"Melanie", :last=>"Chapman", :email=>"MelanieChapman503@gmail.com", :password=>"password", :city=>"Atlanta", :state=>"Georgia", :country=>"USA", :occupation=>"Jeweler", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>62, :about=>"Treehouse Lover!"})
+  user8 = User.create!({:first=>"Melissa", :last=>"Schiebel", :email=>"MelissaSchiebel166@gmail.com", :password=>"password", :city=>"Juneau", :state=>"Alaska", :country=>"USA", :occupation=>"Doctor", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>46, :about=>"Treehouse Lover!"})
+  user9 = User.create!({:first=>"Leslie", :last=>"Vader", :email=>"LeslieVader121@gmail.com", :password=>"password", :city=>"Montpelier", :state=>"Vermont", :country=>"USA", :occupation=>"Nurse", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>46, :about=>"Treehouse Lover!"})
+  user10 = User.create!({:first=>"Amanda", :last=>"Wagner", :email=>"AmandaWagner56@gmail.com", :password=>"password", :city=>"Charleston", :state=>"West Virginia", :country=>"USA", :occupation=>"Sign language interpreter", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>36, :about=>"Treehouse Lover!"})
+  user11 = User.create!({:first=>"Rebecca", :last=>"Vogal", :email=>"RebeccaVogal22@gmail.com", :password=>"password", :city=>"Topeka", :state=>"Kansas", :country=>"USA", :occupation=>"Travel agent", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>61, :about=>"Treehouse Lover!"})
+  user12 = User.create!({:first=>"Sophie", :last=>"Schmitt", :email=>"SophieSchmitt654@gmail.com", :password=>"password", :city=>"Hartford", :state=>"Connecticut", :country=>"USA", :occupation=>"Flight attendant", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>63, :about=>"Treehouse Lover!"})
+  user13 = User.create!({:first=>"Angel", :last=>"Myers", :email=>"AngelMyers587@gmail.com", :password=>"password", :city=>"Boston", :state=>"Massachusetts", :country=>"USA", :occupation=>"Personal assistant", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>54, :about=>"Treehouse Lover!"})
+  user14 = User.create!({:first=>"Maya", :last=>"Sonderling", :email=>"MayaSonderling133@gmail.com", :password=>"password", :city=>"Trenton", :state=>"New Jersey", :country=>"USA", :occupation=>"Cook", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>57, :about=>"Treehouse Lover!"})
 
-  user4 = User.create(
-  first: 'Catie',
-  last: 'Yagher',
-  email: 'CaitlinYagher@gmail.com',
-  password: 'password',
-  city: 'San Francisco',
-  state: 'California',
-  country: 'United States',
-  occupation: 'Customer Success Manager',
-  image_url: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png',
-  age: 26,
-  about: 'Happy and fun outdoor adventure lover!',
-  )
+
 
   # 1
   treeHouse1 = TreeHouse.create!(
-  user_id: user3.id,
-  lng: -123.006,
-  lat: 38.354,
-  name: 'Eagle\'s Nest Tree House',
-  city: 'Bodega Bay',
-  state: 'California',
-  country: 'United States',
-  image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1476482092/campground-photos/abvqx8gl26smow3uxgk8.jpg',
-  description: 'The Eagle\'s Nest Treehouse Farm Stay combines a wilderness experience, sumptuous old growth redwoods, but the comforts of a guest house, with complete privacy and tranquility, yet is within easy driving distance of some of the best that California has to offer. This farm stay and wilderness experience is located on a working ranch on the Sonoma coast. We are less than 90 minutes north of San Francisco and half that from California\'s premier wine-growing regions of the Napa-Sonoma Valleys. We are also smack dab in the middle of some of California\'s most breathtaking coast. You are near enough to civilization, but it feels like you are in the most remote and peaceful spot on earth. During the day you can explore the ranch operations including our ducks, cows, goats and livestock guardian dogs, learn about sustainable organic farming practices and where your (best) food comes from, hike the forest trails and enjoy nature at its best. At night you can see all the stars since SF is over 60 miles away and does not significantly pollute our night sky.',
-  rating: '98%',
-  bed: true,
-  water: true,
-  electricity: true,
-  check_in: '2pm',
-  check_out: '12pm',
-  cancellation_policy: 'Moderate',
-  on_arrival: 'Meet and greet',
-  minimum_nights: 'None',
-  accepts_bookings: '1 month out',
-  toilets: true,
-  showers: true,
-  picnic_table: true,
-  trash: false,
-  wifi: false,
-  biking: true,
-  boating: true,
-  fishing: true,
-  hiking: true,
-  horseback: true,
-  paddling: true,
-  swimming: true,
-  wildlife_watching: true,
-  climbing: false,
-  price: 360,
-  max_guests: 4
+    user_id: user3.id,
+    lng: -123.006,
+    lat: 38.354,
+    name: 'Eagle\'s Nest Tree House',
+    city: 'Bodega Bay',
+    state: 'California',
+    country: 'United States',
+    image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1476482092/campground-photos/abvqx8gl26smow3uxgk8.jpg',
+    description: 'The Eagle\'s Nest Treehouse Farm Stay combines a wilderness experience, sumptuous old growth redwoods, but the comforts of a guest house, with complete privacy and tranquility, yet is within easy driving distance of some of the best that California has to offer. This farm stay and wilderness experience is located on a working ranch on the Sonoma coast. We are less than 90 minutes north of San Francisco and half that from California\'s premier wine-growing regions of the Napa-Sonoma Valleys. We are also smack dab in the middle of some of California\'s most breathtaking coast. You are near enough to civilization, but it feels like you are in the most remote and peaceful spot on earth. During the day you can explore the ranch operations including our ducks, cows, goats and livestock guardian dogs, learn about sustainable organic farming practices and where your (best) food comes from, hike the forest trails and enjoy nature at its best. At night you can see all the stars since SF is over 60 miles away and does not significantly pollute our night sky.',
+    rating: '98%',
+    bed: true,
+    water: true,
+    electricity: true,
+    check_in: '2pm',
+    check_out: '12pm',
+    cancellation_policy: 'Moderate',
+    on_arrival: 'Meet and greet',
+    minimum_nights: 'None',
+    accepts_bookings: '1 month out',
+    toilets: true,
+    showers: true,
+    picnic_table: true,
+    trash: false,
+    wifi: false,
+    biking: true,
+    boating: true,
+    fishing: true,
+    hiking: true,
+    horseback: true,
+    paddling: true,
+    swimming: true,
+    wildlife_watching: true,
+    climbing: false,
+    price: 360,
+    max_guests: 4
   )
 
   # 2
   treeHouse2 = TreeHouse.create!(
-  user_id: user4.id,
-  lat: 36.362,
-  lng: -121.856,
-  name: 'Big Sur Luxery Tree House',
-  city: 'Big Sur',
-  state: 'California',
-  country: 'United States',
-  image_url: 'http://www.postranchinn.com/wp-content/themes/post_ranch_inn/images/bg-tree-xl.jpg',
-  description: "Tree Houses are free-standing structures built on stilts nine feet off the forest floor with a stairway to each entrance. Triangular in shape, each room features a King bed, window seat, desk, fireplace, and skylight to watch the stars from bed each evening.
+    user_id: user4.id,
+    lat: 36.362,
+    lng: -121.856,
+    name: 'Big Sur Luxery Tree House',
+    city: 'Big Sur',
+    state: 'California',
+    country: 'United States',
+    image_url: 'http://www.postranchinn.com/wp-content/themes/post_ranch_inn/images/bg-tree-xl.jpg',
+    description: "Tree Houses are free-standing structures built on stilts nine feet off the forest floor with a stairway to each entrance. Triangular in shape, each room features a King bed, window seat, desk, fireplace, and skylight to watch the stars from bed each evening.
 
-These rooms offer a luxurious opportunity for anyone who has ever dreamed of sleeping amongst the trees.  Please note the minimum age for guests is 18 years old and pets are not allowed.",
-  rating: '98%',
-  bed: true,
-  water: true,
-  electricity: true,
-  check_in: '2pm',
-  check_out: '12pm',
-  cancellation_policy: 'Moderate',
-  on_arrival: 'Meet and greet',
-  minimum_nights: 'None',
-  accepts_bookings: '1 month out',
-  toilets: true,
-  showers: true,
-  picnic_table: true,
-  trash: true,
-  wifi: true,
-  biking: true,
-  boating: false,
-  fishing: false,
-  hiking: true,
-  horseback: false,
-  paddling: false,
-  swimming: true,
-  wildlife_watching: true,
-  climbing: false,
-  price: 995,
-  max_guests: 2
+    These rooms offer a luxurious opportunity for anyone who has ever dreamed of sleeping amongst the trees.  Please note the minimum age for guests is 18 years old and pets are not allowed.",
+    rating: '98%',
+    bed: true,
+    water: true,
+    electricity: true,
+    check_in: '2pm',
+    check_out: '12pm',
+    cancellation_policy: 'Moderate',
+    on_arrival: 'Meet and greet',
+    minimum_nights: 'None',
+    accepts_bookings: '1 month out',
+    toilets: true,
+    showers: true,
+    picnic_table: true,
+    trash: true,
+    wifi: true,
+    biking: true,
+    boating: false,
+    fishing: false,
+    hiking: true,
+    horseback: false,
+    paddling: false,
+    swimming: true,
+    wildlife_watching: true,
+    climbing: false,
+    price: 995,
+    max_guests: 2
   )
 
   # 3
-  TreeHouse.create!(
-  user_id: user1.id,
-  lng: -84.388,
-  lat: 33.749,
-  name: 'Secluded Intown Tree House',
-  city: 'Atlanta',
-  state: 'Georgia',
-  country: 'United States',
-  image_url: 'https://a0.muscache.com/im/pictures/21162888/5a0f1151_original.jpg',
-  description: 'The treehouse has a Southern nature - gracious, calming, and comfortable. Centrally located within the heart of intown Atlanta, the treehouses are a hidden gem. The subject of TV and magazine features including the Today Show, "Treehouse Masters: Ultimate Treehouse IV", Architectural Digest, Travel + Leisure, Harper\'s Bazaar, and numerous others, they are often described as being the most relaxing, romantic, dreamy and unique place you\'ll ever stay. What could be better than falling asleep in the trees and waking up to birds singing around you--all within the city limits?',
-  rating: '100%',
-  bed: true,
-  water: true,
-  electricity: true,
-  check_in: '12pm',
-  check_out: '3pm',
-  cancellation_policy: 'Strict',
-  on_arrival: 'Host greets you',
-  minimum_nights: 'Two',
-  accepts_bookings: '1 month out',
-  toilets: true,
-  showers: true,
-  picnic_table: true,
-  trash: false,
-  wifi: true,
-  biking: true,
-  boating: false,
-  fishing: false,
-  hiking: true,
-  horseback: false,
-  paddling: false,
-  swimming: false,
-  wildlife_watching: true,
-  climbing: false,
-  price: 375,
-  max_guests: 2
+  tree_house_3 = TreeHouse.create!(
+    user_id: user1.id,
+    lng: -84.388,
+    lat: 33.749,
+    name: 'Secluded Intown Tree House',
+    city: 'Atlanta',
+    state: 'Georgia',
+    country: 'United States',
+    image_url: 'https://a0.muscache.com/im/pictures/21162888/5a0f1151_original.jpg',
+    description: 'The treehouse has a Southern nature - gracious, calming, and comfortable. Centrally located within the heart of intown Atlanta, the treehouses are a hidden gem. The subject of TV and magazine features including the Today Show, "Treehouse Masters: Ultimate Treehouse IV", Architectural Digest, Travel + Leisure, Harper\'s Bazaar, and numerous others, they are often described as being the most relaxing, romantic, dreamy and unique place you\'ll ever stay. What could be better than falling asleep in the trees and waking up to birds singing around you--all within the city limits?',
+    rating: '100%',
+    bed: true,
+    water: true,
+    electricity: true,
+    check_in: '12pm',
+    check_out: '3pm',
+    cancellation_policy: 'Strict',
+    on_arrival: 'Host greets you',
+    minimum_nights: 'Two',
+    accepts_bookings: '1 month out',
+    toilets: true,
+    showers: true,
+    picnic_table: true,
+    trash: false,
+    wifi: true,
+    biking: true,
+    boating: false,
+    fishing: false,
+    hiking: true,
+    horseback: false,
+    paddling: false,
+    swimming: false,
+    wildlife_watching: true,
+    climbing: false,
+    price: 375,
+    max_guests: 2
   )
 
   # 4
-  TreeHouse.create!(
-  user_id: user1.id,
-  lng: -83.029,
-  lat: 34.722,
-  name: 'Bolt Farm Tree House',
-  city: 'Walhalla',
-  state: 'South Carolina',
-  country: 'United States',
-  image_url: 'https://a0.muscache.com/im/pictures/6ef18b6d-d14a-47dc-8e0d-1f2d2b2955a3.jpg',
-  description: "
-LIVE LIKE KINGS & PLAY LIKE KIDS in this extraordinary, award-winning treehouse hidden in 40 acres of paradise! Cozy, whimsical & glamorous; 2 connecting treehouse decks transport you to utopia! Fireplace & AC, indoor plumbing, outdoor shower, record player, antiques!! Rest, reconnect & have an Unforgettable Experience!
+  tree_house_4 = TreeHouse.create!(
+    user_id: user1.id,
+    lng: -83.029,
+    lat: 34.722,
+    name: 'Bolt Farm Tree House',
+    city: 'Walhalla',
+    state: 'South Carolina',
+    country: 'United States',
+    image_url: 'https://a0.muscache.com/im/pictures/6ef18b6d-d14a-47dc-8e0d-1f2d2b2955a3.jpg',
+    description: "LIVE LIKE KINGS & PLAY LIKE KIDS in this extraordinary, award-winning treehouse hidden in 40 acres of paradise! Cozy, whimsical & glamorous; 2 connecting treehouse decks transport you to utopia! Fireplace & AC, indoor plumbing, outdoor shower, record player, antiques!! Rest, reconnect & have an Unforgettable Experience!
 
-Featured in Architectural Digest, Buzzfeed, Insider Travel, TLC, The Knot, Gal Meets Glam, Borrowed & Blue, & more!
+    Featured in Architectural Digest, Buzzfeed, Insider Travel, TLC, The Knot, Gal Meets Glam, Borrowed & Blue, & more!
 
-Transport your spirit, and feel a thrill that can only be discovered in the treetops! Experience the one-of-a-kind blend of youthful bliss and grown-up luxury for yourself. The faster you get here, the sooner you change your pace and unwind in our wooden paradise.",
-  rating: '100%',
-  bed: true,
-  water: true,
-  electricity: true,
-  check_in: '12pm',
-  check_out: '3pm',
-  cancellation_policy: 'Strict',
-  on_arrival: 'Host greets you',
-  minimum_nights: 'Two',
-  accepts_bookings: 'Anytime',
-  toilets: true,
-  showers: true,
-  picnic_table: true,
-  trash: true,
-  wifi: true,
-  biking: true,
-  boating: false,
-  fishing: false,
-  hiking: true,
-  horseback: false,
-  paddling: false,
-  swimming: false,
-  wildlife_watching: true,
-  climbing: false,
-  price: 395,
-  max_guests: 2
+    Transport your spirit, and feel a thrill that can only be discovered in the treetops! Experience the one-of-a-kind blend of youthful bliss and grown-up luxury for yourself. The faster you get here, the sooner you change your pace and unwind in our wooden paradise.",
+    rating: '100%',
+    bed: true,
+    water: true,
+    electricity: true,
+    check_in: '12pm',
+    check_out: '3pm',
+    cancellation_policy: 'Strict',
+    on_arrival: 'Host greets you',
+    minimum_nights: 'Two',
+    accepts_bookings: 'Anytime',
+    toilets: true,
+    showers: true,
+    picnic_table: true,
+    trash: true,
+    wifi: true,
+    biking: true,
+    boating: false,
+    fishing: false,
+    hiking: true,
+    horseback: false,
+    paddling: false,
+    swimming: false,
+    wildlife_watching: true,
+    climbing: false,
+    price: 395,
+    max_guests: 2
   )
 
   # 5
-  TreeHouse.create!(
+  tree_house_5 = TreeHouse.create!(
   user_id: user1.id,
   lat: -22.863,
   lng: -46.035,
@@ -289,7 +251,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   # 6
-  TreeHouse.create!(
+  tree_house_6 = TreeHouse.create!(
   user_id: user1.id,
   lat: 19.431,
   lng: -155.225,
@@ -302,7 +264,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   # 7
-  TreeHouse.create!(
+  tree_house_7 = TreeHouse.create!(
   user_id: user1.id,
   lat: 38.206,
   lng: -122.682,
@@ -314,8 +276,8 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   description: 'Magical, Romantic Treehouse'
   )
 
-  # 4
-  TreeHouse.create!(
+  # 8
+  tree_house_8 = TreeHouse.create!(
   user_id: user1.id,
   lat: 37.116,
   lng: -121.917,
@@ -328,7 +290,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   # 8
-  TreeHouse.create!(
+  tree_house_9 = TreeHouse.create!(
   user_id: user1.id,
   lat: 37.794,
   lng: -120.243,
@@ -342,7 +304,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
 
 
   #10
-  TreeHouse.create!(
+  tree_house_10 = TreeHouse.create!(
   user_id: user1.id,
   lat: 47.538,
   lng: -121.911,
@@ -355,7 +317,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   #11
-  TreeHouse.create!(
+  tree_house_11 = TreeHouse.create!(
   user_id: user1.id,
   lat: -16.470,
   lng: 145.345,
@@ -368,7 +330,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   #12
-  TreeHouse.create!(
+  tree_house_12 = TreeHouse.create!(
   user_id: user1.id,
   lat: -36.848,
   lng: 174.754,
@@ -381,7 +343,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   #13
-  TreeHouse.create!(
+  tree_house_13 = TreeHouse.create!(
   user_id: user1.id,
   lat: 8.777,
   lng: -83.222,
@@ -394,7 +356,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   #14
-  TreeHouse.create!(
+  tree_house_14 = TreeHouse.create!(
   user_id: user1.id,
   lat: 66.071,
   lng: 20.987,
@@ -407,7 +369,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   #15
-  TreeHouse.create!(
+  tree_house_15 = TreeHouse.create!(
   user_id: user1.id,
   lat: 19.472,
   lng: 109.885,
@@ -420,7 +382,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   #16
-  TreeHouse.create!(
+  tree_house_16 = TreeHouse.create!(
   user_id: user1.id,
   lat: 35.826,
   lng: 138.333,
@@ -433,7 +395,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   #17
-  TreeHouse.create!(
+  tree_house_17 = TreeHouse.create!(
   user_id: user1.id,
   lat: 11.696,
   lng: 102.531,
@@ -446,7 +408,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   #18
-  TreeHouse.create!(
+  tree_house_18 = TreeHouse.create!(
   user_id: user1.id,
   lat: -39.873,
   lng: -71.913,
@@ -461,7 +423,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   #19
-  TreeHouse.create!(
+  tree_house_19 = TreeHouse.create!(
   user_id: user1.id,
   lat: 45.0345,
   lng: -79.437,
@@ -474,7 +436,7 @@ Transport your spirit, and feel a thrill that can only be discovered in the tree
   )
 
   #20
-  TreeHouse.create!(
+  tree_house_20 = TreeHouse.create!(
   user_id: user1.id,
   lat: 35.9856,
   lng: -84.994,
