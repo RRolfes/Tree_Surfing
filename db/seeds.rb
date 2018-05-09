@@ -98,6 +98,20 @@ ActiveRecord::Base.transaction do
     about: 'Proud owner of the Eagle Nest tree house!'
   )
 
+  user4 = User.create(
+    first: 'Catie',
+    last: 'Yagher',
+    email: 'CaitlinYagher@gmail.com',
+    password: 'password',
+    city: 'San Francisco',
+    state: 'California',
+    country: 'United States',
+    occupation: 'Customer Success Manager',
+    image_url: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png',
+    age: 26,
+    about: 'Happy and fun outdoor adventure lover!',
+  )
+
   # 1
   treeHouse1 = TreeHouse.create!(
     user_id: user3.id,

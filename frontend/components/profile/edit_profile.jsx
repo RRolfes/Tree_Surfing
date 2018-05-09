@@ -3,11 +3,11 @@ import React from 'react';
 class EditProfile extends React.Component {
   constructor(props) {
     super(props);
-      this.state = {
-        currentComponent: 'edit'
-      };
+    this.state = {
+      currentComponent: 'edit'
+    };
 
-      this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
@@ -18,13 +18,17 @@ class EditProfile extends React.Component {
 
   render() {
     return(
-      <div className="edit-profile-container">
-        <div className="click-options">
-          <button onClick={this.handleClick()}>Edit Profile</button>
-          <button onClick={console.log('Trips')}>Trips</button>
-          <button >Photos</button>
-          <button >Trust & Verification</button>
-          <button >Reviews</button>
+      <div class="profile-container">
+        <div class="test">
+          Hello
+        </div>
+        <div class="name-contact-rating-container">
+          <div class="image-container">
+
+          </div>
+        </div>
+        <div class="services-reviews-container">
+
         </div>
       </div>
     );

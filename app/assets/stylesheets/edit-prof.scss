@@ -1,0 +1,24 @@
+.profile-container{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.name-contact-rating-container{
+  background-color: grey;
+  height: 100%;
+  width: 100%
+}
+
+
+
+.image-container {
+  background: url(http://res.cloudinary.com/dreuhltzt/image/upload/v1525551926/me_tajghz.jpg);
+  border-radius: 50%;
+}
+
+.services-reviews-container{
+  background-color: grey;
+  height: 100%;
+  width: 100%
+}
