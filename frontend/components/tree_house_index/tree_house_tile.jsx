@@ -26,8 +26,7 @@ class TreeHouseTile extends React.Component {
             <div className="tree-house-info">
               <ul>
                 <li className="tree-house-name">{treeHouse.name}</li>
-                <li>{treeHouse.city}</li>
-                <li>{treeHouse.country}</li>
+                <li>{treeHouse.city}, {treeHouse.state ? treeHouse.state : treeHouse.country}</li>
               </ul>
             </div>
           </Link>

@@ -323,7 +323,7 @@ ActiveRecord::Base.transaction do
   lng: 145.345,
   name: 'Silky Oaks Lodge',
   city: 'Queensland',
-  state: 'Queensland',
+  state: '',
   country: 'Australia',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Silky-Oaks-b-940x630.jpg',
   description: 'Silky Oaks Lodge is a luxury tree house in the jungle around Queensland, Australia’s Mossman Gorge River.'
@@ -336,7 +336,7 @@ ActiveRecord::Base.transaction do
   lng: 174.754,
   name: 'Yellow Tree House',
   city: 'Aukland',
-  state: 'Aukland',
+  state: '',
   country: 'New Zeland',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Yellow-Treehouse-Restaurant-a.jpg',
   description: 'The Yellow Tree House is built around a 40-meter-tall redwood tree.'
@@ -349,7 +349,7 @@ ActiveRecord::Base.transaction do
   lng: -83.222,
   name: 'Finca Bellavista',
   city: 'Puntarenas',
-  state: 'Puntarenas',
+  state: '',
   country: 'Costa Rica',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Finca-Bellavista-c.jpg',
   description: 'Finca Bellavista is a sustainable treehouse community in Costa Rica’s rainforest canopies. It’s quite possibly the coolest place on earth.'
