@@ -28,7 +28,7 @@
   }
 
   .tree-house-index {
-    width: 65%;
+    width: 63%;
     margin-left: 10px;
 
     .tree-house-tile-index-container {
@@ -37,9 +37,9 @@
 
       .tree-house-tile-container {
         display: flex;
+        flex-grow: 1;
         flex-direction: column;
         min-width: 240px;
-        width: 30%;
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 30px;
