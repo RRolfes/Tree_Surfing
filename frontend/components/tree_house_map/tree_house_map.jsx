@@ -30,14 +30,14 @@ class Map extends React.Component {
       this.addTreeHouse(this.props.treeHouses[id]);
     });
 
+    console.log(this.props.filters.bounds);
 
     let location = this.props.location;
     if (location && location.setLocation){
 
       const lat = this.props.location.lat;
       const lng = this.props.location.lng;
-      console.log(lat);
-      console.log(lng);
+
       const northEast = this.props.location.northeast;
       const southWest = this.props.location.southwest;
       const newLatLng = new google.maps.LatLng(lat, lng);

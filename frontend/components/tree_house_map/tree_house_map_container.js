@@ -6,9 +6,10 @@ import { resetLocation } from '../../actions/search_actions';
 import { fetchTreeHouses } from '../../actions/tree_house_actions';
 
 
-const mapStateToProps = ( { treeHouses, location } ) => ({
+const mapStateToProps = ( { treeHouses, location, filters } ) => ({
   treeHouses,
-  location
+  location,
+  filters
 });
 
 const mapDispatchToProps = (dispatch) => ({
