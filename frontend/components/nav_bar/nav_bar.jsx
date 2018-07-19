@@ -17,7 +17,7 @@ class NavBar extends React.Component {
       const first = currentUser.first;
       return (
         <div className="nav-bar-greeting-and-logout">
-          <h2>Hi, {first}!</h2>
+          <h2 className="greeting">Hi, {first}!</h2>
           <button
             className="header-button"
             onClick={() => this.props.logout().then( () => {
