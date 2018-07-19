@@ -9,6 +9,11 @@ class TreeHouseTileIndex extends React.Component {
         {Object.keys(treeHouses).map((treeHouseId) =>
           <TreeHouseTile key={treeHouseId} treeHouse={treeHouses[treeHouseId]} />
         )}
+        <div className="filler"></div>
+        <div className="filler"></div>
+        <div className="filler"></div>
+        <div className="filler"></div>
+        <div className="filler"></div>
       </div>
     );
   }
