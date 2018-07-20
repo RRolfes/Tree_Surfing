@@ -17,6 +17,8 @@ class EditProfile extends React.Component {
 
 
   render() {
+    console.log(this.props);
+    debugger;
     return(
       <div class="profile-container">
         <div class="test">

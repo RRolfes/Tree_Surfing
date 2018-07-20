@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import Intro from './intro';
 import About from './about';
@@ -21,6 +21,7 @@ class TreeHouseShow extends React.Component {
 
   componentDidMount() {
     const treeHouseId = parseInt(this.props.match.params.treeHouseId);
+    console.log(this.props);
     this.props.fetchCurrentTreeHouse(treeHouseId).then( payload =>
       this.props.fetchUser(payload.currentTreeHouse.user_id).then( host =>
         this.setState({
@@ -42,7 +43,6 @@ class TreeHouseShow extends React.Component {
       const createBooking = this.props.createBooking;
       const userId = this.props.session.currentUser ? this.props.session.currentUser.id : null;
       const history = this.props.history;
-      // const
 
       const backgroundImageStyles = {
         backgroundImage: `url(${currentTreeHouse.image_url})`

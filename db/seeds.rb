@@ -56,20 +56,25 @@ User.destroy_all
 TreeHouse.destroy_all
 
 ActiveRecord::Base.transaction do
+
   user1 = User.create!(first: 'Ryan', last: 'Rolfes', email: 'RyanMRolfes@gmail.com', password: 'password', city: 'San Francisco', state: 'California', country: 'United States', occupation: 'Software Developer', image_url: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1521164950/ryan_rolfes.png', age: 26, about: 'Tree house aficionado!')
   user2 = User.create!(first: 'Guest', last: 'Guest', email: 'Guest@TreeSurfing.com', password: 'password', city: 'San Francisco', state: 'California', country: 'United States', occupation: 'Software Development', image_url: 'https://s-media-cache-ak0.pinimg.com/236x/21/75/f8/2175f8c734a566dbb151c2a0325cdc57--free-monkey-monkey-monkey.jpg', age: 30, about: 'A welcome guest!' )
   user3 = User.create!(first: 'John', last: 'Eagleton', email: 'JEagleton@me.com', password: 'password', city: 'San Francisco', state: 'California', country: 'United States', occupation: 'Optometrist', image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoqqXROdHAlPh3acGl815N0XGZnRrVGskMgoIz_1zW_2jwKC8', age: 50, about: 'Proud owner of the Eagle Nest tree house!' )
   user4 = User.create(first: 'Catie', last: 'Yagher', email: 'CaitlinYagher@gmail.com', password: 'password', city: 'San Francisco', state: 'California', country: 'United States', occupation: 'Customer Success Manager', image_url: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png', age: 26, about: 'Happy and fun outdoor adventure lover!' )
-  user5 = User.create!({:first=>"Zyah", :last=>"Duffman", :email=>"ZyahDuffman326@gmail.com", :password=>"password", :city=>"Charleston", :state=>"West Virginia", :country=>"USA", :occupation=>"Head teacher", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>33, :about=>"Treehouse Lover!"})
-  user6 = User.create!({:first=>"Briana", :last=>"Caswell", :email=>"BrianaCaswell879@gmail.com", :password=>"password", :city=>"Sacramento", :state=>"California", :country=>"USA", :occupation=>"Editor", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>18, :about=>"Treehouse Lover!"})
-  user7 = User.create!({:first=>"Melanie", :last=>"Chapman", :email=>"MelanieChapman503@gmail.com", :password=>"password", :city=>"Atlanta", :state=>"Georgia", :country=>"USA", :occupation=>"Jeweler", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>62, :about=>"Treehouse Lover!"})
-  user8 = User.create!({:first=>"Melissa", :last=>"Schiebel", :email=>"MelissaSchiebel166@gmail.com", :password=>"password", :city=>"Juneau", :state=>"Alaska", :country=>"USA", :occupation=>"Doctor", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>46, :about=>"Treehouse Lover!"})
-  user9 = User.create!({:first=>"Leslie", :last=>"Vader", :email=>"LeslieVader121@gmail.com", :password=>"password", :city=>"Montpelier", :state=>"Vermont", :country=>"USA", :occupation=>"Nurse", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>46, :about=>"Treehouse Lover!"})
-  user10 = User.create!({:first=>"Amanda", :last=>"Wagner", :email=>"AmandaWagner56@gmail.com", :password=>"password", :city=>"Charleston", :state=>"West Virginia", :country=>"USA", :occupation=>"Sign language interpreter", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>36, :about=>"Treehouse Lover!"})
-  user11 = User.create!({:first=>"Rebecca", :last=>"Vogal", :email=>"RebeccaVogal22@gmail.com", :password=>"password", :city=>"Topeka", :state=>"Kansas", :country=>"USA", :occupation=>"Travel agent", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>61, :about=>"Treehouse Lover!"})
-  user12 = User.create!({:first=>"Sophie", :last=>"Schmitt", :email=>"SophieSchmitt654@gmail.com", :password=>"password", :city=>"Hartford", :state=>"Connecticut", :country=>"USA", :occupation=>"Flight attendant", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>63, :about=>"Treehouse Lover!"})
-  user13 = User.create!({:first=>"Angel", :last=>"Myers", :email=>"AngelMyers587@gmail.com", :password=>"password", :city=>"Boston", :state=>"Massachusetts", :country=>"USA", :occupation=>"Personal assistant", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>54, :about=>"Treehouse Lover!"})
-  user14 = User.create!({:first=>"Maya", :last=>"Sonderling", :email=>"MayaSonderling133@gmail.com", :password=>"password", :city=>"Trenton", :state=>"New Jersey", :country=>"USA", :occupation=>"Cook", :image_url=>"http://res.cloudinary.com/dreuhltzt/image/upload/v1525826788/CatieYagher.png", :age=>57, :about=>"Treehouse Lover!"})
+  user5 = User.create!({:first=>"Nicole", :last=>"Aikin", :email=>"NicoleAikin216@gmail.com", :password=>"password", :city=>"Providence", :state=>"Rhode Island", :country=>"USA", :occupation=>"Solicitor", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060208/Girls/download-5.jpg", :age=>30, :about=>"Treehouse Lover!"})
+  user6 = User.create!({:first=>"Zikiria", :last=>"Ostrander", :email=>"ZikiriaOstrander860@gmail.com", :password=>"password", :city=>"Jackson", :state=>"Mississippi", :country=>"USA", :occupation=>"Diplomat", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060209/Girls/images.jpg", :age=>60, :about=>"Treehouse Lover!"})
+  user7 = User.create!({:first=>"Kayla", :last=>"Tapia", :email=>"KaylaTapia680@gmail.com", :password=>"password", :city=>"Juneau", :state=>"Alaska", :country=>"USA", :occupation=>"Sailor", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060209/Girls/images-5.jpg", :age=>20, :about=>"Treehouse Lover!"})
+  user8 = User.create!({:first=>"Mckenzie", :last=>"Schiebel", :email=>"MckenzieSchiebel610@gmail.com", :password=>"password", :city=>"Baton Rouge", :state=>"Louisiana", :country=>"USA", :occupation=>"Accountant", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060209/Girls/images-4.jpg", :age=>49, :about=>"Treehouse Lover!"})
+  user9 = User.create!({:first=>"Melanie", :last=>"Fletcher", :email=>"MelanieFletcher928@gmail.com", :password=>"password", :city=>"Indianapolis", :state=>"Indiana", :country=>"USA", :occupation=>"Scientist", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060209/Girls/download.jpg", :age=>62, :about=>"Treehouse Lover!"})
+  user10 = User.create!({:first=>"Erin", :last=>"Sandstrom", :email=>"ErinSandstrom847@gmail.com", :password=>"password", :city=>"Nashville", :state=>"Tennessee", :country=>"USA", :occupation=>"Executive", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060209/Girls/images-2.jpg", :age=>19, :about=>"Treehouse Lover!"})
+  user11 = User.create!({:first=>"Zykiera", :last=>"Tiernan", :email=>"ZykieraTiernan39@gmail.com", :password=>"password", :city=>"Olympia", :state=>"Washington", :country=>"USA", :occupation=>"Executive", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060209/Girls/download-3.jpg", :age=>46, :about=>"Treehouse Lover!"})
+  user12 = User.create!({:first=>"Kristen", :last=>"Ebner", :email=>"KristenEbner798@gmail.com", :password=>"password", :city=>"St. Paul", :state=>"Minnesota", :country=>"USA", :occupation=>"Professional gambler", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060209/Girls/images-1.jpg", :age=>45, :about=>"Treehouse Lover!"})
+  user13 = User.create!({:first=>"Zanaii", :last=>"Frick", :email=>"ZanaiiFrick497@gmail.com", :password=>"password", :city=>"Jefferson City", :state=>"Missouri", :country=>"USA", :occupation=>"Secretary", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060209/Girls/download-7.jpg", :age=>56, :about=>"Treehouse Lover!"})
+  user14 = User.create!({:first=>"Makayla", :last=>"Root", :email=>"MakaylaRoot257@gmail.com", :password=>"password", :city=>"Dover", :state=>"Delaware", :country=>"USA", :occupation=>"Electrician", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060208/Girls/download-1.jpg", :age=>23, :about=>"Treehouse Lover!"})
+  user15 = User.create!({:first=>"Diana", :last=>"Root", :email=>"DianaRoot838@gmail.com", :password=>"password", :city=>"Annapolis", :state=>"Maryland", :country=>"USA", :occupation=>"Executive", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060209/Girls/download-6.jpg", :age=>39, :about=>"Treehouse Lover!"})
+  user16 = User.create!({:first=>"Zarreah", :last=>"Reamer", :email=>"ZarreahReamer937@gmail.com", :password=>"password", :city=>"Helena", :state=>"Montana", :country=>"USA", :occupation=>"Butcher", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060208/Girls/download-4.jpg", :age=>58, :about=>"Treehouse Lover!"})
+  user17 = User.create!({:first=>"Alyssa", :last=>"Deitz", :email=>"AlyssaDeitz235@gmail.com", :password=>"password", :city=>"Providence", :state=>"Rhode Island", :country=>"USA", :occupation=>"Printer", :image_url=>"https://res.cloudinary.com/dreuhltzt/image/upload/v1532060208/Girls/download-2.jpg", :age=>28, :about=>"Treehouse Lover!"})
+
 
 
 
@@ -109,8 +114,7 @@ ActiveRecord::Base.transaction do
     wildlife_watching: true,
     climbing: false,
     price: 360,
-    max_guests: 4
-  )
+    max_guests: 4)
 
   # 2
   treeHouse2 = TreeHouse.create!(
@@ -237,20 +241,46 @@ ActiveRecord::Base.transaction do
 
   # 5
   tree_house_5 = TreeHouse.create!(
-  user_id: user1.id,
-  lat: -22.863,
-  lng: -46.035,
-  name: 'Jungle House',
-  city: 'Monte Verde',
-  state: '',
-  country: 'Brazil',
-  image_url: 'https://a0.muscache.com/im/pictures/69769498/8b565228_original.jpg',
-  description: 'Cozy Tree House in Monte Verde'
+    user_id: user5.id,
+    lat: -22.863,
+    lng: -46.035,
+    name: 'Jungle House',
+    city: 'Monte Verde',
+    state: '',
+    country: 'Brazil',
+    image_url: 'https://a0.muscache.com/im/pictures/69769498/8b565228_original.jpg',
+    description: 'Cozy Tree House in Monte Verde',
+    rating: '96%',
+    bed: true,
+    water: true,
+    electricity: true,
+    check_in: '12pm',
+    check_out: '3pm',
+    cancellation_policy: 'Strict',
+    on_arrival: 'Host greets you',
+    minimum_nights: 'Two',
+    accepts_bookings: 'Anytime',
+    toilets: true,
+    showers: true,
+    picnic_table: true,
+    trash: true,
+    wifi: true,
+    biking: true,
+    boating: false,
+    fishing: false,
+    hiking: true,
+    horseback: true,
+    paddling: false,
+    swimming: true,
+    wildlife_watching: true,
+    climbing: false,
+    price: 395,
+    max_guests: 2
   )
 
   # 6
   tree_house_6 = TreeHouse.create!(
-  user_id: user1.id,
+  user_id: user6.id,
   lat: 19.431,
   lng: -155.225,
   name: 'Surf Tree',
@@ -258,12 +288,38 @@ ActiveRecord::Base.transaction do
   state: 'Hawaii',
   country: 'United States',
   image_url: 'https://a0.muscache.com/im/pictures/291713/b19c5c33_original.jpg',
-  description: 'Treehouse at Kilauea Volcano'
+  description: 'Treehouse at Kilauea Volcano',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   # 7
   tree_house_7 = TreeHouse.create!(
-  user_id: user1.id,
+  user_id: user7.id,
   lat: 38.206,
   lng: -122.682,
   name: 'Treehouse at Swallowtail Studio',
@@ -271,12 +327,38 @@ ActiveRecord::Base.transaction do
   state: 'California',
   country: 'United States',
   image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1485986996/campground-photos/e4tahv9qnivihw52ohjv.jpg',
-  description: 'Magical, Romantic Treehouse'
+  description: 'Magical, Romantic Treehouse',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   # 8
   tree_house_8 = TreeHouse.create!(
-  user_id: user1.id,
+  user_id: user8.id,
   lat: 37.116,
   lng: -121.917,
   name: 'Vinyard View Tree House',
@@ -284,12 +366,38 @@ ActiveRecord::Base.transaction do
   state: 'California',
   country: 'United States',
   image_url: 'https://a0.muscache.com/im/pictures/15661a7c-bfb2-421d-ac06-332e5d28f623.jpg',
-  description: 'Treehouse in Vineyard Overlooking Monterey Bay'
+  description: 'Treehouse in Vineyard Overlooking Monterey Bay',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   # 8
   tree_house_9 = TreeHouse.create!(
-  user_id: user1.id,
+  user_id: user9.id,
   lat: 37.794,
   lng: -120.243,
   name: 'Wondernut Farm',
@@ -297,13 +405,39 @@ ActiveRecord::Base.transaction do
   state: 'California',
   country: 'United States',
   image_url: 'https://img.hipcamp.com/image/upload/c_limit,f_auto,h_1200,q_60,w_1920/v1465450461/campground-photos/xmuu84zvdnepkzpuucq5.jpg',
-  description: 'Nestled into a small cluster of the dominant trees in our landscape our tree platform is built on a multi-trunked interior live oak'
+  description: 'Nestled into a small cluster of the dominant trees in our landscape our tree platform is built on a multi-trunked interior live oak',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
 
   #10
   tree_house_10 = TreeHouse.create!(
-  user_id: user1.id,
+  user_id: user10.id,
   lat: 47.538,
   lng: -121.911,
   name: 'Tree House Point',
@@ -311,12 +445,38 @@ ActiveRecord::Base.transaction do
   state: 'Washington',
   country: 'United States',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Treehouse-Point-c-940x1404.jpg',
-  description: 'Just outside Seattle in Issaquah, Washington, is the treehouse B&B named TreeHouse Point.'
+  description: 'Just outside Seattle in Issaquah, Washington, is the treehouse B&B named TreeHouse Point.',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   #11
   tree_house_11 = TreeHouse.create!(
-  user_id: user1.id,
+  user_id: user11.id,
   lat: -16.470,
   lng: 145.345,
   name: 'Silky Oaks Lodge',
@@ -324,12 +484,38 @@ ActiveRecord::Base.transaction do
   state: '',
   country: 'Australia',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Silky-Oaks-b-940x630.jpg',
-  description: 'Silky Oaks Lodge is a luxury tree house in the jungle around Queensland, Australia’s Mossman Gorge River.'
+  description: 'Silky Oaks Lodge is a luxury tree house in the jungle around Queensland, Australia’s Mossman Gorge River.',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   #12
   tree_house_12 = TreeHouse.create!(
-  user_id: user1.id,
+  user_id: user12.id,
   lat: -36.848,
   lng: 174.754,
   name: 'Yellow Tree House',
@@ -337,25 +523,77 @@ ActiveRecord::Base.transaction do
   state: '',
   country: 'New Zeland',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Yellow-Treehouse-Restaurant-a.jpg',
-  description: 'The Yellow Tree House is built around a 40-meter-tall redwood tree.'
+  description: 'The Yellow Tree House is built around a 40-meter-tall redwood tree.',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   #13
   tree_house_13 = TreeHouse.create!(
-  user_id: user1.id,
+  user_id: user13.id,
   lat: 8.777,
   lng: -83.222,
   name: 'Finca Bellavista',
-  city: 'Puntarenas',
+  city: 'Piedras Blancas',
   state: '',
   country: 'Costa Rica',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Finca-Bellavista-c.jpg',
-  description: 'Finca Bellavista is a sustainable treehouse community in Costa Rica’s rainforest canopies. It’s quite possibly the coolest place on earth.'
+  description: 'Finca Bellavista is a sustainable treehouse community in Costa Rica’s rainforest canopies. It’s quite possibly the coolest place on earth.',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   #14
   tree_house_14 = TreeHouse.create!(
-  user_id: user1.id,
+  user_id: user14.id,
   lat: 66.071,
   lng: 20.987,
   name: 'TreeHotel',
@@ -363,12 +601,38 @@ ActiveRecord::Base.transaction do
   state: '',
   country: 'Sweden',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Treehotel-f-940x627.jpg',
-  description: 'The second-to-none Treehotel in Harads, Sweden, is absolutely incredible.'
+  description: 'The second-to-none Treehotel in Harads, Sweden, is absolutely incredible.',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   #15
   tree_house_15 = TreeHouse.create!(
-  user_id: user1.id,
+  user_id: user15.id,
   lat: 19.472,
   lng: 109.885,
   name: 'Nanshan Tree House',
@@ -376,12 +640,38 @@ ActiveRecord::Base.transaction do
   state: '',
   country: 'China',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Nanshan-b.jpg',
-  description: 'On the island of Hainan in the South China Sea, the Nanshan Treehouse can house up to 20 people. The tree house is also near a Buddhist “theme park,” with a number of pagodas and temples.'
+  description: 'On the island of Hainan in the South China Sea, the Nanshan Treehouse can house up to 20 people. The tree house is also near a Buddhist “theme park,” with a number of pagodas and temples.',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   #16
   tree_house_16 = TreeHouse.create!(
-  user_id: user1.id,
+  user_id: user16.id,
   lat: 35.826,
   lng: 138.333,
   name: 'Teahouse Tetsu',
@@ -389,12 +679,38 @@ ActiveRecord::Base.transaction do
   state: '',
   country: 'Japan',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Teahouse-a.jpg',
-  description: 'The Teahouse Tetsu is exactly what it sounds like: a teahouse in a tree. It was designed by architect Terunobu Fujimori and sits among the cherry blossoms in Hokuto City, Japan.'
+  description: 'The Teahouse Tetsu is exactly what it sounds like: a teahouse in a tree. It was designed by architect Terunobu Fujimori and sits among the cherry blossoms in Hokuto City, Japan.',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   #17
   tree_house_17 = TreeHouse.create!(
-  user_id: user1.id,
+  user_id: user17.id,
   lat: 11.696,
   lng: 102.531,
   name: 'Soneva Kiri Treepod',
@@ -402,7 +718,33 @@ ActiveRecord::Base.transaction do
   state: '',
   country: 'Thailand',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Soneva-Kiri-a-940x529.jpg',
-  description: 'The Soneva Kiri Resort on Koh Kood, Thailand, has a one-of-a-kind feature: “treepod” dining. Basically, you enter the pod from the jungle floor, then it’s hoisted into the canopy, where you can camp and relax on the deck. Oh, and you can be served a meal by a waiter on a zipline.'
+  description: 'The Soneva Kiri Resort on Koh Kood, Thailand, has a one-of-a-kind feature: “treepod” dining. Basically, you enter the pod from the jungle floor, then it’s hoisted into the canopy, where you can camp and relax on the deck. Oh, and you can be served a meal by a waiter on a zipline.',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   #18
@@ -415,9 +757,33 @@ ActiveRecord::Base.transaction do
   state: '',
   country: 'Chile',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Nothofagus-b-940x625.jpg',
-  description: 'The Nothofagus Hotel is among the treetops of the Huilo Huilo Biological Reserve in Chilean Patagonia.
-
-  '
+  description: 'The Nothofagus Hotel is among the treetops of the Huilo Huilo Biological Reserve in Chilean Patagonia.',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   #19
@@ -430,7 +796,33 @@ ActiveRecord::Base.transaction do
   state: 'Ontario',
   country: 'Canada',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Muskoka-a.jpg',
-  description: 'Designer Lukasz Kos’s treehouse in Lake Muskoka, Ontario, is named the 4Treehouse. It was designed to minimize its impact on the surrounding trees. There are three levels to this treehouse, which looks like a Japanese lantern when lit up at night.'
+  description: 'Designer Lukasz Kos’s treehouse in Lake Muskoka, Ontario, is named the 4Treehouse. It was designed to minimize its impact on the surrounding trees. There are three levels to this treehouse, which looks like a Japanese lantern when lit up at night.',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 2
   )
 
   #20
@@ -443,7 +835,33 @@ ActiveRecord::Base.transaction do
   state: 'Tennessee',
   country: 'United States',
   image_url: 'https://d36tnp772eyphs.cloudfront.net/blogs/1/2014/10/Minister%E2%80%99s-Treehouse-a.jpg',
-  description: 'The Minister’s Treehouse in Crossville, Tennessee, is possibly the world’s largest treehouse, standing 97 feet tall with over 80 rooms, and also serves as a church. Minister Horace Burgess started building it in 1993 and hasn’t stopped. The house is built around a massive oak with six other oaks used for support.'
+  description: 'The Minister’s Treehouse in Crossville, Tennessee, is possibly the world’s largest treehouse, standing 97 feet tall with over 80 rooms, and also serves as a church. Minister Horace Burgess started building it in 1993 and hasn’t stopped. The house is built around a massive oak with six other oaks used for support.',
+  rating: '96%',
+  bed: true,
+  water: true,
+  electricity: true,
+  check_in: '12pm',
+  check_out: '3pm',
+  cancellation_policy: 'Strict',
+  on_arrival: 'Host greets you',
+  minimum_nights: 'Two',
+  accepts_bookings: 'Anytime',
+  toilets: true,
+  showers: true,
+  picnic_table: true,
+  trash: true,
+  wifi: true,
+  biking: true,
+  boating: false,
+  fishing: false,
+  hiking: true,
+  horseback: true,
+  paddling: false,
+  swimming: true,
+  wildlife_watching: true,
+  climbing: false,
+  price: 395,
+  max_guests: 4
   )
   #
   # #10
@@ -457,7 +875,8 @@ ActiveRecord::Base.transaction do
   #   country: '',
   #   image_url: '',
   #   description: ''
-  # )
+  #
+
   #
   # #10
   # TreeHouse.create!(

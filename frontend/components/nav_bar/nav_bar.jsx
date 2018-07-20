@@ -20,10 +20,7 @@ class NavBar extends React.Component {
           <h2 className="greeting">Hi, {first}!</h2>
           <button
             className="header-button"
-            onClick={() => this.props.logout().then( () => {
-              this.props.history.push('./login');
-            })
-          }
+            onClick={() => this.props.logout()}
           >
           Log Out
         </button>

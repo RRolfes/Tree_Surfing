@@ -115,7 +115,6 @@ class BookingWidget extends React.Component {
       this.setState({userMessage: "Please log in to book"});
     } else {
       this.props.createBooking(booking);
-      // this.props.history.push('./');
     }
   }
 

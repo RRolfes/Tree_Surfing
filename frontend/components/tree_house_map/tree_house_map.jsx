@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { withRouter } from 'react-router-dom';
+
 
 const mapCenter = { lat: 37.178261, lng: -91.031211 };
 
@@ -10,11 +12,14 @@ const options = {
 };
 
 class Map extends React.Component {
-
   constructor(props) {
     super(props);
+    this.state = {
+      test: 'test'
+    }
 
     this.addTreeHouse = this.addTreeHouse.bind(this);
+    this.handleOnMarkerClick = this.handleOnMarkerClick.bind(this);
   }
 
   componentDidMount() {
@@ -67,6 +72,10 @@ class Map extends React.Component {
     });
   }
 
+  handleOnMarkerClick(treeHouse) {
+    console.log(this.props.match);
+  }
+
   addTreeHouse(treeHouse) {
     const pos = new google.maps.LatLng(treeHouse.lat, treeHouse.lng);
     const marker = new google.maps.Marker({
@@ -74,6 +83,8 @@ class Map extends React.Component {
       map: this.map,
       icon: 'http://res.cloudinary.com/dreuhltzt/image/upload/v1501105521/icons8-Treehouse-48_o9q0uy.png'
     });
+
+    google.maps.event.addListener(marker, 'click', () => this.handleOnMarkerClick(treeHouse));
   }
 
 
