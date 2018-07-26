@@ -15,17 +15,18 @@ class TreeHouseShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      host: {}
+      host: {},
+      treeHouse: null
     };
   }
 
   componentDidMount() {
     const treeHouseId = parseInt(this.props.match.params.treeHouseId);
-    console.log(this.props);
     this.props.fetchCurrentTreeHouse(treeHouseId).then( payload =>
       this.props.fetchUser(payload.currentTreeHouse.user_id).then( host =>
         this.setState({
-          host: host.user
+          host: host.user,
+          treeHouse: payload.currentTreeHouse
         })
       )
     );
@@ -33,7 +34,8 @@ class TreeHouseShow extends React.Component {
 
 
   render() {
-    const currentTreeHouse = this.props.treeHouses.currentTreeHouse;
+    const currentTreeHouse = this.state.treeHouse;
+    console.log(this.state);
     const usersHaveLoaded = this.props.user;
 
     if (currentTreeHouse && usersHaveLoaded) {

@@ -158,7 +158,7 @@ ActiveRecord::Base.transaction do
   )
 
   # 3
-  tree_house_3 = TreeHouse.create!(
+  treeHouse3 = TreeHouse.create!(
     user_id: user1.id,
     lng: -84.388,
     lat: 33.749,
@@ -197,7 +197,7 @@ ActiveRecord::Base.transaction do
   )
 
   # 4
-  tree_house_4 = TreeHouse.create!(
+  treeHouse4 = TreeHouse.create!(
     user_id: user1.id,
     lng: -83.029,
     lat: 34.722,
@@ -240,7 +240,7 @@ ActiveRecord::Base.transaction do
   )
 
   # 5
-  tree_house_5 = TreeHouse.create!(
+  treeHouse5 = TreeHouse.create!(
     user_id: user5.id,
     lat: -22.863,
     lng: -46.035,
@@ -266,20 +266,20 @@ ActiveRecord::Base.transaction do
     trash: true,
     wifi: true,
     biking: true,
-    boating: false,
-    fishing: false,
+    boating: true,
+    fishing: true,
     hiking: true,
     horseback: true,
-    paddling: false,
+    paddling: true,
     swimming: true,
     wildlife_watching: true,
     climbing: false,
-    price: 395,
-    max_guests: 2
+    price: 114,
+    max_guests: 4
   )
 
   # 6
-  tree_house_6 = TreeHouse.create!(
+  treeHouse6 = TreeHouse.create!(
   user_id: user6.id,
   lat: 19.431,
   lng: -155.225,
@@ -318,7 +318,7 @@ ActiveRecord::Base.transaction do
   )
 
   # 7
-  tree_house_7 = TreeHouse.create!(
+  treeHouse7 = TreeHouse.create!(
   user_id: user7.id,
   lat: 38.206,
   lng: -122.682,
@@ -357,7 +357,7 @@ ActiveRecord::Base.transaction do
   )
 
   # 8
-  tree_house_8 = TreeHouse.create!(
+  treeHouse8 = TreeHouse.create!(
   user_id: user8.id,
   lat: 37.116,
   lng: -121.917,
@@ -396,7 +396,7 @@ ActiveRecord::Base.transaction do
   )
 
   # 8
-  tree_house_9 = TreeHouse.create!(
+  treeHouse9 = TreeHouse.create!(
   user_id: user9.id,
   lat: 37.794,
   lng: -120.243,
@@ -436,7 +436,7 @@ ActiveRecord::Base.transaction do
 
 
   #10
-  tree_house_10 = TreeHouse.create!(
+  treeHouse10 = TreeHouse.create!(
   user_id: user10.id,
   lat: 47.538,
   lng: -121.911,
@@ -475,7 +475,7 @@ ActiveRecord::Base.transaction do
   )
 
   #11
-  tree_house_11 = TreeHouse.create!(
+  treeHouse11 = TreeHouse.create!(
   user_id: user11.id,
   lat: -16.470,
   lng: 145.345,
@@ -514,7 +514,7 @@ ActiveRecord::Base.transaction do
   )
 
   #12
-  tree_house_12 = TreeHouse.create!(
+  treeHouse12 = TreeHouse.create!(
   user_id: user12.id,
   lat: -36.848,
   lng: 174.754,
@@ -553,7 +553,7 @@ ActiveRecord::Base.transaction do
   )
 
   #13
-  tree_house_13 = TreeHouse.create!(
+  treeHouse13 = TreeHouse.create!(
   user_id: user13.id,
   lat: 8.777,
   lng: -83.222,
@@ -592,7 +592,7 @@ ActiveRecord::Base.transaction do
   )
 
   #14
-  tree_house_14 = TreeHouse.create!(
+  treeHouse14 = TreeHouse.create!(
   user_id: user14.id,
   lat: 66.071,
   lng: 20.987,
@@ -631,7 +631,7 @@ ActiveRecord::Base.transaction do
   )
 
   #15
-  tree_house_15 = TreeHouse.create!(
+  treeHouse15 = TreeHouse.create!(
   user_id: user15.id,
   lat: 19.472,
   lng: 109.885,
@@ -670,7 +670,7 @@ ActiveRecord::Base.transaction do
   )
 
   #16
-  tree_house_16 = TreeHouse.create!(
+  treeHouse16 = TreeHouse.create!(
   user_id: user16.id,
   lat: 35.826,
   lng: 138.333,
@@ -709,7 +709,7 @@ ActiveRecord::Base.transaction do
   )
 
   #17
-  tree_house_17 = TreeHouse.create!(
+  treeHouse17 = TreeHouse.create!(
   user_id: user17.id,
   lat: 11.696,
   lng: 102.531,
@@ -748,7 +748,7 @@ ActiveRecord::Base.transaction do
   )
 
   #18
-  tree_house_18 = TreeHouse.create!(
+  treeHouse18 = TreeHouse.create!(
   user_id: user1.id,
   lat: -39.873,
   lng: -71.913,
@@ -787,7 +787,7 @@ ActiveRecord::Base.transaction do
   )
 
   #19
-  tree_house_19 = TreeHouse.create!(
+  treeHouse19 = TreeHouse.create!(
   user_id: user1.id,
   lat: 45.0345,
   lng: -79.437,
@@ -826,7 +826,7 @@ ActiveRecord::Base.transaction do
   )
 
   #20
-  tree_house_20 = TreeHouse.create!(
+  treeHouse20 = TreeHouse.create!(
   user_id: user1.id,
   lat: 35.9856,
   lng: -84.994,
@@ -877,123 +877,6 @@ ActiveRecord::Base.transaction do
   #   description: ''
   #
 
-  #
-  # #10
-  # TreeHouse.create!(
-  #   user_id: user1.id,
-  #   lat: ,
-  #   lng: ,
-  #   name: '',
-  #   city: '',
-  #   state: '',
-  #   country: '',
-  #   image_url: '',
-  #   description: ''
-  # )
-  #
-  # #10
-  # TreeHouse.create!(
-  #   user_id: user1.id,
-  #   lat: ,
-  #   lng: ,
-  #   name: '',
-  #   city: '',
-  #   state: '',
-  #   country: '',
-  #   image_url: '',
-  #   description: ''
-  # )
-  #
-  # #10
-  # TreeHouse.create!(
-  #   user_id: user1.id,
-  #   lat: ,
-  #   lng: ,
-  #   name: '',
-  #   city: '',
-  #   state: '',
-  #   country: '',
-  #   image_url: '',
-  #   description: ''
-  # )
-  #
-  # #10
-  # TreeHouse.create!(
-  #   user_id: user1.id,
-  #   lat: ,
-  #   lng: ,
-  #   name: '',
-  #   city: '',
-  #   state: '',
-  #   country: '',
-  #   image_url: '',
-  #   description: ''
-  # )
-  #
-  # #10
-  # TreeHouse.create!(
-  #   user_id: user1.id,
-  #   lat: ,
-  #   lng: ,
-  #   name: '',
-  #   city: '',
-  #   state: '',
-  #   country: '',
-  #   image_url: '',
-  #   description: ''
-  # )
-  #
-  # #10
-  # TreeHouse.create!(
-  #   user_id: user1.id,
-  #   lat: ,
-  #   lng: ,
-  #   name: '',
-  #   city: '',
-  #   state: '',
-  #   country: '',
-  #   image_url: '',
-  #   description: ''
-  # )
-  #
-  # #10
-  # TreeHouse.create!(
-  #   user_id: user1.id,
-  #   lat: ,
-  #   lng: ,
-  #   name: '',
-  #   city: '',
-  #   state: '',
-  #   country: '',
-  #   image_url: '',
-  #   description: ''
-  # )
-  #
-  # #10
-  # TreeHouse.create!(
-  #   user_id: user1.id,
-  #   lat: ,
-  #   lng: ,
-  #   name: '',
-  #   city: '',
-  #   state: '',
-  #   country: '',
-  #   image_url: '',
-  #   description: ''
-  # )
-  #
-  # #10
-  # TreeHouse.create!(
-  #   user_id: user1.id,
-  #   lat: ,
-  #   lng: ,
-  #   name: '',
-  #   city: '',
-  #   state: '',
-  #   country: '',
-  #   image_url: '',
-  #   description: ''
-  # )
 
   Review.create!(
   tree_house_id: treeHouse1.id,
@@ -1013,36 +896,64 @@ ActiveRecord::Base.transaction do
   )
 
   Review.create!(
-  tree_house_id: treeHouse1.id,
-  user_id: user2.id,
-  title: "Cool Spot!",
-  comment: "Loved the tree house design and all the ammeneties up there!",
-  img_url: user2.image_url,
-  date: '08/03/2017',
-  reviewer_name: user2.first,
-  helpfuls: 1
+    tree_house_id: treeHouse1.id,
+    user_id: user2.id,
+    title: "Cool Spot!",
+    comment: "Loved the tree house design and all the ammeneties up there!",
+    img_url: user2.image_url,
+    date: '08/03/2017',
+    reviewer_name: user2.first,
+    helpfuls: 1
   )
 
   Review.create!(
-  tree_house_id: treeHouse1.id,
-  user_id: user3.id,
-  title: "Lovely Place!",
-  comment: "This is my favorite place in the world - hope you love it to!",
-  img_url: user3.image_url,
-  date: '02/14/2017',
-  reviewer_name: user3.first,
-  helpfuls: 3
+    tree_house_id: treeHouse1.id,
+    user_id: user3.id,
+    title: "Lovely Place!",
+    comment: "This is my favorite place in the world - hope you love it to!",
+    img_url: user3.image_url,
+    date: '02/14/2017',
+    reviewer_name: user3.first,
+    helpfuls: 3
   )
 
   Review.create!(
-  tree_house_id: treeHouse2.id,
-  user_id: user1.id,
-  title: "Incredible Stay!",
-  comment: "Wow! I cannot speak highly enough about this property. As soon as you arrive the worries of the outside world just melt away! The views are unforgettable and you will truly feel at peace in nature.",
-  img_url: user1.image_url,
-  date: '02/11/2017',
-  reviewer_name: user1.first,
-  helpfuls: 3
+    tree_house_id: treeHouse2.id,
+    user_id: user1.id,
+    title: "Incredible Stay!",
+    comment: "Wow! I cannot speak highly enough about this property. As soon as you arrive the worries of the outside world just melt away! The views are unforgettable and you will truly feel at peace in nature.",
+    img_url: user1.image_url,
+    date: '02/11/2017',
+    reviewer_name: user1.first,
+    helpfuls: 3
+  )
+
+  Review.create!(
+    tree_house_id: treeHouse2.id,
+    user_id: user5.id,
+    title: "Beautiful Place!",
+    comment: "Don't fool yourselves people. If you haven't stayed here you haven't experienced 5 star Big Sur living. Only come here with someone you truly enjoy being with. There are no TVs here for a very good reason. It's all about disconnecting with the world and staying connected with your partner. Lucky for me I married my best friend. Best escape from the grind in the area. We live in Santa Cruz and make it a priority to take the time to run away to Post Ranch. Love this place!",
+    img_url: user5.image_url,
+    date: '02/11/2017',
+    reviewer_name: user5.first,
+    helpfuls: 3
+  )
+
+  Review.create!(
+    tree_house_id: treeHouse2.id,
+    user_id: user9.id,
+    title: "Beautiful Place!",
+    comment: "Room was clean, cozy and FULL of amazing snacks, treats and drinks. Cookies are of the hook! The next morning we ordered breakfast in and that was amazing. They did forget our silverware, but not that big of a deal.
+
+During the day we laid out at the infinitely pool and ordered drinks and lunch. If you like tropical alcoholic beverages, order the \"Golden Pineapple\", it comes in a copper cup and metal straws! It's really cool! I've also added a picture of that.  The burger was great, chips and salsa were tasty and the shrimp cocktail along with the cocktail sauce were perfect!
+
+We had dinner at Sierra Mar restaurant and it was amazing. Service was great, restaurant was clean and very upscale. Views were to die for!!
+
+This morning we woke up and ordered breakfast. Food was great, but our order was completely wrong and doubled up so we had a ton of wasted food. Generally speaking service was good, not great. I feel a slight disconnect with some of them but nothing catastrophic.",
+    img_url: user9.image_url,
+    date: '02/11/2017',
+    reviewer_name: user9.first,
+    helpfuls: 3
   )
 
   Booking.create!(
