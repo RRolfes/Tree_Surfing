@@ -20,16 +20,16 @@ class EditProfile extends React.Component {
     console.log(this.props);
     debugger;
     return(
-      <div class="profile-container">
-        <div class="test">
+      <div className="profile-container">
+        <div className="test">
           Hello
         </div>
-        <div class="name-contact-rating-container">
-          <div class="image-container">
+        <div className="name-contact-rating-container">
+          <div className="image-container">
 
           </div>
         </div>
-        <div class="services-reviews-container">
+        <div className="services-reviews-container">
 
         </div>
       </div>

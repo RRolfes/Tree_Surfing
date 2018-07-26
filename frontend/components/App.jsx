@@ -14,7 +14,7 @@ import LogInFormContainer from './log_in/log_in_form_container';
 import SignUpFormContainer from './sign_up/sign_up_form_container';
 import TreeHouseShowContainer from './tree_house_show/tree_house_show_container';
 import NavBar from './nav_bar/nav_bar_container';
-import EditProfile from './profile/edit_profile';
+import EditProfileContainer from './profile/edit_profile_container';
 
 const App = () => (
   <div>
@@ -24,7 +24,7 @@ const App = () => (
       <div className="main-content">
         <AuthRoute path="/login" component={LogInFormContainer} />
         <AuthRoute path="/signup" component={SignUpFormContainer} />
-        <Route exact path="/edit-profile" component={EditProfile} />
+        <Route exact path="/edit-profile" component={EditProfileContainer} />
         <Route path="/treehouses/:treeHouseId" component={TreeHouseShowContainer} />
         <Route exact path="/" component={TreeHouseIndexContainer} />
         <Route exact path="/treehouses" component={TreeHouseIndexContainer} />
