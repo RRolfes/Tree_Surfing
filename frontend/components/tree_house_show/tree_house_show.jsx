@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router-dom';
+import { FadeLoader } from 'react-spinners';
 
 import Intro from './intro';
 import About from './about';
@@ -16,7 +17,8 @@ class TreeHouseShow extends React.Component {
     super(props);
     this.state = {
       host: {},
-      treeHouse: null
+      treeHouse: null,
+      loading: true
     };
   }
 
@@ -26,7 +28,8 @@ class TreeHouseShow extends React.Component {
       this.props.fetchUser(payload.currentTreeHouse.user_id).then( host =>
         this.setState({
           host: host.user,
-          treeHouse: payload.currentTreeHouse
+          treeHouse: payload.currentTreeHouse,
+          loading: false
         })
       )
     );
@@ -35,12 +38,11 @@ class TreeHouseShow extends React.Component {
 
   render() {
     const currentTreeHouse = this.state.treeHouse;
-    console.log(this.state);
     const usersHaveLoaded = this.props.user;
 
-    if (currentTreeHouse && usersHaveLoaded) {
-      const reviews = this.props.treeHouses.currentTreeHouse.reviews;
-      const bookings = this.props.treeHouses.currentTreeHouse.bookings;
+    if (!this.state.loading) {
+      const reviews = currentTreeHouse.reviews;
+      const bookings = currentTreeHouse.bookings;
       const host = this.state.host;
       const createBooking = this.props.createBooking;
       const userId = this.props.session.currentUser ? this.props.session.currentUser.id : null;
@@ -91,7 +93,12 @@ class TreeHouseShow extends React.Component {
       );
     } else {
       return(
-        <div>Loading...</div>
+      <div className='sweet-loading'>
+        <FadeLoader
+          loading={this.state.loading}
+          color={'rgba(64, 217, 172, 0.85)'}
+        />
+      </div>
       );
     }
   }

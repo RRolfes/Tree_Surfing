@@ -13,7 +13,6 @@ class TreeHouseTile extends React.Component {
     const treeHousePhoto = {
       backgroundImage: `url(${treeHouse.image_url})`
     };
-    // debugger;
 
     return(
         <div className="tree-house-tile-container">
